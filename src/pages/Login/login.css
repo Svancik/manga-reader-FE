@@ -1,0 +1,28 @@
+*{
+    overflow: hidden;
+}
+
+.loginWrapper{
+    background-color: white;
+    display: flex;  
+    flex-direction: row;  
+}
+
+.loginLeft{
+    background-color: #1C658C;
+    height: 100vh;
+    flex: 1;
+}
+
+.loginRight{
+    flex: 1;
+    height: 100vh;
+}
+
+.loginFormTitle{
+    font-family: Tahoma, sans-serif;
+    font-weight: 300;
+    font-size: 8vw;
+    letter-spacing: 1vw;
+    color: #a6a19b;
+}
