@@ -1,34 +1,53 @@
 .carouselWrapper{
     display: flex;
     flex-direction: row;
-    margin: 0 2vw;
+
 }
 
-.carouselLeft{
+.carousel--right{
+    flex: 0.7;
+    margin-right: 4vw;
+    animation: scroll-right 130s linear infinite;   
+}
+
+.carousel--left{
     flex: 1;
-    margin-left: 1vw;
-    transition: margin, 100s;
+    margin-left: 2vw;   
+    animation: scroll-left 200s linear infinite;
+    height: calc(900px * 6);
+  
+}
+
+.carousel--left > .slide{  
+    height: 900px;
+    width: 660px;
+}
+
+.carousel--right > .slide{  
+    height: 650px;
+    width: 490px;
 }
 
 img{
     z-index: 99;
-    margin-top: 50px;
+    margin-top: 15px;
     width: 90%;
 }
 
-
-
-.carouselRight{
-    margin-top: -10vw;
-    flex: 1;
-    margin-right: 1vw;
-    transition: margin, 100s;
+@keyframes scroll-left {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(calc(-900px * 3));
+    }
 }
 
-.carouselRight:hover{
-    margin-top: 100vw;
-}
-
-.carouselLeft:hover{
-    margin-top: -80vw;
+@keyframes scroll-right {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(calc(-650px * 4));
+    }
 }
