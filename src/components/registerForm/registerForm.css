@@ -1,0 +1,108 @@
+.registerFormWrapper{    
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    justify-content: space-around;
+    margin: auto;
+}
+
+input{
+    margin-bottom: 10px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 14pt;
+    padding-left: 10px;
+}
+
+.registerFormNext{
+    height: 50px;
+    border-radius: 5px;
+    background-color: #1C658C;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color, background-color 1.5s;
+}
+
+button:hover{
+    color: #1C658C;
+    background-color: white;
+    border: 1px solid #1C658C;
+}
+
+.genderOption{   
+    padding: 0px 15px;
+    margin: 0px 10px;
+    border: 1px solid black;
+}
+
+.registerFormTitle{
+    font-family:"Roboto";
+    margin-bottom: 20px;
+}
+
+.genderSelect{
+    width: 100%;
+
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.genderOption{
+    width: 120px;
+    background-color: white;
+    color: #1C658C;
+    border: 1.5px solid #1C658C;
+    padding: 0;
+    margin: 0;
+}
+
+.genderOption:hover, .genderOption:active{
+    background-color: #1C658C;
+    color: white;
+}
+
+
+
+.genderMale{
+    background-color: #1C658C;
+}
+
+.genderMale:hover{
+    background-color: white;
+    border: 2px solid #1C658C;
+    color: #1C658C;
+}
+
+
+.genderFemale{
+    background-color: #c14d92;
+}
+
+.genderFemale:hover{
+    background-color: white;
+    border: 2px solid #c14d92;
+    color: #c14d92;
+}
+
+.genderOther{
+    background-color: gray;
+}
+
+.genderOther:hover{
+    background-color: white;
+    border: 2px solid gray;
+    color: gray;
+}

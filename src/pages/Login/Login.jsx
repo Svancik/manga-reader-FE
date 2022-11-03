@@ -3,9 +3,6 @@ import "./login.css";
 import Carousel from "./../../components/carousel/Carousel";
 
 export default function Login() {
-  const imgs_1 = []
-
-
   return (
     <div className="loginWrapper">
       <div className="loginLeft">

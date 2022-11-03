@@ -7,25 +7,27 @@
 .carousel--right{
     flex: 0.7;
     margin-right: 4vw;
-    animation: scroll-right 130s linear infinite;   
+    animation: scroll-right 200s linear infinite; 
+    margin-top: -2100px;  
 }
 
 .carousel--left{
     flex: 1;
     margin-left: 2vw;   
-    animation: scroll-left 200s linear infinite;
+    animation: scroll-left 280s linear infinite;
     height: calc(900px * 6);
   
 }
 
 .carousel--left > .slide{  
-    height: 900px;
-    width: 660px;
+    width: 390px;
+    height: 520px;
 }
 
 .carousel--right > .slide{  
-    height: 650px;
-    width: 490px;
+    width: 290px;
+    height: 390px;
+    
 }
 
 img{
@@ -39,7 +41,7 @@ img{
         transform: translateY(0);
     }
     100%{
-        transform: translateY(calc(-900px * 3));
+        transform: translateY(calc(-520px * 3));
     }
 }
 
@@ -48,6 +50,6 @@ img{
         transform: translateY(0);
     }
     100%{
-        transform: translateY(calc(-650px * 4));
+        transform: translateY(calc(390px * 3));
     }
 }

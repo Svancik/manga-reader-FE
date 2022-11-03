@@ -29,7 +29,7 @@ button{
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
-    transition: color, background-color 1s;
+    transition: color, background-color 1.5s;
 }
 
 button:hover{

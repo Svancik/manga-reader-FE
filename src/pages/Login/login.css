@@ -11,7 +11,7 @@
 .loginLeft{
     background-color: #1C658C;
     height: 100vh;
-    flex: 1;
+    flex: 0.5;
 }
 
 .loginRight{

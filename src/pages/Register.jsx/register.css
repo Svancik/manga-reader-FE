@@ -1,0 +1,15 @@
+.registerWrapper{
+    display: flex;
+    height: 100vh;
+}
+
+.register--left{
+    background-color: #1C658C;
+    flex: 0.5;
+}
+
+.register--right{
+    flex: 1;
+    
+}
+
