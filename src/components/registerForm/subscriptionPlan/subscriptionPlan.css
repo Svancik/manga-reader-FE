@@ -1,0 +1,1085 @@
+/* CSS kód níže byl validován dle validátoru https://jigsaw.w3.org/css-validator/validator */
+/* TODO: */
+/* FIXME: */
+
+/* Níže jsme provedli import pro zvýšení performance stránky aby se nemuseli načítat separátně 2 css soubory (nenačítají se v index) */
+
+.subscriptionWrapper{
+    height: 60vh;
+}
+
+:root {
+  --color-primary: #1c658c;
+  --color-secondary: #228cc5;
+  --color-accent: #ff3400;
+  --color-headings: #1b0760;
+  --color-body: #918ca4;
+  --color-body-darker: #5c5577;
+  --color-border: #ccc;
+  --border-radius: 30px;
+}
+
+*,
+*::after,
+*::before {
+  /* Nenastavý box-sizing rozhodí rozměry ahrefu. box-sizing border-box je implicitně nastavené u buttonů  */
+  box-sizing: border-box;
+}
+
+/* Typography */
+
+::selection {
+  background: var(--color-primary);
+  color: white;
+}
+
+html {
+  /* Níže stanovíme font size na 10px */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  color: var(--color-body);
+  font-size: 2.4rem;
+  line-height: 1.5;
+}
+
+
+
+
+h2 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+p {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 6rem;
+  }
+  h3 {
+    font-size: 2.4rem;
+  }
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.link-arrow {
+  color: var(--color-accent);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.link-arrow::after {
+  content: "-->";
+  margin-left: 5px;
+  transition: margin 0.15s;
+}
+
+/* Kódem níže selektujeme element after (šipku -->) při hoveru */
+.link-arrow:hover::after {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .link-arrow {
+    font-size: 1.5rem;
+  }
+}
+
+/* Badges */
+
+.badge {
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0.5rem 2rem;
+  white-space: nowrap;
+}
+
+.badge--primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.badge--secondary {
+  background: var(--color-secondary);
+  color: white;
+}
+
+.badge--small {
+  font-size: 1.6rem;
+  padding: 0.5rem 1.5rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .badge--small {
+    font-size: 1.2rem;
+  }
+}
+
+/* Lists */
+
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list--inline .list__item {
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.list--tick {
+  color: var(--color-headings);
+  list-style-image: url(../../../media/design/tick.svg);
+  padding-left: 2rem;
+}
+
+.list--tick .list--item {
+  padding-left: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .list--tick .list--item {
+    padding-left: 0;
+  }
+}
+
+/* Icons */
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon--primary {
+  /* Fill funguje pouze u svg souborů k vyplnění barvou. */
+  fill: var(--color-primary);
+}
+
+.icon--white {
+  fill: #fff;
+}
+
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+
+.icon-container {
+  background: #f3f9fa;
+  width: 64px;
+  height: 64px;
+  display: inline-flex;
+  border-radius: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-container--accent {
+  background-color: var(--color-accent);
+}
+
+/* Buttons */
+
+.button {
+  align-items: center;
+  border-radius: 40px;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  justify-content: center;
+  margin: 1rem 0;
+  outline: 0;
+  /* Níže jsme nepoužili jednotky rem pro padding tlačítka, protože při zobrazení na malém mobilním
+  displeji docházelo k tomu že tlačítko mělo příliš velký padding. Pomocí užití 4vw říkáme že padding
+  tlačítka by měl být 4% jednotky vizuální plochy - viewport */
+  padding: 2rem 4vw;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color, color, 0.35s;
+  white-space: nowrap;
+}
+
+.button--primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.button--primary:hover {
+  background: #3a8ffd;
+}
+
+.button--secondary {
+  background-color: var(--color-secondary);
+  color: white;
+}
+
+.button--secondary:hover {
+  background: #00c8eb;
+}
+
+.button--accent {
+  background-color: var(--color-accent);
+  color: white;
+}
+
+.button--accent:hover {
+  background: #ec3000;
+}
+
+.button--block {
+  width: 100%;
+  display: inline-block;
+}
+
+.button .icon {
+  fill: white;
+  height: 2rem;
+  width: 2rem;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+
+.button--outline {
+  background: white;
+  color: var(--color-headings);
+  border: 2px solid var(--color-headings);
+}
+
+.button--outline:hover {
+  background-color: var(--color-headings);
+  color: white;
+}
+
+.button--stretched {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .button {
+    font-size: 1.5rem;
+  }
+}
+
+/* Inputs */
+
+.input {
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-border);
+  color: var(--color-headings);
+  font-size: 2rem;
+  margin: 5px;
+  outline: 0;
+  padding: 1.5rem 3.5rem;
+  text-align: left;
+}
+.input::placeholder {
+  color: #cdcbd7;
+}
+
+.input-group {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  display: flex;
+}
+
+/* Pokud jsme v třídě input-group tak třída input nebude mít border (tím se odstrani duplicitni border) */
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+  padding: 1.5rem 2rem;
+  width: 0;
+}
+
+.input-group .button {
+  margin: 4px;
+}
+
+@media screen and (min-width: 1024px) {
+  .input {
+    font-size: 2rem;
+  }
+}
+
+/* Cards */
+
+.card {
+  border-radius: 9px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  overflow: hidden;
+  
+}
+
+.card__header,
+.card__body {
+  padding: 2rem 3rem;
+}
+
+.card--primary .card__header {
+    background: var(--color-primary);
+    color: white;
+}
+
+.card--secondary .card__header {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+/* Pokud máme .badge--secondary uvnitř .card--secondary tak platí: ... */
+.card--secondary .badge--secondary {
+  background: #02cdf1;
+}
+
+.card--primary .badge--primary {
+  background: #126de4;
+}
+
+/* Plans */
+.plan__name {
+  color: white;
+  margin: 0;
+  font-weight: 500;
+  font-size: 2.4rem;
+}
+
+.plan__price {
+  font-size: 6rem;
+}
+
+.plan__billing-cycle {
+  font-size: 2.4rem;
+  font-weight: 300;
+  opacity: 0.8;
+  margin-right: 1rem;
+}
+
+.plan__description {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.plan--popular .card__header {
+  /* Zde je to dáno kvůli position absolute níže. */
+  position: relative;
+}
+.plan--popular .card__header::before {
+  content: url(../../../media/design/popular.svg);
+  width: 40px;
+  display: inline-block;
+  /* Když cheme element upevnit pomocí absolut tak musí být rodič elementu (zde je element img) position: RELATIVE */
+  position: absolute;
+  top: -6px;
+  right: 5%;
+}
+.plan {
+  transition: 0.2s ease-out;
+  margin-top: 40px;
+
+}
+
+.plan .list__item {
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.list__item{
+    font-size: 1.75rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .plan__name {
+    font-size: 1.4rem;
+  }
+
+  .plan__price {
+    font-size: 5rem;
+  }
+
+  .plan__billing-cycle {
+    font-size: 1.6rem;
+  }
+
+  .plan__description {
+    font-size: 1.7rem;
+  }
+}
+
+/* Media */
+
+.media {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.media__title {
+  margin-top: 0;
+  color: white;
+}
+
+.media__body {
+  margin: 0 2rem;
+}
+
+.media__image {
+  margin-top: 1rem;
+}
+
+/* Quotes */
+
+.quote {
+  font-size: 3rem;
+  font-style: italic;
+  color: var(--color-body-darker);
+  line-height: 1.3;
+}
+
+.quoute__text::before {
+  content: open-quote;
+}
+
+.quoute__text::after {
+  content: close-quote;
+}
+
+.quote__author {
+  font-style: normal;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 0;
+}
+
+.quote__organization {
+  font-size: 2rem;
+  font-style: normal;
+  color: var(--color-headings);
+  opacity: 0.5;
+}
+
+.quote__line {
+  position: relative;
+  bottom: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .quote {
+    font-size: 2rem;
+  }
+
+  .quote__author {
+    font-size: 2.4rem;
+  }
+
+  .quote__organization {
+    font-size: 1.6rem;
+  }
+}
+
+/* Grids */
+
+.grid {
+  display: grid;
+
+  padding: 40px 20px;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    /* Kód níže si vydělí veškerý dostupný prostor na obrazovce, vydělí ho dvěmi a rozdělí do dvou sloupců, mezery oddělují sloupce */
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Testimonials */
+
+.testimonial {
+  padding: 3rem;
+}
+
+.testimonial__image {
+  /* Budeme dávat absolute position pro fixaci ikony, k tomu je nutné aby byl kontejner relative */
+  position: relative;
+}
+
+/* Níže říkáme že musí být obrázek přímo v testimonial image (ne někde zanořen) */
+.testimonial__image > img {
+  width: 100%;
+}
+
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  /*  Width ikony je 64px, když to zarovnáme doprava a odečteme 32px (polovinu width), tak bude ikona na středu mezi containery */
+  right: -32px;
+}
+
+@media screen and (max-width: 767px) {
+  .testimonial__image > .icon-container {
+    right: -30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .testimonial .quote,
+  .testimonial .quote__author {
+    font-size: 2.4rem;
+  }
+
+  .testimonial .quote {
+    margin-left: 6rem;
+  }
+}
+
+/* Callouts */
+
+.callout {
+  padding: 4rem;
+  border-radius: 5px;
+}
+
+.callout--primary {
+  background: var(--color-primary);
+  color: white;
+}
+
+.callout__heading {
+  color: white;
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.callout .button {
+  /* Zde používáme self protože to platí na objekt v gridu a ne na vícero položek v gridu */
+  justify-self: center;
+  align-self: center;
+
+}
+
+.callout__content {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .callout .grid--1x2 {
+    /* Níže: 1fr = 1 zlomek dostupného místa. auto = že column bude akorát široký jako element uvnitř něj */
+    grid-template-columns: 1fr auto;
+  }
+  .callout__content {
+    text-align: left;
+  }
+  .callout .btn {
+    justify-self: start;
+    margin: 0 2rem;
+  }
+}
+
+/* Collapsibles */
+
+.collapsible__header {
+  display: flex;
+  /* justify-content: space-between => zarovná elementy na 2 různé strany od sebe ke krajům */
+  justify-content: space-between;
+}
+
+.collapsible__heading {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.3s;
+}
+
+.collapsible__content {
+  /* display: none; - použilo se dřív ale s tím nelze provézt smooth animaci 
+                    - snížil se max-height na 0 a overflow hidden - tím se element zneviditelnil */
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  /* Níže se zanimují všechny změny vlastností pomocí transition: all */
+  transition: all 0.3s;
+}
+
+/* expanded níže známená že stylujeme jak to bude vypadat po rozkliknutí */
+
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(0);
+}
+
+.registerFormTitle{
+    font-family:"Roboto";
+    margin-bottom: 60px;
+    color: black;
+    font-size: 32pt;
+}
+
+.collapsible--expanded .collapsible__content {
+  /* Element zviditelníme tím že maximum height zvedneme z nuly na 100 a dáme opacity 1.
+  max-height není height. Reálně bude height dle obsahu elementu a ne přes celou obrazovku jako by tomu bylo u height */
+  max-height: 100vh;
+  opacity: 1;
+}
+
+/* Blocks */
+
+.container {
+  
+  max-width: 1380px;
+  padding: 40px 40px;
+  /* Margin ze shora - vertikálně je 0 a horizontálně je automaticky (automaticky se vyrovná dle dostupného místa)*/
+  margin: 100px auto;
+}
+
+.block {
+  /* Níže používáme proměnou padding vertical protože řešíme odsazení od spodku bloku. 
+  Dáváme sem proměnou protože v momentě kdy nastavíme 2 fixní hodnoty tak bychom museli provádět změnu ve 2 místech.
+  Takhle máme jednu proměnnou která se používá na 2 místech (níže a block--skewed   */
+  --padding-vertical: 6rem;
+  padding: var(--padding-vertical) 2rem;
+}
+
+.block__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.block__heading {
+  margin-top: 0;
+}
+
+.block--dark {
+  background: #000;
+  color: #7b858b;
+}
+
+.block--dark h1,
+.block--dark h2,
+.block--dark h3 {
+  color: #fff;
+}
+
+.block--skewed-right {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+}
+
+.block--skewed-left {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 00% 100%);
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+}
+
+/* Navigation Bar */
+
+.nav {
+  background: #000;
+  display: flex;
+  /* Na mobilu je v navigačním panelu logo na jedné straně a menu na druhé (nejdřív programujeme pro mobil) */
+  justify-content: space-between;
+  /* flex-wrap nám zabalí obsah a tím se nám nav__list který zabírá 100% šířku přesune na další řádek */
+  flex-wrap: wrap;
+  padding: 0 1rem;
+  /* Zarovnáme pomocí align-items vertikálně logo */
+  align-items: center;
+}
+
+/* šlo použít .nav .list = "NESTING" ale je spíše doporučeno vytvořit speciální třídu */
+
+.nav__list {
+  width: 100%;
+  margin: 0;
+}
+
+.nav__item {
+  padding: 0.5rem 2rem;
+  border-bottom: 1px solid #222;
+}
+
+/* Níže nevytváříme speciální třídu protože v navigačnim panelu budeme mít vždy element a (anchor) a to nebudeme měnit */
+.nav__item > a {
+  color: #d2d0db;
+  transition: color 0.3s;
+}
+
+.nav__item > a:hover {
+  color: #fff;
+}
+
+.nav__toggler {
+  opacity: 0.5;
+  transition: box-shadow 0.15s;
+  cursor: pointer;
+}
+
+/* .nav.collapsible--expanded znamená že musí mít class jak .nav tak .collapsible--expanded
+(.collapsible--expanded se nastaví pomocí scriptu automaticky po kliknutí na collapsible element) */
+.nav.collapsible--expanded .nav__toggler {
+  opacity: 1;
+  box-shadow: 0 0 0 3px #666;
+  border-radius: 5px;
+}
+
+.nav__brand {
+  /* Pomocí transform níže posouváme obrázek(logo) o 5px níže aby byl vycentrován (má defaulntě nastavené rozměry) */
+  transform: translateY(5px);
+}
+
+@media screen and (min-width: 768px) {
+  .nav__toggler {
+    display: none;
+  }
+
+  .nav__list {
+    width: auto;
+    display: flex;
+    font-size: 1.6rem;
+    /* Pomocí max-height a opacity jsme zviditelni navigační panel, který byl neviditelný při zobrazení na mobilech */
+    max-height: 100%;
+    opacity: 1;
+  }
+
+  .nav__item {
+    border: 0;
+  }
+}
+
+/* Hero */
+
+.hero__tagline {
+  font-size: 2rem;
+  color: #b9c3cf;
+  letter-spacing: 1px;
+  /* top margin 2 rem, right margin 0 a bottom margin 5 rem */
+  margin: 2rem 0 5rem;
+}
+
+.hero__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding-top: 0;
+  }
+
+  .hero__content {
+    text-align: left;
+    align-self: center;
+  }
+}
+
+/* Domain Block */
+
+.block-domain .input-group {
+  box-shadow: 0 0 30px 20px #e6ebee;
+  border: 0;
+  margin: 4rem auto;
+  max-width: 670px;
+}
+
+.block-domain__prices {
+  color: var(--color-headings);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 6rem);
+  font-size: 2rem;
+  font-weight: 600;
+  justify-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .block-domain__prices {
+    /* Namísto psaní natvrdo vytvoření 6ti sloupců se používá auto-fit. Šířka sloupce je minmax od 100px až po dostupné místo. 
+    Takto si prohlížeč upraví dle libosti dostupné místo a můžeme tam přidat položku a zůstanou zachovány také v řadě vedle sebe. */
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+}
+
+/* 
+NÍŽE JE MŮJ ŠPATNÝ POKUS O PROVEDENÍ KÓDU bez komentu 
+.plans-block { display: grid; grid-template-columns: 0.95fr 1.02fr 0.95fr;  justify-items: center; align-items: center; }
+.plans-block .plan--popular { width: 100%; }
+.plans-block .card:hover { transform: scaleY(1.15); transform: scaleX(1.03); margin-bottom: 3rem;}
+
+Plans block 
+
+*/
+/* Pomocí transform: scale(1.1) se zvýší velikost elementu o 10% */
+.plan--popular {
+  transform: scale(1.1);
+
+}
+
+.block-plans .grid {
+  gap: 8rem 4rem;
+}
+
+.block-plans .card {
+  max-width: 800px;
+  margin-top: 200px;
+  margin: 0 auto;
+}
+
+.plan:hover {
+  transform: scale(1.05);
+}
+.plan--popular:hover {
+  transform: scale(1.15);
+}
+
+/* Features */
+
+.feature {
+  gap: 6rem 2rem;
+  margin-bottom: 6rem;
+}
+
+.feature__heading {
+  /*       V   H */
+  margin: 1rem 0;
+}
+
+.feature__image {
+  width: 100%;
+}
+
+/* Kódem níže říkáme že první element třídy .feature má margin-top nižší - přepíšeme ho */
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    /* Pomocí order níže jsme přeházeli pořadí, říkáme tím že div.feature_content bude na sudém elementu.feature druhý v pořadí 
+    a tím se přesune doprava. */
+    order: 2;
+  }
+}
+
+/* Showcase */
+
+.block-showcase__image > img {
+  /* Nastavením width bude obrázek responzivní (na mobilu chceme) */
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .block-showcase .grid {
+    grid-template-columns: 50% 50%;
+  }
+  /* justify-self: end přišpendlí obrázek */
+  .block-showcase__image {
+    justify-self: end;
+  }
+
+  .block-showcase__image > img {
+    /* Nastavením width níže bude mít obrázek velikost defaultní */
+    width: auto;
+    max-width: 700px;
+  }
+}
+
+/* Footer */
+.footer {
+  background: #232323;
+}
+
+.footer__section {
+  padding: 2rem;
+  border-bottom: 1px solid #393939;
+}
+
+/* Defaultně je u listu od prohlížeče margin. Níže říkáme že pokud je v sekci footer list tak nemá žádný margin */
+.footer__section .list {
+  margin: 0;
+}
+
+/* je lepší vytvořit samostatnou třídu nežli použít .footer .collapsible__heading - protože při nepouziti .footer a budouci zmene to nebude fungovat */
+.footer__heading {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.footer__brand {
+  margin-top: 5rem;
+  text-align: center;
+}
+
+.footer__brand img {
+  /* TODO: Zvaž předělání a nastavení width:100% u všech obrázků */
+  width: 100%;
+  max-width: 230px;
+}
+
+.footer__copyright {
+  font-size: 2.1rem;
+  color: #fff;
+  opacity: 0.3;
+}
+
+.footer a {
+  color: #777;
+  transition: color 0.3s;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__sections {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
+
+  .footer .collapsible__chevron {
+    display: none;
+  }
+  .footer .collapsible__content {
+    opacity: 1;
+    max-height: 100%;
+  }
+
+  .footer__brand {
+    /* POMOCÍ VLASTNOSTI NÍŽE SE PŘESUNE LOGO KTERÉ NA MOBILU BYLO JAKO POSLEDNÍ NA PRVNÍ POZICI. order: -1; to hodí na začátek */
+    order: -1;
+    margin-top: 1rem;
+  }
+
+  .footer__copyright {
+    font-size: 1.5rem;
+  }
+
+  .footer__section {
+    border: none;
+  }
+
+  .footer__heading {
+    font-size: 1.6rem;
+  }
+}
+
+/* Než nasadíme stránku na webový server kde poběží tak je nutné provést následující:
+
+BUILDING FOR PRODUCTION:
+
+        a) Sjednotit soubory CSS a JS - tím se minimalizují HTTP požadavky
+        b) Minimalizovat JS/CSS soubory (zbavit se zbytečných mezer a komentářů) - soubory budou menší
+        c) Optimalizovat obrázky
+        
+BUILD TOOLS - aplikace umožnující modifikaci / optimalizaci stránky před jejím uvedením do chodu:
+
+        a) WEBPACK (nejvíce používané ale složité na nastavení)
+        b) ROLLUP
+        c) PARCEL - webová aplikace (velmi jednoduché)
+
+        CTRL + ; => otevře terminál
+        npm => Node Package Manager (NPM) - pomocí toho lze instalovat balíčky třetích stran (tzv. "dependancies" neboli závislosti
+
+        npim init -y => inicializace (pomoci -y přeskočíme konfiguraci)
+
+        Před provedením npim init -y je nutné aby složka ve které se nacházíme neobsahovala mezery (možná i velká písmena)
+
+        npm i -D parcel-bundler@1.12.4 => zde nainstalujeme SW PARCEL a verzy jakou má MOSH v tutorialu.
+
+        Po instalaci pomocí kódu výše do terminálu nám vznikne složka node_modules obsahující stovky několik složek.
+        Tyto složky jsou bundly/knihovny jiných stran. Jsou zde, protože to co mi chceme použít (PARCEL BUNDLE) může být závislé
+        na jiné knihovně třetí strany.
+
+        V souboru package.json ve vlastnosti "devDependencies" je vidět na jakých souborech je závislý náš projekt.
+
+        DŮLEŽITÉ:
+        Aby se na GITHUB nenahrála složka node_modules obsahující přes 10 000 souborů, tak vytvoříme soubor
+        .gitignore a do něj napíšeme node_modules/ => tím říkáme že GIT by měl tyto změny ignorovat.
+
+        node_modules/.bin/parcel index.html - v .bin jsou spustitelné soubory a pomocí tohoto kódu spustíme SW PARCEL
+
+        npm i -g parcel-bundler - tímto nainstalujeme parcel globálně a mužeme volat parcel z jakékoliv složky v PC 
+        (tím se zbavujeme nutnosti chodin do node_modules/.bin/parcel, stačí napsat odkudkoliv parcel index.html 
+
+        po napsání parcel index.html nám běží stránka na virtuálním serveru na odkaze. 
+
+        PARCEL nám vytvořil 2 nové složky: dist a ..cache => tyto složky opět nechceme mít v GIT repositáři, tudíž
+        napíšeme do .gitignore "dist/" a ".cache/"
+
+        Pomocí CTRL + C vynpeme PARCEL server
+
+        Pomocí příkazu parcel build index.html spustíme builder - PARCEL.
+          - Vyskočila mi však chybová hláška "tree.render is not a function" která je spojitá s .SVG soubory
+          - Vyřešil jsem to vytvořením .htmlnanorc do které jsem napsal {  "minifySvg": false } - PŘÍKAZ POTÉ FUNGOVAL
+
+          PO SPUŠTĚNÍ PARCEL BUILDERU SE MINIMALIZOVAL KÓD A JE TO NYNÍ:
+          - index.html SPOJENÉ JAKO 1 STRING. 
+          - CSS je v jednom řádku.
+          - styles.css je ve vícero souborech a v názvu je přidán HASH - styles.4e3365cc.css & styles.b61e60ae.css 
+            to tak je kvůli cachování aby se pokaždé načetl nový soubor s jiným hashem po provedení změny, pokud 
+            bychom měli 1 soubor styles.css tak prohlížeč si to dá do cache paměti a ten soubor nenačte znovu ze serveru.
+
+            Po prvním příkazu parcel build index.html vznikli dvojí soubory - protože jsme byli ve vývoji (development build)
+            při spuštění PARCELU na webserveru. Tudíž ve složce dist byly souboru 2x (development build & production build).
+            Tuto složku jsem tedy odstranil a spustil příkaz znovu a byly zde soubory pouze 1x
+
+
+            NAHRÁVÁNÍ STRÁNKY NA GIT-HUB:
+
+            1) Vytvoření repozitáře na GITHUBU
+            2) Zkopírování kódu níže.
+
+      Toto přidá vzdálený repozitář do našeho projektu (vzdálený = není na našem PC)
+      git remote add origin https://github.com/Svancik/training_moshify.git
+
+      Tímto přejmenujeme název defaultního kořene adresáře (branch) v gitu - název bude "main" (dříve to bylo "master")
+      git branch -M main
+
+      Pomocí kódu níže vložíme náš hlavní kořenový adresář (obsahující všechny soubory) - naší branch to mainu (což je repozitář na odkaze)
+      git push -u origin main.
+
+      KDYŽ PROVEDEME NĚJAKÉ ZMĚNY (po napojení na GIT) tak použijeme příkat "git push" a promítnou se na GITHUB.
+
+      Stránka https://www.netlify.com/ umožnuje nahrát stránky živě které jsou uloženy v GIT repozitáři.
+
+      Je nutné v 3. kroku "Create a new site" napsat Build command "parcel build index.html" a Publish directory "dist"
+
+      Na netlify byla chyba jež se odstranila použitím commandu "parcel build --no-minify index.html" po té co se 
+      instalovala nižší verze parcelu- "npm i -D parcel-bundler@1.12.3"
+      
+      Na odkazu níže lze zjistit výkon naší stráky (performance)
+      https://web.dev/measure/
+
+      Do té stránky můžeme vložit NETLIFY odkaz - viz mnou vytvořený - https://tutorialmoshify.netlify.app/ 
+
+
+      WEB MEASURE JE JAKO PLUGIN do GOOGLE CHROME - stačí hledat "LIGHTHOUSE"
+*/

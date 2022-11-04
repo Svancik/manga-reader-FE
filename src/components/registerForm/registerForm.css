@@ -10,17 +10,22 @@
 form{
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 620px;
     justify-content: space-around;
     margin: auto;
 }
 
-input{
+input, .form-control{
     margin-bottom: 10px;
     height: 50px;
     border-radius: 5px;
     font-size: 14pt;
     padding-left: 10px;
+}
+
+label{
+    text-align: left;
+    float: left;
 }
 
 .registerFormNext{
@@ -33,6 +38,7 @@ input{
     font-weight: 500;
     cursor: pointer;
     transition: color, background-color 1.5s;
+    
 }
 
 button:hover{
@@ -49,7 +55,7 @@ button:hover{
 
 .registerFormTitle{
     font-family:"Roboto";
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .genderSelect{
@@ -73,8 +79,6 @@ button:hover{
     background-color: #1C658C;
     color: white;
 }
-
-
 
 .genderMale{
     background-color: #1C658C;

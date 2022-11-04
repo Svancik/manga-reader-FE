@@ -8,13 +8,13 @@
     flex: 0.7;
     margin-right: 4vw;
     animation: scroll-right 200s linear infinite; 
-    margin-top: -2100px;  
+
 }
 
 .carousel--left{
     flex: 1;
     margin-left: 2vw;   
-    animation: scroll-left 280s linear infinite;
+    animation: scroll-left 480s linear infinite;
     height: calc(900px * 6);
   
 }
@@ -50,6 +50,6 @@ img{
         transform: translateY(0);
     }
     100%{
-        transform: translateY(calc(390px * 3));
+        transform: translateY(calc(-390px * 3));
     }
 }
