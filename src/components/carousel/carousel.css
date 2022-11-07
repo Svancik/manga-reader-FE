@@ -1,22 +1,29 @@
 .carouselWrapper{
     display: flex;
     flex-direction: row;
-
 }
 
 .carousel--right{
     flex: 0.7;
     margin-right: 4vw;
     animation: scroll-right 200s linear infinite; 
+    margin-top: 16vh;
 
 }
 
 .carousel--left{
+    margin-top: 10vh;
     flex: 1;
     margin-left: 2vw;   
     animation: scroll-left 480s linear infinite;
     height: calc(900px * 6);
   
+}
+
+.slide > img{
+    -webkit-box-shadow: 1px 2px 22px 0px rgba(0,0,0,0.42);
+    -moz-box-shadow: 1px 2px 22px 0px rgba(0,0,0,0.42);
+    box-shadow: 1px 2px 22px 0px rgba(0,0,0,0.42);
 }
 
 .carousel--left > .slide{  

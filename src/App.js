@@ -3,13 +3,16 @@ import './App.css';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Login from './pages/Login/Login';
 import Register from './pages/Register.jsx/Register';
+import React, { Component }  from 'react';
+
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />
-          <Route path="/" element ={<Register/>}/>
+          <Route exact path="/" element={<Login />} />
+          <Route path="/register" element ={<Register/>}/>
         </Routes>
       </BrowserRouter>
     </div>

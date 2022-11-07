@@ -1,9 +1,11 @@
 import "./subscriptionPlan.css";
+import React, { Component } from "react";
 
 export default function SubscriptionPlan() {
   return (
     <div className="subscriptionWrapper">
       <section className="container block block-plans subWrapper">
+        <h1 className="registerFormTitle">Subscription Plan</h1>
         <div className="grid grid--1x3">
           <div className="plan">
             <div className="card card--secondary">
@@ -15,7 +17,7 @@ export default function SubscriptionPlan() {
                   5% off
                 </span>
                 <span className="plan__description">
-                  Start your Journey into the manga world on budget.
+                  Access amazing Mangas almost for free!.
                 </span>
               </header>
               <div className="card__body">
@@ -31,9 +33,12 @@ export default function SubscriptionPlan() {
                     {" "}
                     <li className="list__item">Ad-free manga</li>
                   </s>
+                  <s>
+                    <li className="list__item">Free monthly paperback manga</li>
+                  </s>
                 </ul>
                 <button className="button button--block button--outline">
-                  buy now
+                  select
                 </button>
               </div>
             </div>
@@ -49,7 +54,7 @@ export default function SubscriptionPlan() {
                   20% off
                 </span>
                 <span className="plan__description">
-                  East start on the cloud
+                  Enjoy unlimited Manga experience!
                 </span>
               </header>
               <div className="card__body">
@@ -58,11 +63,10 @@ export default function SubscriptionPlan() {
                   <li className="list__item">5 supported devices at a time</li>
                   <li className="list__item">Read & Download in HQ</li>
                   <li className="list__item">Ad-free manga</li>
-
                   <li className="list__item">Free monthly paperback manga</li>
                 </ul>
                 <button className="button button--block button--outline">
-                  buy now
+                  select
                 </button>
               </div>
             </div>
@@ -75,7 +79,7 @@ export default function SubscriptionPlan() {
                 <span className="plan__price">$4.99</span>
                 <span className="plan__billing-cycle">/month</span>
                 <span className="plan__description">
-                  East start on the cloud
+                  Read and download Manga at high quality!
                 </span>
               </header>
               <div className="card__body">
@@ -89,14 +93,21 @@ export default function SubscriptionPlan() {
                     {" "}
                     <li className="list__item">Ad-free manga</li>
                   </s>
+                  <s>
+                    <li className="list__item">Free monthly paperback manga</li>
+                  </s>
                 </ul>
                 <button className="button button--block button--outline">
-                  buy now
+                  select
                 </button>
               </div>
             </div>
           </div>
         </div>
+        <button className="registerFormNext finishButton">
+          {" "}
+          Finish Registration
+        </button>
       </section>
     </div>
   );

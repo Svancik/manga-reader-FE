@@ -1,4 +1,5 @@
 import "../../registerForm/registerForm.css";
+import React, { Component } from "react";
 
 export default function registerFormPage2() {
   return (

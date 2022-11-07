@@ -1,4 +1,6 @@
 import "../../registerForm/registerForm.css";
+import React, { Component } from "react";
+
 export default function registerFormPage1() {
   return (
     <form action="">
