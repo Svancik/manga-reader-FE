@@ -10,7 +10,22 @@
 }
 
 .register--right{
-    flex: 1;
-    
+    flex: 1;    
 }
 
+.registerFormWrapper{    
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -5vh;
+
+}
+
+
+@media (min-width: 1250px) {
+    .register--left{
+     display: none;
+    }
+   }

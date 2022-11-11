@@ -12,8 +12,8 @@ export default function Navbar() {
         <Link to="/login" className="link">
           <span className="navbarMainLinks">Login</span>
         </Link>
-        <Link to="/register" className="link">
-          <span className="navbarMainLinks">Sign Up</span>
+        <Link to="/register/step1" className="link">
+          <span className="navbarMainLinks">Register</span>
         </Link>
       </div>
       <div className="right">

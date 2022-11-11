@@ -3,6 +3,9 @@ import RegisterForm from "../../components/registerForm/RegisterForm";
 import Carousel from "./../../components/carousel/Carousel";
 import "./register.css";
 import React, { Component } from "react";
+import RegisterFormPage1 from "../../components/registerForm/registerFormPages/RegisterFormPage1";
+import RegisterFormPage2 from "../../components/registerForm/registerFormPages/RegisterFormPage2";
+import RegisterFormPage3 from "../../components/registerForm/registerFormPages/RegisterFormPage3";
 
 export default function Register() {
   return (
@@ -13,7 +16,9 @@ export default function Register() {
           <Carousel />
         </div>
         <div className="register--right">
-          <RegisterForm />
+          <div className="registerFormWrapper">
+            <RegisterForm />
+          </div>
         </div>
       </div>
     </>

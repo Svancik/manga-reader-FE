@@ -3,6 +3,7 @@
     flex-direction: row;
 }
 
+
 .carousel--right{
     flex: 0.7;
     margin-right: 4vw;
@@ -60,3 +61,4 @@ img{
         transform: translateY(calc(-390px * 3));
     }
 }
+

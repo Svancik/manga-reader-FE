@@ -1,7 +1,7 @@
 import "./subscriptionPlan.css";
 import React, { Component } from "react";
 
-export default function SubscriptionPlan() {
+export default function SubscriptionPlan({ plan1 }) {
   return (
     <div className="subscriptionWrapper">
       <section className="container block block-plans subWrapper">
@@ -37,9 +37,11 @@ export default function SubscriptionPlan() {
                     <li className="list__item">Free monthly paperback manga</li>
                   </s>
                 </ul>
-                <button className="button button--block button--outline">
-                  select
-                </button>
+                {
+                  <button className="button button--block button--outline">
+                    select
+                  </button>
+                }
               </div>
             </div>
           </div>
@@ -104,10 +106,6 @@ export default function SubscriptionPlan() {
             </div>
           </div>
         </div>
-        <button className="registerFormNext finishButton">
-          {" "}
-          Finish Registration
-        </button>
       </section>
     </div>
   );
