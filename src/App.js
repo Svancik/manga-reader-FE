@@ -1,9 +1,9 @@
-import logo from './logo.svg';
-import './App.css';
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import React, { Component }  from 'react';
 import Login from './pages/Login/Login';
 import Register from './pages/Register.jsx/Register';
-import React, { Component }  from 'react';
+import Home from './pages/Home/Home';
+import './App.css';
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />          
           <Route exact path="/register/" element ={<Register/>}/>
-         
+          <Route exact path="/" element = {<Home/>}/>
         </Routes>
       </BrowserRouter>
     </div>

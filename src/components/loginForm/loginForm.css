@@ -20,7 +20,7 @@ input{
     padding-left: 10px;
 }
 
-button{
+.buttonLogin{
     height: 50px;
     border-radius: 5px;
     background-color: #1C658C;

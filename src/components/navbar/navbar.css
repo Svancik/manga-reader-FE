@@ -13,6 +13,11 @@ background: linear-gradient(122deg, rgba(28,101,140,1) 7%, rgba(239,244,247,1) 1
     z-index: 999;
 }
 
+.logo{
+    width: 7.5vw;
+    margin: auto 120px;
+}
+
 .navbarMainLinks{
     color: white;
     text-decoration: none;

@@ -27,6 +27,8 @@
   text-transform: uppercase;
   transition: background-color, color, 0.35s;
   white-space: nowrap;
+  color: white;
+  border: 1px solid black;
 }
 
 .checkBox{
@@ -313,7 +315,7 @@ a {
 }
 
 .button--outline:hover {
-  background-color: var(--color-headings);
+  background-color: goldenrod;
   color: white;
 }
 

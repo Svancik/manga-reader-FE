@@ -1,0 +1,41 @@
+.topbarWrapper{
+    width: 100vw;
+    height: 12vh;
+    border: 1px solid #1c658cb5;
+    display: flex;
+}
+
+.topbar__logo{
+    flex: 2;
+    height: 100%;
+    display: flex;
+    border-right: 1px solid #1c658cb5;
+
+}
+
+.topbar__searchBar{
+    flex: 7;    
+    height: 100%;
+    display: flex;
+    margin: auto 0;
+    border-right: 1px solid #1c658cb5;
+    background-color: #1c658c07;
+}
+
+.topbar__basket{
+    flex: 2;
+}
+
+.topbar__profile{
+    flex: 1;
+}
+
+
+.logo{
+    width: 10vw;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    margin: auto;
+}
+

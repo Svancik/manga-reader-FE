@@ -6,9 +6,8 @@ export default function Navbar() {
   return (
     <div className="navbarWrapper">
       <div className="left">
-        <Link to="/" className="link">
-          <span className="navbarMainLinks mainLink">MANGA READER</span>
-        </Link>
+        <img src={require("../../media/design/logo.png")} className="logo" />
+
         <Link to="/login" className="link">
           <span className="navbarMainLinks">Login</span>
         </Link>
