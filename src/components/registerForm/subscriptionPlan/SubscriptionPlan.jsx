@@ -1,10 +1,15 @@
 import "./subscriptionPlan.css";
 import React, { Component } from "react";
+import { useState } from "react";
 
-export default function SubscriptionPlan({ plan1 }) {
+export default function SubscriptionPlan({ setSelect }) {
+  const [basic, setBasic] = useState(false);
+  const [premium, setPremium] = useState(false);
+  const [standard, setStandard] = useState(false);
+
   return (
     <div className="subscriptionWrapper">
-      <section className="container block block-plans subWrapper">
+      <section className="container block block-plans">
         <h1 className="registerFormTitle">Subscription Plan</h1>
         <div className="grid grid--1x3">
           <div className="plan">
@@ -37,11 +42,20 @@ export default function SubscriptionPlan({ plan1 }) {
                     <li className="list__item">Free monthly paperback manga</li>
                   </s>
                 </ul>
-                {
-                  <button className="button button--block button--outline">
-                    select
-                  </button>
-                }
+
+                <button
+                  className={
+                    basic ? " button-selected" : "button  button--outline"
+                  }
+                  onClick={() => {
+                    setSelect(true);
+                    setStandard(false);
+                    setBasic(true);
+                    setPremium(false);
+                  }}
+                >
+                  order
+                </button>
               </div>
             </div>
           </div>
@@ -67,8 +81,18 @@ export default function SubscriptionPlan({ plan1 }) {
                   <li className="list__item">Ad-free manga</li>
                   <li className="list__item">Free monthly paperback manga</li>
                 </ul>
-                <button className="button button--block button--outline">
-                  select
+                <button
+                  className={
+                    premium ? " button-selected" : "button  button--outline"
+                  }
+                  onClick={() => {
+                    setSelect(true);
+                    setStandard(false);
+                    setBasic(false);
+                    setPremium(true);
+                  }}
+                >
+                  order
                 </button>
               </div>
             </div>
@@ -99,8 +123,18 @@ export default function SubscriptionPlan({ plan1 }) {
                     <li className="list__item">Free monthly paperback manga</li>
                   </s>
                 </ul>
-                <button className="button button--block button--outline">
-                  select
+                <button
+                  className={
+                    standard ? " button-selected" : "button  button--outline"
+                  }
+                  onClick={() => {
+                    setSelect(true);
+                    setStandard(true);
+                    setBasic(false);
+                    setPremium(false);
+                  }}
+                >
+                  order
                 </button>
               </div>
             </div>

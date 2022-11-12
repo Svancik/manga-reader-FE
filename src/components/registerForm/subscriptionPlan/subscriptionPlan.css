@@ -5,7 +5,36 @@
 /* Níže jsme provedli import pro zvýšení performance stránky aby se nemuseli načítat separátně 2 css soubory (nenačítají se v index) */
 
 .subscriptionWrapper{
-    height: 90vh;
+    height: 75vh;   
+}
+.button-selected{
+  background-color: goldenrod;
+  align-items: center;
+  border-radius: 40px;
+  border: 0;
+  cursor: pointer;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  justify-content: center;
+  margin: 1rem 0;
+  outline: 0;
+  /* Níže jsme nepoužili jednotky rem pro padding tlačítka, protože při zobrazení na malém mobilním
+  displeji docházelo k tomu že tlačítko mělo příliš velký padding. Pomocí užití 4vw říkáme že padding
+  tlačítka by měl být 4% jednotky vizuální plochy - viewport */
+  padding: 1rem 4vw;
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color, color, 0.35s;
+  white-space: nowrap;
+}
+
+.checkBox{
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+
+  background-color: red;
 }
 
 :root {
@@ -17,6 +46,16 @@
   --color-body-darker: #5c5577;
   --color-border: #ccc;
   --border-radius: 30px;
+}
+
+input[type=checkbox] {
+  vertical-align: middle;
+  position: relative;
+  bottom: -10px;
+}
+
+label {
+  display: block;
 }
 
 *,
@@ -220,7 +259,7 @@ a {
   /* Níže jsme nepoužili jednotky rem pro padding tlačítka, protože při zobrazení na malém mobilním
   displeji docházelo k tomu že tlačítko mělo příliš velký padding. Pomocí užití 4vw říkáme že padding
   tlačítka by měl být 4% jednotky vizuální plochy - viewport */
-  padding: 2rem 4vw;
+  padding: 1.25rem 4vw;
   text-align: center;
   text-transform: uppercase;
   transition: background-color, color, 0.35s;
@@ -665,13 +704,13 @@ a {
 /* Blocks */
 
 .container {
-  
  
   max-width: 1380px;
-  padding: 40px 40px;
-  height: 90vh;
+  padding: 20px 20px;
+
+  
   /* Margin ze shora - vertikálně je 0 a horizontálně je automaticky (automaticky se vyrovná dle dostupného místa)*/
-  margin: 100px auto;
+  margin: 0px auto;
 }
 
 .block {

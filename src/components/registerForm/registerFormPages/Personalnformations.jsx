@@ -1,7 +1,7 @@
 import "../../registerForm/registerForm.css";
 import React, { Component } from "react";
 
-export default function registerFormPage2() {
+export default function Personalnformations({ page, setPage }) {
   return (
     <form>
       <h1 className="registerFormTitle">Personal Informations</h1>
@@ -13,7 +13,7 @@ export default function registerFormPage2() {
           <input
             type="text"
             class="form-control"
-            id="inputEmail4"
+            id="inputName4"
             placeholder="Robert"
           />
         </div>
@@ -66,7 +66,22 @@ export default function registerFormPage2() {
           <input type="text" class="form-control" id="inputZip" />
         </div>
       </div>
-      <button type="submit">Next</button>
+      <div className="formButtons">
+        <button
+          type="submit"
+          className="registerFormNext button--back"
+          onClick={() => setPage(page - 1)}
+        >
+          Back
+        </button>
+        <button
+          type="submit"
+          className="registerFormNext"
+          onClick={() => setPage(page + 1)}
+        >
+          Next
+        </button>
+      </div>
     </form>
   );
 }

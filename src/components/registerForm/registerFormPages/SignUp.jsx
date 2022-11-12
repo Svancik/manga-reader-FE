@@ -1,7 +1,7 @@
 import "../../registerForm/registerForm.css";
 import React, { Component } from "react";
 
-export default function registerFormPage1() {
+export default function registerFormPage1({ page, setPage }) {
   return (
     <form action="">
       {" "}
@@ -17,7 +17,14 @@ export default function registerFormPage1() {
         placeholder="Repeat Password"
         className="form-control"
       />
-      <button className="registerFormNext">Next</button>
+      <button
+        className="registerFormNext"
+        onClick={() => {
+          setPage(page + 1);
+        }}
+      >
+        Next
+      </button>
     </form>
   );
 }

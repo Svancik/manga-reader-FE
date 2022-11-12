@@ -11,6 +11,10 @@
     width: 80vw;
 }
 
+.formField{
+    padding-bottom: 10px;
+}
+
 form{
     display: flex;
     flex-direction: column;
@@ -32,8 +36,15 @@ label{
     float: left;
 }
 
+.link{
+    color: white;
+}
+
+
 .registerFormNext{
     height: 50px;
+    margin: 0 0.11vw;
+    width: 100%;
     border-radius: 5px;
     background-color: #1C658C;
     color: white;
@@ -41,8 +52,29 @@ label{
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
-    transition: color, background-color 1.5s;
-    
+    transition: color, background-color 1.5s; 
+}
+
+.button--back{
+    background-color: #1c658cb5;
+}
+
+.button--notSelected{
+    background-color: gray;
+    color: beige;
+}
+.subFormButtons{
+    width: 50%;
+    margin: auto;
+    display: flex;
+}
+
+.button--finish{
+    background-color: goldenrod;
+}
+
+.formButtons{
+    display: flex;
 }
 
 button:hover{

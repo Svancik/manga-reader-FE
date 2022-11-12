@@ -11,8 +11,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />          
-          <Route exact path="/register/step1" element ={<Register/>}/>
-          <Route exact path="/register/:step" element ={<Register/>}/>
+          <Route exact path="/register/" element ={<Register/>}/>
+         
         </Routes>
       </BrowserRouter>
     </div>
