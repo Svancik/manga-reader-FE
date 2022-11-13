@@ -1,0 +1,16 @@
+.sideMenu__wrapper{
+width: 100%;
+margin: 0;
+padding: 0;
+text-align: left;
+justify-items: left;
+}
+
+.sideMenu__list{
+    height: 88vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0;
+    padding: 0 0;
+}

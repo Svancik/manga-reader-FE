@@ -1,0 +1,26 @@
+.hero{
+    display: flex;
+}
+.body{
+    background-color: wheat;
+}
+.homeWrapper{
+    width: 70vw;
+    margin: auto;
+    background-color: white;
+}
+
+.sideMenu{   
+    flex: 2; 
+    height: 88vh;
+    border-right: 1px solid black;
+}
+
+.library{
+    flex: 10;
+    height: 88vh;   
+}
+
+.horizontalCarousel{
+
+}

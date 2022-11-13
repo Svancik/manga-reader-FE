@@ -1,8 +1,16 @@
 .topbarWrapper{
-    width: 100vw;
+    
     height: 12vh;
     border: 1px solid #1c658cb5;
     display: flex;
+}
+
+.topElement{
+    height: 100%;
+    display: flex;
+    margin: auto 0;
+    border-right: 1px solid #1c658cb5;
+  
 }
 
 .topbar__logo{
@@ -10,24 +18,27 @@
     height: 100%;
     display: flex;
     border-right: 1px solid #1c658cb5;
-
+    background-color: #1c658c07;
 }
 
 .topbar__searchBar{
     flex: 7;    
-    height: 100%;
-    display: flex;
-    margin: auto 0;
-    border-right: 1px solid #1c658cb5;
-    background-color: #1c658c07;
+    background-color: #1c658c10;
 }
 
 .topbar__basket{
-    flex: 2;
+    flex: 1;
+    background-color: #1c658c20;
+}
+
+.topbar__contact{
+    flex: 1;
+    background-color: #1c658c4d;
 }
 
 .topbar__profile{
     flex: 1;
+    background-color: #1c658c73;
 }
 
 

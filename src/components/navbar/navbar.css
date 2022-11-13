@@ -14,14 +14,17 @@ background: linear-gradient(122deg, rgba(28,101,140,1) 7%, rgba(239,244,247,1) 1
 }
 
 .logo{
-    width: 7.5vw;
+    width: 6.5vw;
+    height: 5vh;
     margin: auto 120px;
+  
 }
 
 .navbarMainLinks{
     color: white;
     text-decoration: none;
-    padding-right: 50px;
+    padding: 0 50px;
+
 }
 
 .link:hover, .navbarMainLinks:hover{
