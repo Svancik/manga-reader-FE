@@ -23,6 +23,8 @@
 .sideMenu__item:hover{
     padding: 0 1.5vw;
     background-color: #1f7db0;
+    color: wheat;
+    font-weight: 500;
     cursor: pointer;
    
 }

@@ -1,8 +1,16 @@
+body{
+    overflow:scroll;
+   height: 100%;
+}
+
+
 .hero{
     display: flex;
+    background-color: rgba(245, 222, 179, 0.674);
 }
 .body{
-    background-color: wheat;
+    background-color: rgba(245, 222, 179, 0.674);
+ 
 }
 .homeWrapper{
     width: 70vw;
@@ -16,11 +24,17 @@
     border-right: 1px solid black;
 }
 
-.library{
+.contentWrapper{
     flex: 10;
-    height: 88vh;   
+   
+    background-color: white;
+    
 }
 
 .horizontalCarousel{
-
+    height: 35vh;
+    flex:10;
+    background-color: rgb(151, 111, 36);  
+    object-fit: fill;
 }
+

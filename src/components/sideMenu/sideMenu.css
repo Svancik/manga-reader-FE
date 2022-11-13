@@ -4,6 +4,7 @@ margin: 0;
 padding: 0;
 text-align: left;
 justify-items: left;
+background-color: wheat;
 }
 
 .sideMenu__list{
@@ -13,4 +14,5 @@ justify-items: left;
     flex-direction: column;
     margin: 0 0;
     padding: 0 0;
+    
 }
