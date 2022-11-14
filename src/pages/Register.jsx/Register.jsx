@@ -1,6 +1,6 @@
 import Navbar from "../../components/navbar/Navbar";
 import RegisterForm from "../../components/registerForm/RegisterForm";
-import Carousel from "./../../components/carousel/Carousel";
+import VerticalCarousel from "./../../components/verticalCarousel/VerticalCarousel";
 import "./register.css";
 import React, { Component } from "react";
 import RegisterFormPage1 from "../../components/registerForm/registerFormPages/SignUp";
@@ -13,7 +13,7 @@ export default function Register() {
       <Navbar />
       <div className="registerWrapper">
         <div className="register--left">
-          <Carousel />
+          <VerticalCarousel />
         </div>
         <div className="register--right">
           <div className="registerFormWrapper">

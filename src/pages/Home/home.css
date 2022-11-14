@@ -3,15 +3,16 @@ body{
    height: 100%;
 }
 
-
 .hero{
     display: flex;
-    background-color: rgba(245, 222, 179, 0.674);
+    background-color: black;
 }
+
 .body{
-    background-color: rgba(245, 222, 179, 0.674);
+    background-color: black;
  
 }
+
 .homeWrapper{
     width: 70vw;
     margin: auto;
@@ -25,10 +26,8 @@ body{
 }
 
 .contentWrapper{
-    flex: 10;
-   
+    flex: 10;   
     background-color: white;
-    
 }
 
 .horizontalCarousel{

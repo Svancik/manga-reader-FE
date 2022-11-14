@@ -1,0 +1,14 @@
+.heroSlider{
+    margin: 0;
+    padding: 0;
+  
+    margin-top: -20px;
+}
+
+.heroSlider__menu{
+    background-color: black;
+}
+
+.heroSlider:hover{
+    text-decoration: none;
+}
