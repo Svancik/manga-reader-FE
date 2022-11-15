@@ -13,6 +13,49 @@ const countyClare = "https://i.imgur.com/idjXzVQ.jpg";
 const craterRock = "https://i.imgur.com/8DYumaY.jpg";
 const giauPass = "https://i.imgur.com/8IuucQZ.jpg";
 
+const slides = [
+  {
+    label: "Berserk",
+    url:
+      "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/berserk-overlay.webp?alt=media&token=924179a4-6b53-44bc-8fc1-51d113cf3dc1",
+  },
+  {
+    label: "Goodnight Punpun",
+    url:
+      "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/goodnight%20punpun.png?alt=media&token=c54b6c8f-d566-499c-b3ed-d4e3b1adb532",
+  },
+  // {
+  //   label: "Akira",
+  //   url:
+  //     "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/akira-overlay.png?alt=media&token=3871938b-5010-4363-a760-a34ad2007c91",
+  // },
+  {
+    label: "One Punch Man",
+    url:
+      "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/onepunch-overlay.png?alt=media&token=dc36e98b-643a-48c4-8443-ef453bf9a6e3",
+  },
+  // {
+  //   label: "Attack on Titan",
+  //   url:
+  //     "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/aot-overlay.webp?alt=media&token=36a511fa-9414-49d4-900c-fc8653c02788",
+  // },
+  {
+    label: "Neon Genesis Evangelion",
+    url:
+      "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/neongenesis-overlay.webp?alt=media&token=5d7e4001-1894-4431-9b19-9fb499ef9ee2",
+  },
+  {
+    label: "Vagabond",
+    url:
+      "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/vagabond-overlay.webp?alt=media&token=3408e6a2-d668-4183-b8e4-1503cd390626",
+  },
+  {
+    label: "Chainsaw Man",
+    url:
+      "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/chainsawmanpng-overlay.webp?alt=media&token=49f5c123-5c08-469e-be18-fafeb91a416e",
+  },
+];
+
 export default function AutoSlider() {
   return (
     <HeroSlider
@@ -20,9 +63,10 @@ export default function AutoSlider() {
       height={"40vh"}
       autoplay
       controller={{
-        initialSlide: 1,
-        slidingDuration: 500,
-        slidingDelay: 100,
+        initialSlide: 2,
+        slidingDuration: 300,
+        autoplayDuration: 500,
+        slidingDelay: 10,
         onSliding: (nextSlide) =>
           console.debug("onSliding(nextSlide): ", nextSlide),
         onBeforeSliding: (previousSlide, nextSlide) =>
@@ -35,82 +79,17 @@ export default function AutoSlider() {
           console.debug("onAfterSliding(nextSlide): ", nextSlide),
       }}
     >
-      {/* <Overlay>
-        <Wrapper>
-          <Title>Berserk</Title>
-          <Subtitle>
-            Check out the documentation for more advanced examples.
-          </Subtitle>
-        </Wrapper>
-      </Overlay> */}
-      <Slide
-        shouldRenderMask
-        label="Berserk"
-        background={{
-          backgroundImageSrc:
-            "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/berserk-overlay.png?alt=media&token=7052d354-7193-42a1-8e2a-576e47504005",
-        }}
-      />
-      <Slide
-        shouldRenderMask
-        label="Vagabond"
-        background={{
-          backgroundImageSrc:
-            "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/vagabond.png?alt=media&token=37d2104b-077f-46cd-8a39-7b164a3208bf",
-        }}
-      />
-
-      <Slide
-        shouldRenderMask
-        label="Oyasumi PunPun"
-        background={{
-          backgroundImageSrc:
-            "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/punpun.png?alt=media&token=5e4d4c7f-13d7-4eb9-8622-890ee03e1e16",
-        }}
-      />
-
-      <Slide
-        shouldRenderMask
-        label="Chainsaw Man"
-        background={{
-          backgroundImageSrc:
-            "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/chainsawman.png?alt=media&token=7255d57d-0f51-4df6-af78-26212b7072a5",
-        }}
-      />
-      <Slide
-        shouldRenderMask
-        label="Berserk"
-        background={{
-          backgroundImageSrc:
-            "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/berserk.png?alt=media&token=446e8cd3-4be8-4a8a-b5f3-137f330a33c6",
-        }}
-      />
-      <Slide
-        shouldRenderMask
-        label="Vagabond"
-        background={{
-          backgroundImageSrc:
-            "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/vagabond.png?alt=media&token=37d2104b-077f-46cd-8a39-7b164a3208bf",
-        }}
-      />
-
-      <Slide
-        shouldRenderMask
-        label="Oyasumi PunPun"
-        background={{
-          backgroundImageSrc:
-            "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/punpun.png?alt=media&token=5e4d4c7f-13d7-4eb9-8622-890ee03e1e16",
-        }}
-      />
-
-      <Slide
-        shouldRenderMask
-        label="Chainsaw Man"
-        background={{
-          backgroundImageSrc:
-            "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/chainsawman.png?alt=media&token=7255d57d-0f51-4df6-af78-26212b7072a5",
-        }}
-      />
+      {slides.map((slide) => (
+        <div className="heroSlider__slide">
+          <Slide
+            shouldRenderMask
+            label={slide.label}
+            background={{
+              backgroundImageSrc: slide.url,
+            }}
+          />
+        </div>
+      ))}
 
       <Nav className="heroSlider__menu" />
     </HeroSlider>
