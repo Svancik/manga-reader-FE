@@ -1,18 +1,100 @@
-.sideMenu__wrapper{
+/* .sideMenu__wrapper{
 width: 100%;
 margin: 0;
 padding: 0;
 text-align: left;
 justify-items: left;
-background-color: wheat;
+color: black;
+} */
+
+.sideMenuWrapper{ 
+    width: 100%;
+    display: flex; 
+    height: max-content;
+    flex-direction: column;  
+background-color: white;
 }
 
-.sideMenu__list{
-    height: 88vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin: 0 0;
-    padding: 0 0;
+.genresFilter{
+    float: left;
+    width: 100%; 
+}
+
+.genresFilter .inputItem{
+    margin-left:90px;   
+    margin-top: -42px;
+}
+
+.genresFilter label {
+    float: left;
+    text-align: left;
+    margin:20px 10px;
+    color: #1c658cb5;
+    font-weight: 500;
+    font-size: 15pt;
+
+}
+.genresFilter input {
+    float: left;
+    width: auto;  
+    border:solid 1px;
+}
+
+.genresFilter h2{
+    margin-top: 0px;
+    margin-bottom: 30px;    
+}
+
+.filterItem{
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
     
+}
+
+.filterItem h2{
+    font-size: 20pt;
+    color: black;
+    margin-top: 15px;
+}
+
+.filterItem label:hover{
+    color: goldenrod;
+    cursor: pointer;
+}
+
+.filterItem button{
+    border: none;
+    padding: 10px 15px;
+    background-color: goldenrod;
+    color:white;
+    font-size: 12pt;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+
+.sortFilter{
+    width: 75%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.sortFilter label{
+    margin:10px 10px;    
+}
+
+.sortFilter input{
+    float: right;
+    margin-right: 10px;
+    width: auto;
+}
+
+.sortFilter .inputItem{
+    margin-bottom: -30px;
+}
+
+
+.sortFilter .inputItem{
+
 }

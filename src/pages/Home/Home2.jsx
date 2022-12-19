@@ -3,18 +3,13 @@ import SideMenu from "../../components/sideMenu/SideMenu";
 import AutoSlider from "../../components/autoSlider/AutoSlider";
 import Topbar from "./../../components/topbar/Topbar";
 import "./home.css";
-
-//TODO: Buttony se chovají zvláštně po kliknutí (i ve slideru)
-
-export default function Home() {
+export default function Home2() {
   return (
     <div className="body">
       <div className="homeWrapper">
         <Topbar />
         <div className="hero">
-          <div className="sideMenu">
-            <SideMenu />
-          </div>
+          <div className="sideMenu"></div>
           <div className="contentWrapper">
             <div className="slider">
               <AutoSlider />

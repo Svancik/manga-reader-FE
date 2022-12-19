@@ -5,24 +5,26 @@ body{
 
 .hero{
     display: flex;
-    background-color: rgba(245, 222, 179, 0.674);
 }
 
 .body{
-    background-color: rgba(245, 222, 179, 0.674);
  
 }
 
 .homeWrapper{
-    width: 70vw;
+    width: 100vw;
     margin: auto;
     background-color: white;
 }
 
 .sideMenu{   
     flex: 2; 
-    height: 88vh;
+    height: max-content;
     border-right: 1px solid black;
+    position: sticky;
+    top: 0px;
+
+
 }
 
 .contentWrapper{
@@ -31,10 +33,15 @@ body{
 }
 
 .horizontalCarousel{
-    height: 35vh;
+    height: 65vh;
     flex:10;
     background-color: rgb(151, 111, 36);  
     object-fit: fill;
 }
 
+
+
+.slider{
+    height: 65vh;
+}
 

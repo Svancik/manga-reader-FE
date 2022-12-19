@@ -18,27 +18,23 @@
     height: 100%;
     display: flex;
     border-right: 1px solid #1c658cb5;
-    background-color: #1c658c07;
 }
 
 .topbar__searchBar{
     flex: 7;    
-    background-color: #1c658c10;
 }
 
 .topbar__basket{
     flex: 1;
-    background-color: #1c658c20;
 }
 
 .topbar__contact{
     flex: 1;
-    background-color: #1c658c4d;
 }
 
 .topbar__profile{
     flex: 1;
-    background-color: #1c658c73;
+   
 }
 
 

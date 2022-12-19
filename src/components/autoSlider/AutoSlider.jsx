@@ -60,10 +60,10 @@ export default function AutoSlider() {
   return (
     <HeroSlider
       className="heroSlider"
-      height={"40vh"}
+      height={"45vh"}
       autoplay
       controller={{
-        initialSlide: 2,
+        initialSlide: 1,
         slidingDuration: 300,
         autoplayDuration: 500,
         slidingDelay: 10,
