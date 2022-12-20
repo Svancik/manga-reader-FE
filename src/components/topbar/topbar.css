@@ -37,7 +37,6 @@
    
 }
 
-
 .logo{
     width: 10vw;
     justify-content: center;
@@ -45,4 +44,17 @@
     align-items: center;
     margin: auto;
 }
+
+.topElement{
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    color:rgb(187, 142, 28);
+    cursor: pointer;
+}
+
+.topElement:hover{
+    color: #1c658cb5;
+}
+
 

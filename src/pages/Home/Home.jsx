@@ -9,17 +9,18 @@ import "./home.css";
 export default function Home() {
   return (
     <div className="body">
-      <div className="homeWrapper">
-        <Topbar />
-        <div className="hero">
-          <div className="sideMenu">
-            <SideMenu />
-          </div>
-          <div className="contentWrapper">
-            <div className="slider">
-              <AutoSlider />
+      <div className="skewed-left">
+        <div className="homeWrapper">
+          <Topbar />
+          <div className="hero">
+            <div className="sideMenu">
+              <SideMenu />
             </div>
-
+            <div className="contentWrapper">
+              <div className="slider">
+                <AutoSlider />
+              </div>
+            </div>
             <div className="library"></div>
           </div>
         </div>
