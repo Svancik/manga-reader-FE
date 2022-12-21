@@ -51,10 +51,14 @@
     align-items: center;
     color:rgb(187, 142, 28);
     cursor: pointer;
+    transition: all 0.5s ease-out;
+    margin-top: 0px;
+
 }
 
 .topElement:hover{
     color: #1c658cb5;
+    margin-top: -5px;
 }
 
 

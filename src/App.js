@@ -4,7 +4,7 @@ import Login from './pages/Login/Login';
 import Register from './pages/Register.jsx/Register';
 import Home from './pages/Home/Home';
 import './App.css';
-import Home2 from "./pages/Home/Home2";
+
 
 /*TODO:
 

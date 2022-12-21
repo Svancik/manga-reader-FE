@@ -1,21 +1,21 @@
-body{
-    overflow:scroll;
-   height: 100%;
-}
 
 .hero{
     display: flex;
+    height: max-content;
+    
 }
 
-.body{
+
+
+.homeWrapper{    
+    width: 88vw;
+    margin: auto;   
  
 }
 
-.homeWrapper{
-    
-    width: 88vw;
-    margin: auto;
-   
+.library{
+
+    height: max-content;
 }
 
 .sideMenu{   
@@ -24,17 +24,17 @@ body{
     border-right: 1px solid black;
     position: sticky;
     top: 0px;
-
-
 }
 
 .contentWrapper{
     flex: 10;   
     background-color: white;
+    height: max-content;
+   
 }
 
 .horizontalCarousel{
-    height: 65vh;
+   
     flex:10;
     background-color: rgb(151, 111, 36);  
     object-fit: fill;
@@ -43,6 +43,6 @@ body{
 
 
 .slider{
-    height: 65vh;
+
 }
 
