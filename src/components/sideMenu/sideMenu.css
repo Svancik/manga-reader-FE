@@ -12,7 +12,8 @@ color: black;
     display: flex; 
     height: max-content;
     flex-direction: column;  
-background-color: white;
+
+
 }
 
 .genresFilter{

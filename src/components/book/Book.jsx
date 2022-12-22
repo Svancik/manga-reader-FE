@@ -27,6 +27,13 @@ export const Book = ({ manga }) => {
             <span className="author">{author}</span>
           ))}
         </div>
+        <div className="categories">
+          {manga.categories.map((category) => (
+            <Link>
+              <span className="category">{category}</span>
+            </Link>
+          ))}
+        </div>
         <div className="rating">
           <ReactStars
             count={5}
@@ -37,7 +44,7 @@ export const Book = ({ manga }) => {
             activeColor="#ffd700"
           />
         </div>
-        <button className="readOnline">VIEW MANGA</button>
+        <button className="readOnline">BUY MANGA</button>
       </div>
     </div>
   );

@@ -19,10 +19,15 @@ const slides = [
     url:
       "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/berserk-overlay.webp?alt=media&token=924179a4-6b53-44bc-8fc1-51d113cf3dc1",
   },
+  // {
+  //   label: "Goodnight Punpun",
+  //   url:
+  //     "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/goodnight%20punpun.png?alt=media&token=c54b6c8f-d566-499c-b3ed-d4e3b1adb532",
+  // },
   {
     label: "Goodnight Punpun",
     url:
-      "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/goodnight%20punpun.png?alt=media&token=c54b6c8f-d566-499c-b3ed-d4e3b1adb532",
+      "https://dthezntil550i.cloudfront.net/56/latest/562211210010423950024013769/da98a649-990c-4d65-ac28-7f2a48f9c3be.png",
   },
   // {
   //   label: "Akira",
@@ -60,7 +65,7 @@ export default function AutoSlider() {
   return (
     <HeroSlider
       className="heroSlider"
-      height={"45vh"}
+      height={"33vh"}
       autoplay
       controller={{
         initialSlide: 1,
