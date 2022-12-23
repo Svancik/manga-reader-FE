@@ -3,16 +3,38 @@ import { Link } from "react-router-dom";
 import "./book.css";
 import ReactStars from "react-rating-stars-component";
 import MenuBookTwoToneIcon from "@mui/icons-material/MenuBookTwoTone";
+import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 
 export const Book = ({ manga }) => {
   return (
     <div className="bookWrapper">
       <div className="coverImg">
         <img src={manga.imgCover} alt="" />
-        <div className="paperBackPriceBadge">
+        {manga.discount && (
+          <div className="discountBadge">
+            <LocalOfferIcon sx={{ width: "100%", height: "100%" }} />
+          </div>
+        )}
+        {manga.isNew && (
+          <div
+            className={manga.isBestseller ? "newBadge badge-up" : "newBadge"}
+          >
+            <div className="pointer">
+              <span>new</span>
+            </div>
+          </div>
+        )}
+        {manga.isBestseller && (
+          <div className="bestsellerBadge">
+            <div className="pointer">
+              <span>bestseller</span>
+            </div>
+          </div>
+        )}
+        <div className="priceBadge">
           <span>
             <MenuBookTwoToneIcon
-              sx={{ width: "25%", height: "25%", margin: "-5px 0px 0px 0px" }}
+              sx={{ width: "25%", height: "100%", margin: "-5px 0px 0px 0px" }}
             />
           </span>
           <span>{manga.price} Kč</span>

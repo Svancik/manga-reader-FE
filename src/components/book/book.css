@@ -1,14 +1,20 @@
 .bookWrapper{
   
-    width: 220px;
+    width: 230px;
     padding: 15px;
+    margin-top: 10px;
+  
     display: flex;
     flex-direction: column;
     gap: 10px;
+    position: relative;
 }
 
 .coverImg{
     position: relative;
+    margin-top: 30px;
+    z-index: 1;
+    
 }
 
 .coverImg img{
@@ -31,13 +37,14 @@
     display:inline-block;
 }
 
-.paperBackPriceBadge{
+.priceBadge{
     background-color: #1c658c;    
     position: absolute;
     color: white;
     bottom: 10px;
     right: -20px;
     width: 80%;
+    height: 35px;
     z-index: 999;
     padding: 5px 15px;
     justify-content: center;
@@ -45,7 +52,96 @@
     font-size: 14pt;
 }
 
-.paperBackPriceBadge span {
+.bestsellerBadge{
+    position: absolute; 
+    width: 160px;
+    color: white;
+    bottom: 45px;
+    right: -20px;
+    z-index: 999;
+    padding: 1px 15px;
+    justify-content: center;   
+    font-size: 14pt;
+}
+
+.newBadge{
+    position: absolute; 
+    width: 100px;
+    color: white;
+    bottom: 45px;
+    right: -20px;
+    z-index: 999;
+    padding: 1px 15px;
+    justify-content: center;   
+    font-size: 14pt;
+}
+
+.badge-up{
+    bottom: 77.5px;
+}
+
+.newBadge .pointer{
+    background-color: green;
+}
+
+.discountBadge{
+    position: absolute;
+    color: black;
+    z-index: 999;
+    width: 60px;
+    top: 0;
+    right: -5px;
+}
+
+
+.pointer {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+    font-size: 12pt;
+    text-align: left;
+    padding-left: 10px;
+  }
+  .pointer:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-right: 15px solid white;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+  }
+  .pointer:before {
+    content: "";
+    position: absolute;
+    right: -15px;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-left: 15px solid red;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+  }
+
+  .bestsellerBadge .pointer{
+background-color: #900C3F;
+  }
+
+  .pointer span{
+    height: auto;
+    justify-content: center;
+    
+    vertical-align: middle;
+  }
+    
+.priceBadge span {
     margin-right: 10px;
     
 }
