@@ -9,10 +9,12 @@ export const Book = ({ manga }) => {
   return (
     <div className="bookWrapper">
       <div className="coverImg">
-        <img src={manga.imgCover} alt="" />
+        <img src={manga.imgCover} className="mangaCover" alt="" />
         {manga.discount && (
           <div className="discountBadge">
             <LocalOfferIcon sx={{ width: "100%", height: "100%" }} />
+            <span className="discountValue">{manga.discount}</span>
+            <span className="oldPriceValue">{manga.price}</span>
           </div>
         )}
         {manga.isNew && (
@@ -37,7 +39,11 @@ export const Book = ({ manga }) => {
               sx={{ width: "25%", height: "100%", margin: "-5px 0px 0px 0px" }}
             />
           </span>
-          <span>{manga.price} Kč</span>
+          <span className="price">
+            {manga.discount
+              ? Math.round(manga.price - (manga.discount / 100) * manga.price)
+              : manga.price}
+          </span>
         </div>
       </div>
       <div className="bookInfo">
@@ -64,7 +70,7 @@ export const Book = ({ manga }) => {
             size={24}
             edit={false}
             activeColor="#ffd700"
-          />
+          /> 
         </div>
         <button className="readOnline">BUY MANGA</button>
       </div>

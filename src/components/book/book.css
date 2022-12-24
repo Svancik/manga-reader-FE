@@ -34,6 +34,7 @@
    margin-top: 5px;
     text-align: left;
     font-size: 16px;
+    font-weight: 600;
     display:inline-block;
 }
 
@@ -43,13 +44,18 @@
     color: white;
     bottom: 10px;
     right: -20px;
-    width: 80%;
+    width: 160px;
     height: 35px;
     z-index: 999;
     padding: 5px 15px;
     justify-content: center;
-    vertical-align: center;
+    vertical-align: middle;    
     font-size: 14pt;
+    font-weight: 500;
+}
+
+.price::after{
+    content: " Kč";
 }
 
 .bestsellerBadge{
@@ -62,6 +68,7 @@
     padding: 1px 15px;
     justify-content: center;   
     font-size: 14pt;
+    font-weight: 400;
 }
 
 .newBadge{
@@ -86,13 +93,47 @@
 
 .discountBadge{
     position: absolute;
-    color: black;
-    z-index: 999;
-    width: 60px;
+    color: goldenrod;
+    z-index: 99;
+    width: 80px;
     top: 0;
     right: -5px;
+    outline: yellow;
 }
 
+.discountValue{
+    position: absolute;
+    width: auto;
+    top: 18px;
+    right: 20px;
+    color: black;
+    font-weight: 1000;
+    font-size: 13pt;
+}
+
+.oldPriceValue{
+    font-size: 13px;
+    color: black;
+    font-weight: 700;
+    text-decoration: line-through;
+    position: absolute;
+    top:36px;
+    right: 14px;
+    z-index: 999;
+}
+
+.oldPriceValue::after{
+    content: " Kč";
+}
+
+
+.discountValue::before{
+    content: "-";
+}
+
+.discountValue::after{
+    content: "%";
+}
 
 .pointer {
     width: 100%;
@@ -143,7 +184,7 @@ background-color: #900C3F;
     
 .priceBadge span {
     margin-right: 10px;
-    
+    margin-bottom: 5px;    
 }
 
 .author + .author::before {
@@ -180,8 +221,12 @@ background-color: #900C3F;
 
 .rating{
     margin: auto;    
-    width: max-content;    
+    width: max-content;  
+    height: max-content;  
+    display: flex;
 }
+
+
 
 .readOnline{
     border: 1px solid blue;
