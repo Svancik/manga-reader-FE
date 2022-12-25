@@ -4,6 +4,7 @@ import Login from './pages/Login/Login';
 import Register from './pages/Register.jsx/Register';
 import Home from './pages/Home/Home';
 import './App.css';
+import Product from "./pages/Product/Product";
 
 
 /*TODO:
@@ -28,7 +29,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={<Login />} />          
-          <Route exact path="/register/" element ={<Register/>}/>
+          <Route path="/register/" element ={<Register/>}/>
+          <Route path="/product/:id" element ={<Product/>}/>          
           <Route exact path="/" element = {<Home/>}/>
         </Routes>
       </BrowserRouter>

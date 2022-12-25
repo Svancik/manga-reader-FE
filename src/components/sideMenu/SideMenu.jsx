@@ -2,7 +2,6 @@ import React from "react";
 import { useState } from "react";
 import "./sideMenu.css";
 import { Genres } from "../../dummyData";
-import SideMenuItem from "../sideMenuItem/SideMenuItem";
 
 export default function SideMenu() {
   const [cleanedGenreFilters, setCleanGenreFilters] = useState(false);

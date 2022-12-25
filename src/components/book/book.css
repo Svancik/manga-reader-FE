@@ -235,3 +235,7 @@ background-color: #900C3F;
     color: white;
     font-weight: 500;
 }
+
+.coverImg:hover{
+    cursor: pointer;
+}
