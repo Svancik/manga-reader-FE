@@ -7,11 +7,15 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import ContactMailOutlinedIcon from "@mui/icons-material/ContactMailOutlined";
 import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
 import Person2OutlinedIcon from "@mui/icons-material/Person2Outlined";
+import { Link } from "react-router-dom";
+
 export default function Topbar() {
   return (
     <div className="topbarWrapper">
       <div className="topbar__logo topElement">
-        <img src={require("../../media/design/logo.png")} className="logo" />
+        <Link to="/">
+          <img src={require("../../media/design/logo.png")} className="logo" />
+        </Link>
       </div>
 
       <div className="topbar__searchBar topElement">

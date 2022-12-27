@@ -58,7 +58,7 @@
     content: " Kč";
 }
 
-.bestsellerBadge{
+.coverImg .bestsellerBadge{
     position: absolute; 
     width: 160px;
     color: white;
@@ -71,7 +71,7 @@
     font-weight: 400;
 }
 
-.newBadge{
+.coverImg .newBadge{
     position: absolute; 
     width: 100px;
     color: white;
@@ -91,7 +91,7 @@
     background-color: green;
 }
 
-.discountBadge{
+.coverImg .discountBadge{
     position: absolute;
     color: goldenrod;
     z-index: 99;

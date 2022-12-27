@@ -70,9 +70,11 @@ export const Book = ({ manga }) => {
             size={24}
             edit={false}
             activeColor="#ffd700"
-          /> 
+          />
         </div>
-        <button className="readOnline">BUY MANGA</button>
+        <Link to={`/product/${manga.id}`}>
+          <button className="readOnline">BUY MANGA</button>
+        </Link>
       </div>
     </div>
   );
