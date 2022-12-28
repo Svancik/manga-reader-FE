@@ -5,11 +5,16 @@ import ReactStars from "react-rating-stars-component";
 import MenuBookTwoToneIcon from "@mui/icons-material/MenuBookTwoTone";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 
-export const Book = ({ manga }) => {
+
+export const Book = ({ manga, fromSeries }) => {
+
+
   return (
     <div className="bookWrapper">
       <div className="coverImg">
-        <img src={manga.imgCover} className="mangaCover" alt="" />
+        <Link to={`/product/${manga.id}`}>
+          <img src={manga.imgCover} className="mangaCover" alt="" />
+        </Link>
         {manga.discount && (
           <div className="discountBadge">
             <LocalOfferIcon sx={{ width: "100%", height: "100%" }} />
@@ -47,7 +52,7 @@ export const Book = ({ manga }) => {
         </div>
       </div>
       <div className="bookInfo">
-        <Link>
+        <Link to={`/product/${manga.id}`}>
           <span className="title">{manga.title}</span>
         </Link>
         <div className="authors">
@@ -72,9 +77,7 @@ export const Book = ({ manga }) => {
             activeColor="#ffd700"
           />
         </div>
-        <Link to={`/product/${manga.id}`}>
-          <button className="readOnline">BUY MANGA</button>
-        </Link>
+        {!fromSeries && <button className="buyManga">BUY MANGA</button>}
       </div>
     </div>
   );

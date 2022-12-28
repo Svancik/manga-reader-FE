@@ -1,17 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./product.css";
 import Topbar from "./../../components/topbar/Topbar";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { MangaProducts } from "../../dummyData";
 import ReactStars from "react-rating-stars-component";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { Book } from "./../../components/book/Book";
 
 export default function Product() {
   const productId = useLocation().pathname.split("/")[2];
   const product = MangaProducts.filter((manga) => manga.id == productId)[0];
-  const [quantity, setQuantity] = useState(0);
+  const series = MangaProducts.filter(
+    (manga) => manga.series === product.series && manga.id != product.id
+  );
 
-  console.log(product);
+  const [quantity, setQuantity] = useState(0);
+  const [mainImg, setMainImg] = useState(product.imgCover);
+
+  useEffect(() => {
+    setMainImg(product.imgCover);
+  }, [product]);
 
   return (
     <>
@@ -21,22 +30,30 @@ export default function Product() {
           <div className="left">
             <div className="images">
               {product.imgPanels.map((panel) => (
-                <img src={panel} alt="" />
+                <img src={panel} onClick={() => setMainImg(panel)} alt="" />
               ))}
+              <img
+                src={product.imgCover}
+                onClick={() => setMainImg(product.imgCover)}
+                alt=""
+              />
             </div>
             <div className="mainImg">
-              {" "}
-              <img src={product.imgCover} alt="" />
+              <img src={mainImg} alt="" />
             </div>
           </div>
           <div className="right">
+            <Link to="/" className="linkBack">
+              <ArrowBackIcon
+                sx={{ width: "100%", height: "100%", margin: "0" }}
+              />{" "}
+            </Link>{" "}
             <h1 className="title">{product.title}</h1>
             <h4 className="author">
               {product.authors.map((author) => author)}
             </h4>
             <span className="desc">{product.desc}</span>
-
-            <span className="price">
+            <span className="priceValue">
               {product.discount
                 ? Math.round(
                     product.price - (product.discount / 100) * product.price
@@ -46,7 +63,6 @@ export default function Product() {
             {product.discount && (
               <span className="oldPrice">{product.price}</span>
             )}
-
             <div className="quantity">
               <button
                 onClick={
@@ -61,11 +77,6 @@ export default function Product() {
               <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
             </div>
             <button className="add">ADD TO CARD</button>
-            <div className="links">
-              <div className="item">ADD TO WISH LIST</div>
-              <div className="item">ADD TO COMPARE</div>
-            </div>
-            <hr />
             <div className="info">
               {product.isNew && (
                 <div
@@ -117,6 +128,17 @@ export default function Product() {
               </span>
               <span>Pages: {product.pages}</span>
               <span>Date of publishment: {product.date}</span>
+
+              <h3>More from the series:</h3>
+              <div className="showSeries">
+                {series.map((manga) => (
+                  <Book
+                    manga={manga}
+                    fromSeries={true}
+                    onClick={() => setMainImg(manga.imgCover)}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </>

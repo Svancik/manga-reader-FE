@@ -1,6 +1,6 @@
 .topbarWrapper{
     
-    height: 12vh;
+    height: 10vh;
     border: 1px solid #1c658cb5;
     display: flex;
 }
@@ -58,7 +58,6 @@
 
 .topElement:hover{
     color: #1c658cb5;
-    margin-top: -5px;
 }
 
 

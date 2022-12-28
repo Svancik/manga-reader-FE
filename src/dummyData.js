@@ -151,7 +151,7 @@ export const MangaProducts = [
     },
 
     {
-        id: 4,
+        id: 5,
         title: "Berserk Volume 1",
         series: "Berserk",
         authors: ["Kentaro Miura"],
@@ -166,11 +166,12 @@ export const MangaProducts = [
         date: "4.11.2003",
         categories: ["Seinen", "Action", "Supernatural"],
         imgCover: "https://www.slovart.cz/buxus/images/image_30623_19_v1.jpeg",
-        imgPanels: ["https://i.pinimg.com/736x/07/28/b9/0728b970ae219619b83fb64ea3431020.jpg", "https://64.media.tumblr.com/acd466ceb19e78395e00bc2c22a5122c/6a975e344cbf7da6-ff/s500x750/428e250ae2303fa1bf22fee5e35992492dd74562.jpg",
-         "https://pbs.twimg.com/media/Ew4ymZYWUAAt4Wd.jpg"],    
+        imgPanels: ["https://i.pinimg.com/originals/85/a1/2d/85a12d7d3536b6d570daa0a71da78089.jpg", 
+        "https://m.media-amazon.com/images/I/714Umh-Y9IL._AC_UF894,1000_QL80_.jpg",
+         "https://external-preview.redd.it/JyVV5DgtU49IwsN5ibdL_OFTthSjdvBbxpRNAgc_Z-E.jpg?auto=webp&s=49caa347ed3a6eaa7babde0efc43ec640344db9c"],    
     },
     {
-        id: 5,
+        id: 6,
         title: "Berserk Volume 2",
         series: "Berserk",
         authors: ["Kentaro Miura"],
@@ -185,11 +186,12 @@ export const MangaProducts = [
         date: "4.11.2004",
         categories: ["Seinen", "Action", "Supernatural"],
         imgCover: "https://media.libris.to/jacket/02750247_berserk.jpg",
-        imgPanels: ["https://i.pinimg.com/736x/07/28/b9/0728b970ae219619b83fb64ea3431020.jpg", "https://64.media.tumblr.com/acd466ceb19e78395e00bc2c22a5122c/6a975e344cbf7da6-ff/s500x750/428e250ae2303fa1bf22fee5e35992492dd74562.jpg",
-         "https://pbs.twimg.com/media/Ew4ymZYWUAAt4Wd.jpg"],    
+        imgPanels: ["https://i.pinimg.com/originals/85/a1/2d/85a12d7d3536b6d570daa0a71da78089.jpg", 
+        "https://m.media-amazon.com/images/I/714Umh-Y9IL._AC_UF894,1000_QL80_.jpg",
+         "https://external-preview.redd.it/JyVV5DgtU49IwsN5ibdL_OFTthSjdvBbxpRNAgc_Z-E.jpg?auto=webp&s=49caa347ed3a6eaa7babde0efc43ec640344db9c"],    
     },
     {
-        id: 6,
+        id: 7,
         title: "Berserk Volume 3",
         series: "Berserk",
         authors: ["Kentaro Miura"],
@@ -204,11 +206,12 @@ export const MangaProducts = [
         date: "4.11.2005",
         categories: ["Seinen", "Action", "Supernatural"],
         imgCover: "https://media.libris.to/jacket/01348903_berserk.jpg",
-        imgPanels: ["https://i.pinimg.com/736x/07/28/b9/0728b970ae219619b83fb64ea3431020.jpg", "https://64.media.tumblr.com/acd466ceb19e78395e00bc2c22a5122c/6a975e344cbf7da6-ff/s500x750/428e250ae2303fa1bf22fee5e35992492dd74562.jpg",
-         "https://pbs.twimg.com/media/Ew4ymZYWUAAt4Wd.jpg"],    
+        imgPanels: ["https://i.pinimg.com/originals/85/a1/2d/85a12d7d3536b6d570daa0a71da78089.jpg", 
+        "https://m.media-amazon.com/images/I/714Umh-Y9IL._AC_UF894,1000_QL80_.jpg",
+         "https://external-preview.redd.it/JyVV5DgtU49IwsN5ibdL_OFTthSjdvBbxpRNAgc_Z-E.jpg?auto=webp&s=49caa347ed3a6eaa7babde0efc43ec640344db9c"],    
     },
     {
-        id: 7,
+        id: 8,
         title: "Berserk Volume 4",
         series: "Berserk",
         authors: ["Kentaro Miura"],
@@ -223,11 +226,12 @@ export const MangaProducts = [
         date: "4.11.2003",
         categories: ["Seinen", "Action", "Supernatural"],
         imgCover: "https://media.libris.to/jacket/04238660_berserk.jpg",
-        imgPanels: ["https://i.pinimg.com/736x/07/28/b9/0728b970ae219619b83fb64ea3431020.jpg", "https://64.media.tumblr.com/acd466ceb19e78395e00bc2c22a5122c/6a975e344cbf7da6-ff/s500x750/428e250ae2303fa1bf22fee5e35992492dd74562.jpg",
-         "https://pbs.twimg.com/media/Ew4ymZYWUAAt4Wd.jpg"],    
+        imgPanels: ["https://i.pinimg.com/originals/85/a1/2d/85a12d7d3536b6d570daa0a71da78089.jpg", 
+        "https://m.media-amazon.com/images/I/714Umh-Y9IL._AC_UF894,1000_QL80_.jpg",
+         "https://external-preview.redd.it/JyVV5DgtU49IwsN5ibdL_OFTthSjdvBbxpRNAgc_Z-E.jpg?auto=webp&s=49caa347ed3a6eaa7babde0efc43ec640344db9c"],    
     },
     {
-        id: 8,
+        id: 9,
         title: "Berserk Volume 5",
         series: "Berserk",
         authors: ["Kentaro Miura"],
@@ -242,11 +246,12 @@ export const MangaProducts = [
         date: "4.11.2003",
         categories: ["Seinen", "Action", "Supernatural"],
         imgCover: "https://media.libris.to/jacket/04238667_berserk.jpg",
-        imgPanels: ["https://i.pinimg.com/736x/07/28/b9/0728b970ae219619b83fb64ea3431020.jpg", "https://64.media.tumblr.com/acd466ceb19e78395e00bc2c22a5122c/6a975e344cbf7da6-ff/s500x750/428e250ae2303fa1bf22fee5e35992492dd74562.jpg",
-         "https://pbs.twimg.com/media/Ew4ymZYWUAAt4Wd.jpg"],    
+        imgPanels: ["https://i.pinimg.com/originals/85/a1/2d/85a12d7d3536b6d570daa0a71da78089.jpg", 
+        "https://m.media-amazon.com/images/I/714Umh-Y9IL._AC_UF894,1000_QL80_.jpg",
+         "https://external-preview.redd.it/JyVV5DgtU49IwsN5ibdL_OFTthSjdvBbxpRNAgc_Z-E.jpg?auto=webp&s=49caa347ed3a6eaa7babde0efc43ec640344db9c"],    
     },
     {
-        id: 9,
+        id: 10,
         title: "Berserk Volume 6",
         series: "Berserk",
         authors: ["Kentaro Miura"],
@@ -261,13 +266,14 @@ export const MangaProducts = [
         date: "4.11.2003",
         categories: ["Seinen", "Action", "Supernatural"],
         imgCover: "https://media.libris.to/jacket/04238668_berserk.jpg",
-        imgPanels: ["https://i.pinimg.com/736x/07/28/b9/0728b970ae219619b83fb64ea3431020.jpg", "https://64.media.tumblr.com/acd466ceb19e78395e00bc2c22a5122c/6a975e344cbf7da6-ff/s500x750/428e250ae2303fa1bf22fee5e35992492dd74562.jpg",
-         "https://pbs.twimg.com/media/Ew4ymZYWUAAt4Wd.jpg"],    
+        imgPanels: ["https://i.pinimg.com/originals/85/a1/2d/85a12d7d3536b6d570daa0a71da78089.jpg", 
+        "https://m.media-amazon.com/images/I/714Umh-Y9IL._AC_UF894,1000_QL80_.jpg",
+         "https://external-preview.redd.it/JyVV5DgtU49IwsN5ibdL_OFTthSjdvBbxpRNAgc_Z-E.jpg?auto=webp&s=49caa347ed3a6eaa7babde0efc43ec640344db9c"],    
     },
 
 
     {
-        id: 10,
+        id: 11,
         title: "Vagabond Vol. 1",
         series: "Vagabond",
         authors: ["Takehiko Inoue"],
@@ -286,7 +292,7 @@ export const MangaProducts = [
          "https://pbs.twimg.com/media/Ew4ymZYWUAAt4Wd.jpg"],    
     },
     {
-        id: 11,
+        id: 12,
         title: "Vagabond Vol. 2",
         series: "Vagabond",
         authors: ["Takehiko Inoue"],
@@ -305,7 +311,7 @@ export const MangaProducts = [
          "https://pbs.twimg.com/media/Ew4ymZYWUAAt4Wd.jpg"],    
     },
     {
-        id: 12,
+        id: 13,
         title: "Vagabond Vol. 3",
         series: "Vagabond",
         authors: ["Takehiko Inoue"],
@@ -324,7 +330,7 @@ export const MangaProducts = [
          "https://pbs.twimg.com/media/Ew4ymZYWUAAt4Wd.jpg"],    
     },
     {
-        id:13,
+        id:14,
         title: "Vagabond Vol. 4",
         series: "Vagabond",
         authors: ["Takehiko Inoue"],
@@ -343,7 +349,7 @@ export const MangaProducts = [
          "https://pbs.twimg.com/media/Ew4ymZYWUAAt4Wd.jpg"],    
     },
     {
-        id:14,
+        id:15,
         title: "Vagabond Vol. 5",
         series: "Vagabond",
         authors: ["Takehiko Inoue"],
@@ -362,7 +368,7 @@ export const MangaProducts = [
          "https://pbs.twimg.com/media/Ew4ymZYWUAAt4Wd.jpg"],    
     },
     {
-        id: 15,
+        id: 16,
         title: "Goodnight Punpun 1",
         series: "Goodnight Punpun",
         authors: ["Inio Asano"],
@@ -389,7 +395,7 @@ export const MangaProducts = [
         imgPanels: ["https://ih1.redbubble.net/image.261632499.7181/st,small,845x845-pad,1000x1000,f8f8f8.u3.jpg", "https://64.media.tumblr.com/9e23336e5766599c043bba339252616d/tumblr_p9cyptinrQ1w3yzuso1_1280.jpg", "https://64.media.tumblr.com/e1bbfac351585ec033d7ba1bcead1cff/bc7ac4ae49cc54da-7b/s540x810/8fc7b2ab2fc636a588783919104b61a4fe30ed64.pnj"],    
     },
     {
-        id: 16,
+        id: 17,
         title: "Goodnight Punpun 2",
         series: "Goodnight Punpun",
         authors: ["Inio Asano"],
@@ -416,7 +422,7 @@ export const MangaProducts = [
         imgPanels: ["https://ih1.redbubble.net/image.261632499.7181/st,small,845x845-pad,1000x1000,f8f8f8.u3.jpg", "https://64.media.tumblr.com/9e23336e5766599c043bba339252616d/tumblr_p9cyptinrQ1w3yzuso1_1280.jpg", "https://64.media.tumblr.com/e1bbfac351585ec033d7ba1bcead1cff/bc7ac4ae49cc54da-7b/s540x810/8fc7b2ab2fc636a588783919104b61a4fe30ed64.pnj"],    
     },
     {
-        id: 17,
+        id: 18,
         title: "Goodnight Punpun 3",
         series: "Goodnight Punpun",
         authors: ["Inio Asano"],
@@ -443,7 +449,7 @@ export const MangaProducts = [
         imgPanels: ["https://ih1.redbubble.net/image.261632499.7181/st,small,845x845-pad,1000x1000,f8f8f8.u3.jpg", "https://64.media.tumblr.com/9e23336e5766599c043bba339252616d/tumblr_p9cyptinrQ1w3yzuso1_1280.jpg", "https://64.media.tumblr.com/e1bbfac351585ec033d7ba1bcead1cff/bc7ac4ae49cc54da-7b/s540x810/8fc7b2ab2fc636a588783919104b61a4fe30ed64.pnj"],    
     },
     {
-        id: 18,
+        id: 19,
         title: "Goodnight Punpun 4",
         series: "Goodnight Punpun",
         authors: ["Inio Asano"],
@@ -470,7 +476,7 @@ export const MangaProducts = [
         imgPanels: ["https://ih1.redbubble.net/image.261632499.7181/st,small,845x845-pad,1000x1000,f8f8f8.u3.jpg", "https://64.media.tumblr.com/9e23336e5766599c043bba339252616d/tumblr_p9cyptinrQ1w3yzuso1_1280.jpg", "https://64.media.tumblr.com/e1bbfac351585ec033d7ba1bcead1cff/bc7ac4ae49cc54da-7b/s540x810/8fc7b2ab2fc636a588783919104b61a4fe30ed64.pnj"],    
     },
     {
-        id: 19,
+        id: 20,
         title: "Goodnight Punpun 5",
         series: "Goodnight Punpun",
         authors: ["Inio Asano"],
@@ -497,7 +503,7 @@ export const MangaProducts = [
         imgPanels: ["https://ih1.redbubble.net/image.261632499.7181/st,small,845x845-pad,1000x1000,f8f8f8.u3.jpg", "https://64.media.tumblr.com/9e23336e5766599c043bba339252616d/tumblr_p9cyptinrQ1w3yzuso1_1280.jpg", "https://64.media.tumblr.com/e1bbfac351585ec033d7ba1bcead1cff/bc7ac4ae49cc54da-7b/s540x810/8fc7b2ab2fc636a588783919104b61a4fe30ed64.pnj"],    
     },
     {
-        id: 20,
+        id: 21,
         title: "Goodnight Punpun 6",
         series: "Goodnight Punpun",
         authors: ["Inio Asano"],
@@ -524,7 +530,7 @@ export const MangaProducts = [
         imgPanels: ["https://ih1.redbubble.net/image.261632499.7181/st,small,845x845-pad,1000x1000,f8f8f8.u3.jpg", "https://64.media.tumblr.com/9e23336e5766599c043bba339252616d/tumblr_p9cyptinrQ1w3yzuso1_1280.jpg", "https://64.media.tumblr.com/e1bbfac351585ec033d7ba1bcead1cff/bc7ac4ae49cc54da-7b/s540x810/8fc7b2ab2fc636a588783919104b61a4fe30ed64.pnj"],    
     },
     {
-        id: 21,
+        id: 22,
         title: "Goodnight Punpun 7",
         series: "Goodnight Punpun",
         authors: ["Inio Asano"],
@@ -551,8 +557,8 @@ export const MangaProducts = [
         imgPanels: ["https://ih1.redbubble.net/image.261632499.7181/st,small,845x845-pad,1000x1000,f8f8f8.u3.jpg", "https://64.media.tumblr.com/9e23336e5766599c043bba339252616d/tumblr_p9cyptinrQ1w3yzuso1_1280.jpg", "https://64.media.tumblr.com/e1bbfac351585ec033d7ba1bcead1cff/bc7ac4ae49cc54da-7b/s540x810/8fc7b2ab2fc636a588783919104b61a4fe30ed64.pnj"],    
     },
     {
-        id: 22,
-        title: "Uzumaki (3-in-1 Deluxe Edition)",
+        id: 23,
+        title: "Uzumaki (3-in-1 Edition)",
         series: "",
         authors: ["Junji Ito"],
         language: "EN",
@@ -576,8 +582,8 @@ export const MangaProducts = [
         "https://i0.wp.com/croneandcasket.com/wp-content/uploads/2017/08/awitf7x.jpg?resize=676%2C998&ssl=1"],    
     },
     {
-        id: 23,
-        title: "Tomie: Complete Deluxe Edition",
+        id: 24,
+        title: "Tomie: Complete Edition",
         series: "",
         authors: ["Junji Ito"],
         language: "CZ",
@@ -598,8 +604,8 @@ export const MangaProducts = [
         imgPanels: ["https://i.imgur.com/f9AnnYK.png", "https://static1.mangayeh.com/manga/chapter/601918f12b30c165f1ce79a9/601a26bedfcb41783d6e59fa/kanshikan_tsunemori_akane_1_26.jpg", "https://static.mangajar.com/pages/952/66044/zpuq5vYhcfiyhrLUuOkjdIorYqUlQKQUf9pRBCbT.webp"],    
     },
     {
-        id: 24,
-        title: "World's End Harem: Fantasia Vol. 1",
+        id: 25,
+        title: "World's End Harem Vol. 1",
         series: "World's End Harem",
         authors: ["Savan"],
         language: "EN",
@@ -614,8 +620,8 @@ export const MangaProducts = [
         imgPanels: ["https://s2.mbcdnv6.xyz/file/img-mbuddy/manga/worlds-end-harem-fantasia/chapter-5/37.jpg", "https://isekaiscan.com/wp-content/uploads/WP-manga/data/manga_5cc49ccfead1a/c361d4daf023a8fb687af77e9e966ae8/15.jpg", "https://image.mangabtt.com//Upload/ImageContent/20221016/41647/28fec211-46b8-46c4-850a-7aafd2975f25-950609.jpg"],    
     },
     {
-        id: 25,
-        title: "World's End Harem: Fantasia Vol. 2",
+        id: 26,
+        title: "World's End Harem Vol. 2",
         series: "World's End Harem",
         authors: ["Savan"],
         language: "EN",
@@ -630,8 +636,8 @@ export const MangaProducts = [
         imgPanels: ["https://s2.mbcdnv6.xyz/file/img-mbuddy/manga/worlds-end-harem-fantasia/chapter-5/37.jpg", "https://isekaiscan.com/wp-content/uploads/WP-manga/data/manga_5cc49ccfead1a/c361d4daf023a8fb687af77e9e966ae8/15.jpg", "https://image.mangabtt.com//Upload/ImageContent/20221016/41647/28fec211-46b8-46c4-850a-7aafd2975f25-950609.jpg"],    
     },
     {
-        id: 26,
-        title: "World's End Harem: Fantasia Vol. 3",
+        id: 27,
+        title: "World's End Harem Vol. 3",
         series: "World's End Harem",
         authors: ["Savan"],
         language: "EN",
@@ -646,8 +652,8 @@ export const MangaProducts = [
         imgPanels: ["https://s2.mbcdnv6.xyz/file/img-mbuddy/manga/worlds-end-harem-fantasia/chapter-5/37.jpg", "https://isekaiscan.com/wp-content/uploads/WP-manga/data/manga_5cc49ccfead1a/c361d4daf023a8fb687af77e9e966ae8/15.jpg", "https://image.mangabtt.com//Upload/ImageContent/20221016/41647/28fec211-46b8-46c4-850a-7aafd2975f25-950609.jpg"],    
     },
     {
-        id:27,
-        title: "Psycho-Pass: Inspector Shinya Kogami 1",
+        id:28,
+        title: "Psycho-Pass: Kogami 1",
         series: "Psycho Pass",
         authors: ["Goto Midori", "Sai Natsuo"],
         language: "CZ",
@@ -663,8 +669,8 @@ export const MangaProducts = [
         imgPanels: ["https://i.imgur.com/f9AnnYK.png", "https://static1.mangayeh.com/manga/chapter/601918f12b30c165f1ce79a9/601a26bedfcb41783d6e59fa/kanshikan_tsunemori_akane_1_26.jpg", "https://static.mangajar.com/pages/952/66044/zpuq5vYhcfiyhrLUuOkjdIorYqUlQKQUf9pRBCbT.webp"],    
     },
     {
-        id: 28,
-        title: "Psycho-Pass: Inspector Shinya Kogami 2",
+        id: 29,
+        title: "Psycho-Pass: Kogami 2",
         series: "Psycho Pass",
         authors: ["Goto Midori","Sai Natsuo"],
         language: "CZ",
@@ -680,8 +686,8 @@ export const MangaProducts = [
         imgPanels: ["https://i.imgur.com/f9AnnYK.png", "https://static1.mangayeh.com/manga/chapter/601918f12b30c165f1ce79a9/601a26bedfcb41783d6e59fa/kanshikan_tsunemori_akane_1_26.jpg", "https://static.mangajar.com/pages/952/66044/zpuq5vYhcfiyhrLUuOkjdIorYqUlQKQUf9pRBCbT.webp"],    
     },
     {
-        id: 29,
-        title: "Psycho-Pass: Inspector Shinya Kogami 3",
+        id: 30,
+        title: "Psycho-Pass: Kogami 3",
         series: "Psycho Pass",
         authors: ["Goto Midori", "Sai Natsuo"],
         language: "CZ",
@@ -698,7 +704,7 @@ export const MangaProducts = [
     },
 
     {
-        id: 30,
+        id: 31,
         title: "Demon Slayer Vol. 1",
         series: "Demon Slayer",
         authors: ["Koyoharu Gotouge"],
@@ -723,7 +729,7 @@ export const MangaProducts = [
     },
 
     {
-        id: 31,
+        id: 32,
         title: "Demon Slayer Vol. 2",
         series: "Demon Slayer",
         authors: ["Koyoharu Gotouge"],
@@ -748,7 +754,7 @@ export const MangaProducts = [
     },
 
     {
-        id: 32,
+        id: 33,
         title: "Demon Slayer Vol. 3",
         series: "Demon Slayer",
         authors: ["Koyoharu Gotouge"],
@@ -773,7 +779,7 @@ export const MangaProducts = [
     },
 
     {
-        id: 33,
+        id: 34,
         title: "Demon Slayer Vol. 4",
         series: "Demon Slayer",
         authors: ["Koyoharu Gotouge"],
@@ -798,7 +804,7 @@ export const MangaProducts = [
     },
 
     {
-        id: 34,
+        id: 35,
         title: "Demon Slayer Vol. 5",
         series: "Demon Slayer",
         authors: ["Koyoharu Gotouge"],
@@ -822,7 +828,7 @@ export const MangaProducts = [
          "https://i.pinimg.com/736x/63/46/e3/6346e33b8ef8a84fd9459e4800b8eb12.jpg"],    
     },
     {
-        id: 35,
+        id: 36,
         title: "your name. Vol. 1",
         series: "your name.",
         authors: ["Makoto Shinkai"],
@@ -845,7 +851,7 @@ export const MangaProducts = [
          "https://64.media.tumblr.com/24ef5d20e84e4327b5d0eab663ff19b9/e5ad6a37bb0becea-f0/s540x810/5aab1c91d9558d2193aae1785b1d5aba8406b4b2.jpg"],    
     },
     {
-        id: 36,
+        id: 37,
         title: "your name. Vol. 2",
         series: "your name.",
         authors: ["Makoto Shinkai"],
@@ -868,7 +874,7 @@ export const MangaProducts = [
          "https://64.media.tumblr.com/24ef5d20e84e4327b5d0eab663ff19b9/e5ad6a37bb0becea-f0/s540x810/5aab1c91d9558d2193aae1785b1d5aba8406b4b2.jpg"],    
     },
     {
-        id: 37,
+        id: 38,
         title: "your name. Vol. 3",
         series: "your name.",
         authors: ["Makoto Shinkai"],
@@ -891,7 +897,7 @@ export const MangaProducts = [
          "https://64.media.tumblr.com/24ef5d20e84e4327b5d0eab663ff19b9/e5ad6a37bb0becea-f0/s540x810/5aab1c91d9558d2193aae1785b1d5aba8406b4b2.jpg"],    
     },
     {
-        id: 38,
+        id: 39,
         title: "One Punch Man Vol. 1",
         series: "One Punch Man",
         authors: ["Yusuke Murata"],
@@ -915,7 +921,7 @@ export const MangaProducts = [
          "https://i.pinimg.com/736x/63/46/e3/6346e33b8ef8a84fd9459e4800b8eb12.jpg"],    
     },
     {
-        id: 39,
+        id: 40,
         title: "One Punch Man Vol. 2",
         series: "One Punch Man",
         authors: ["Yusuke Murata"],
@@ -939,7 +945,7 @@ export const MangaProducts = [
          "https://i.pinimg.com/736x/63/46/e3/6346e33b8ef8a84fd9459e4800b8eb12.jpg"],    
     },
     {
-        id: 40,
+        id: 41,
         title: "One Punch Man Vol. 3",
         series: "One Punch Man",
         authors: ["Yusuke Murata"],
