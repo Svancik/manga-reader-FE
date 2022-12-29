@@ -12,10 +12,11 @@ export default function Home() {
   const [mangaLibrary, setMangaLibrary] = useState(MangaProducts);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [priceRange, setPriceRange] = useState(750);
+  const [isTextfieldFull, setIsTextFieldFull] = useState(false);
 
   const handleMangaLibraryGenre = (e) => {
-    e.target.value === ""
-      ? setMangaLibrary(MangaProducts)
+    isTextfieldFull
+      ? setMangaLibrary(mangaLibrary)
       : setMangaLibrary(
           MangaProducts.filter(
             (manga) =>
@@ -33,6 +34,10 @@ export default function Home() {
   };
 
   const handleTextSearch = (e) => {
+    handleFilterReset();
+    e.target.value === ""
+      ? setIsTextFieldFull(false)
+      : setIsTextFieldFull(true);
     setMangaLibrary(
       MangaProducts.filter((manga) =>
         manga.title
@@ -73,6 +78,7 @@ export default function Home() {
               setPriceRange={setPriceRange}
               selectedCategory={selectedCategory}
               priceRange={priceRange}
+              isTextfieldFull={isTextfieldFull}
             />
           </div>
           <div className="contentWrapper">

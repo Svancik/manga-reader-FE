@@ -14,15 +14,25 @@
 }
 
 
-.heroSlider__menu button{
+.heroSlider button{
+    display: block;
+    background-color: transparents;
+
+    border: none;
     outline: none;
 }
 
-.heroSlider__menu button:hover, button:active, button:checked, button:focus{
-    background-color: transparent; border: 0px; outline: none;
+.heroSlider button:hover{
+    background-color: #ffffff00;
+    outline: none;
+    border: none;
 }
 
-.heroSlider__menu{
-   
+.heroSlider button:target{
+    background-color: red;
+    outline: none;
+    border: none;
 }
+
+
 

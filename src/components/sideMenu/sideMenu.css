@@ -12,8 +12,8 @@ color: black;
     display: flex; 
     height: max-content;
     flex-direction: column;  
-    border: 1px solid black;
-
+    border-bottom: 1px solid black;
+    border-left: 1px solid black;
 
 }
 
@@ -43,7 +43,7 @@ color: black;
 .genresFilter input {
     float: left;
     width: auto;  
-    border:solid 1px;
+
 }
 
 .genresFilter h2{
@@ -81,6 +81,10 @@ color: black;
     font-size: 12pt;
     font-weight: 600;
     margin-bottom: 10px;
+}
+
+.filterItem .blocked-btn{
+    background-color: gray;
 }
 
 

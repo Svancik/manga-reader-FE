@@ -9,6 +9,7 @@ export default function SideMenu({
   setPriceRange,
   handleFilterReset,
   priceRange,
+  isTextfieldFull,
 }) {
   const [cleanedGenreFilters, setCleanGenreFilters] = useState(false);
   const [maxPrice, setMaxPrice] = useState(750);
@@ -32,6 +33,7 @@ export default function SideMenu({
                   value={genre.name}
                   onClick={handleMangaLibraryGenre}
                   checked={selectedCategory === genre.name}
+                  disabled={isTextfieldFull}
                 />
                 <label htmlFor={genre.id}>{genre.name}</label>
               </div>
@@ -47,11 +49,16 @@ export default function SideMenu({
               min={0}
               max={750}
               onChange={(e) => setMaxPrice(e.target.value)}
+              disabled={isTextfieldFull}
             />
             <span>{priceRange}</span>
           </div>
           <br />
-          <button value="" onClick={handleFilterReset}>
+          <button
+            value=""
+            onClick={handleFilterReset}
+            className={isTextfieldFull && "blocked-btn"}
+          >
             RESET FILTERS
           </button>
           <hr />
