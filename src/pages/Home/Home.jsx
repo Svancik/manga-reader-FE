@@ -26,6 +26,23 @@ export default function Home() {
     setSelectedCategory(e.target.value);
   };
 
+  const handleFilterReset = () => {
+    setMangaLibrary(MangaProducts);
+    setPriceRange(750);
+    setSelectedCategory("");
+  };
+
+  const handleTextSearch = (e) => {
+    setMangaLibrary(
+      MangaProducts.filter((manga) =>
+        manga.title
+          .toString()
+          .toLocaleLowerCase()
+          .includes(e.target.value.toLocaleLowerCase())
+      )
+    );
+  };
+
   useEffect(() => {
     // console.log("price: ", priceRange);
     // console.log(mangaLibrary.filter((manga) => manga.price < priceRange));
@@ -46,14 +63,16 @@ export default function Home() {
   return (
     <div className="body">
       <div className="homeWrapper">
-        <Topbar />
+        <Topbar handleTextSearch={handleTextSearch} />
         <div className="hero">
           <div className="sideMenu">
             <SideMenu
               handleMangaLibraryGenre={handleMangaLibraryGenre}
+              handleFilterReset={handleFilterReset}
               setSelectedCategory={setSelectedCategory}
               setPriceRange={setPriceRange}
               selectedCategory={selectedCategory}
+              priceRange={priceRange}
             />
           </div>
           <div className="contentWrapper">

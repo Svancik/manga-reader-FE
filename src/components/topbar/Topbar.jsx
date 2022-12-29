@@ -9,7 +9,7 @@ import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
 import Person2OutlinedIcon from "@mui/icons-material/Person2Outlined";
 import { Link } from "react-router-dom";
 
-export default function Topbar() {
+export default function Topbar({ handleTextSearch }) {
   return (
     <div className="topbarWrapper">
       <div className="topbar__logo topElement">
@@ -19,7 +19,7 @@ export default function Topbar() {
       </div>
 
       <div className="topbar__searchBar topElement">
-        <SearchBar />
+        <SearchBar handleTextSearch={handleTextSearch} />
       </div>
 
       <div className="topbar__basket topElement">

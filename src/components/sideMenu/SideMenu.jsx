@@ -7,6 +7,8 @@ export default function SideMenu({
   handleMangaLibraryGenre,
   selectedCategory,
   setPriceRange,
+  handleFilterReset,
+  priceRange,
 }) {
   const [cleanedGenreFilters, setCleanGenreFilters] = useState(false);
   const [maxPrice, setMaxPrice] = useState(750);
@@ -20,7 +22,7 @@ export default function SideMenu({
       <div className="sideMenuWrapper">
         <div className="genresFilter">
           <div className="filterItem">
-            <h2>Genres</h2>
+            <h2>Filter by genres</h2>
             {Genres.map((genre) => (
               <div className="inputItem" key={genre.id}>
                 <input
@@ -34,10 +36,6 @@ export default function SideMenu({
                 <label htmlFor={genre.id}>{genre.name}</label>
               </div>
             ))}
-            <button value="" onClick={handleMangaLibraryGenre}>
-              ALL GENRES
-            </button>
-            <hr />
           </div>
         </div>
         <div className="filterItem">
@@ -50,8 +48,12 @@ export default function SideMenu({
               max={750}
               onChange={(e) => setMaxPrice(e.target.value)}
             />
-            <span>{maxPrice}</span>
+            <span>{priceRange}</span>
           </div>
+          <br />
+          <button value="" onClick={handleFilterReset}>
+            RESET FILTERS
+          </button>
           <hr />
         </div>
 
