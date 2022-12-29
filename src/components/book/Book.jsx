@@ -5,10 +5,7 @@ import ReactStars from "react-rating-stars-component";
 import MenuBookTwoToneIcon from "@mui/icons-material/MenuBookTwoTone";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 
-
 export const Book = ({ manga, fromSeries }) => {
-
-
   return (
     <div className="bookWrapper">
       <div className="coverImg">
@@ -62,9 +59,9 @@ export const Book = ({ manga, fromSeries }) => {
         </div>
         <div className="categories">
           {manga.categories.map((category) => (
-            <Link>
+            <span>
               <span className="category">{category}</span>
-            </Link>
+            </span>
           ))}
         </div>
         <div className="rating">

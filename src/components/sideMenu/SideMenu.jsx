@@ -3,7 +3,11 @@ import { useState } from "react";
 import "./sideMenu.css";
 import { Genres } from "../../dummyData";
 
-export default function SideMenu() {
+export default function SideMenu({
+  handleMangaLibraryGenre,
+  selectedCategory,
+  setSelectedCategory,
+}) {
   const [cleanedGenreFilters, setCleanGenreFilters] = useState(false);
 
   return (
@@ -14,11 +18,21 @@ export default function SideMenu() {
             <h2>Genres</h2>
             {Genres.map((genre) => (
               <div className="inputItem" key={genre.id}>
-                <input type="checkbox" id={genre.id} value={genre.id} />
+                <input
+                  type="radio"
+                  name="genre"
+                  id={genre.id}
+                  value={genre.name}
+                  onClick={handleMangaLibraryGenre}
+                  checked={selectedCategory === genre.name}
+                />
                 <label htmlFor={genre.id}>{genre.name}</label>
               </div>
             ))}
-            <button>UNSELECT ALL</button>
+            <button value="all" onClick={handleMangaLibraryGenre}>
+              ALL GENRES
+            </button>
+            <hr />
           </div>
         </div>
         <div className="filterItem">
@@ -28,7 +42,9 @@ export default function SideMenu() {
             <input type="range" min={0} max={1000} />
             <span>1000</span>
           </div>
+          <hr />
         </div>
+
         <div className="filterItem">
           <h2>Sort by</h2>
           <div className="sortFilter">
