@@ -7,6 +7,9 @@ import { MangaProducts } from "../../dummyData";
 import ReactStars from "react-rating-stars-component";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Book } from "./../../components/book/Book";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cartReducer";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
 export default function Product() {
   const productId = useLocation().pathname.split("/")[2];
@@ -17,6 +20,8 @@ export default function Product() {
 
   const [quantity, setQuantity] = useState(0);
   const [mainImg, setMainImg] = useState(product.imgCover);
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     setMainImg(product.imgCover);
@@ -76,7 +81,24 @@ export default function Product() {
               {quantity}
               <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
             </div>
-            <button className="add">ADD TO CARD</button>
+            <button
+              className="add"
+              onClick={() =>
+                dispatch(
+                  addToCart({
+                    id: product.id,
+                    title: product.title,
+                    desc: product.desc,
+                    price: product.price,
+                    img: product.imgCover,
+                    quantity,
+                  })
+                )
+              }
+            >
+              <ShoppingCartOutlinedIcon />
+              ADD TO CARD
+            </button>
             <div className="info">
               {product.isNew && (
                 <div
