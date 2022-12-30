@@ -14,7 +14,7 @@ const slides = [
   },
   {
     label: "Akira",
-    url: "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/akira-overlay.png?alt=media&token=3871938b-5010-4363-a760-a34ad2007c91",
+    url: "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/akira-overlay.png?alt=media&token=db08ad89-6a94-4b57-af43-ebc8b3d5c57e",
   },
   {
     label: "One Punch Man",
@@ -22,7 +22,7 @@ const slides = [
   },
   {
     label: "Attack on Titan",
-    url: "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/aot-overlay.webp?alt=media&token=36a511fa-9414-49d4-900c-fc8653c02788",
+    url: "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/aot-overlay.webp?alt=media&token=4e62891a-400d-432e-9124-d3bc92b0676a",
   },
   {
     label: "Neon Genesis Evangelion",
@@ -42,7 +42,7 @@ export default function AutoSlider() {
   return (
     <HeroSlider
       className="heroSlider"
-      height={"47.5vh"}
+      height={"42.5vh"}
       autoplay
       controller={{
         initialSlide: 1,

@@ -10,7 +10,7 @@ export default function SearchBar({ handleTextSearch }) {
         placeholder="Enter name of a Manga here..."
         onChange={handleTextSearch}
       />
-      <button className="searchBar__button button--accent">Search</button>
+      {/* <button className="searchBar__button button--accent">Search</button> */}
     </div>
   );
 }

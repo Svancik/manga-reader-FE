@@ -4,6 +4,7 @@ import "./book.css";
 import ReactStars from "react-rating-stars-component";
 import MenuBookTwoToneIcon from "@mui/icons-material/MenuBookTwoTone";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
 export const Book = ({ manga, fromSeries }) => {
   return (
@@ -16,7 +17,9 @@ export const Book = ({ manga, fromSeries }) => {
           <div className="discountBadge">
             <LocalOfferIcon sx={{ width: "100%", height: "100%" }} />
             <span className="discountValue">{manga.discount}</span>
-            <span className="oldPriceValue">{manga.price}</span>
+            <span className="oldPriceValue">
+              {Math.round(manga.price + (manga.discount / 100) * manga.price)}
+            </span>
           </div>
         )}
         {manga.isNew && (
@@ -41,11 +44,7 @@ export const Book = ({ manga, fromSeries }) => {
               sx={{ width: "25%", height: "100%", margin: "-5px 0px 0px 0px" }}
             />
           </span>
-          <span className="price">
-            {manga.discount
-              ? Math.round(manga.price - (manga.discount / 100) * manga.price)
-              : manga.price}
-          </span>
+          <span className="price">{manga.price}</span>
         </div>
       </div>
       <div className="bookInfo">
@@ -74,7 +73,11 @@ export const Book = ({ manga, fromSeries }) => {
             activeColor="#ffd700"
           />
         </div>
-        {!fromSeries && <button className="buyManga">BUY MANGA</button>}
+        {!fromSeries && (
+          <button className="buyManga">
+            <ShoppingCartOutlinedIcon /> <span>ADD TO CART</span>
+          </button>
+        )}
       </div>
     </div>
   );

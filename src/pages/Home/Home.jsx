@@ -24,6 +24,7 @@ export default function Home() {
               manga.price < priceRange
           )
         );
+
     setSelectedCategory(e.target.value);
   };
 

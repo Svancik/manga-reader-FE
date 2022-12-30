@@ -231,12 +231,16 @@ background-color: #900C3F;
 .buyManga{
     border: 1px solid blue;
     padding: 5px 10px;
-    background-color: goldenrod;
+    background-color: #2879fe;
     color: white;
     font-weight: 500;
     margin: auto;
     width: max-content;
     text-align: center;
+}
+
+.buyManga span{
+    font-size: 13px;
 }
 
 .coverImg:hover{
