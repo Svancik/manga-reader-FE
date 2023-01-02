@@ -1,0 +1,33 @@
+.cartTable img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: flex;
+    margin: auto;
+}
+
+.cartTable tbody tr td{
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.cartTable tbody tr td .quantity{
+display: flex;
+height: max-content;
+margin: auto;
+width: max-content;
+}
+
+.cartTable tbody tr td .quantity button{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.cartTable .delete{
+    color: red;
+    cursor: pointer;
+}

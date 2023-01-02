@@ -4,6 +4,7 @@ import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import { useSelector } from "react-redux";
 import { removeItem, resetCart } from "../../redux/cartReducer";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 //TODO: Po refreshi položky z košíku zmizí!
 
 export const Cart = () => {
@@ -25,11 +26,10 @@ export const Cart = () => {
         <>
           <hr />
           <div className="item" key={item.id}>
-            {console.log(item)}
             <img src={item.img} alt="" />
             <div className="details">
               <h1>{item.title}</h1>
-              <p>{item.desc.substring(0, 100)}</p>
+              <p>{item.desc.substring(0, 110)}</p>
               <div className="price">
                 {item.quantity} x {item.price} Kč
               </div>
@@ -45,7 +45,15 @@ export const Cart = () => {
         <span>SUBTOTAL</span>
         <span>{totalPrice()} Kč</span>
       </div>
-      <button>PROCEED TO CHECKOUT</button>
+      {products.length > 0 ? (
+        <Link to="/checkout" className="link">
+          <button>PROCEED TO CHECKOUT</button>
+        </Link>
+      ) : (
+        <div>
+          <span>ADD ITEMS TO CART IN ORDER TO PROCEED</span>
+        </div>
+      )}
       <span className="reset" onClick={() => dispatch(resetCart())}>
         Reset Cart
       </span>

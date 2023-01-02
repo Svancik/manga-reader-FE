@@ -5,6 +5,8 @@ import Register from './pages/Register.jsx/Register';
 import Home from './pages/Home/Home';
 import './App.css';
 import Product from "./pages/Product/Product";
+import { Checkout } from './pages/Checkout/Checkout';
+import Topbar from './components/topbar/Topbar';
 
 
 /*TODO:
@@ -30,7 +32,8 @@ function App() {
         <Routes>
           <Route path="/login" element={<Login />} />          
           <Route path="/register/" element ={<Register/>}/>
-          <Route path="/product/:id" element ={<Product/>}/>          
+          <Route path="/product/:id" element ={<Product/>}/>    
+          <Route path="/checkout" element ={<><Topbar hideSearch={true}/><Checkout/></>}/>         
           <Route exact path="/" element = {<Home/>}/>
         </Routes>
       </BrowserRouter>

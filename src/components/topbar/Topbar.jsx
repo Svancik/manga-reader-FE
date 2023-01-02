@@ -13,22 +13,30 @@ import CancelIcon from "@mui/icons-material/Cancel";
 import { useSelector } from "react-redux";
 import Cart from "../cart/Cart";
 
-export default function Topbar({ handleTextSearch }) {
+export default function Topbar({ handleTextSearch, hideSearch }) {
   const [isLogin, setIsLogin] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const products = useSelector((state) => state.cart.products);
 
   return (
-    <div className="topbarWrapper">
-      <div className="topbar__logo topElement">
+    <div
+      className={
+        hideSearch ? "topbarWrapper topbarWrapper-hidden" : "topbarWrapper"
+      }
+    >
+      <div
+        className={"topbar__logo topElement "}
+        style={hideSearch ? { flex: "0.5" } : { flex: "2" }}
+      >
         <Link to="/">
           <img src={require("../../media/design/logo.png")} className="logo" />
         </Link>
       </div>
-
-      <div className="topbar__searchBar topElement">
-        <SearchBar handleTextSearch={handleTextSearch} />
-      </div>
+      {!hideSearch && (
+        <div className="topbar__searchBar topElement">
+          <SearchBar handleTextSearch={handleTextSearch} />
+        </div>
+      )}
       <div className="topbar__icons">
         <div
           className="topbar__basket topElement"

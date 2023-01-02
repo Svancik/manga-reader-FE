@@ -3,23 +3,26 @@
     height: 11vh;    
     display: flex;
     width: 100%;
-    justify-content: space-between;
- 
+    justify-content: space-between; 
+}
+.topbarWrapper-hidden{
+    background-color: transparent;
+    justify-content: space-between;    
 }
 
 .topElement{
     height: 100%;
     display: flex;
-    margin: auto 0;
- 
+    margin: auto 0; 
   
 }
 
 .topbar__logo{
     flex: 2;
     height: 100%;
+    width: max-content;
     display: flex;
- 
+
 }
 
 .topbar__searchBar{
@@ -49,11 +52,11 @@
 }
 
 .logo{
-    width: 10vw;
-    justify-content: center;
-    justify-self: center;
-    align-items: center;
-    margin: auto;
+    width: max-content;
+    justify-content: left;
+    justify-self: left;
+    align-items: left;
+   
 }
 
 .topElement{

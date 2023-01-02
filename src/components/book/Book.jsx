@@ -5,8 +5,12 @@ import ReactStars from "react-rating-stars-component";
 import MenuBookTwoToneIcon from "@mui/icons-material/MenuBookTwoTone";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import { useDispatch } from "react-redux";
+import { addToCart } from "../../redux/cartReducer";
 
 export const Book = ({ manga, fromSeries }) => {
+  const dispatch = useDispatch();
+
   return (
     <div className="bookWrapper">
       <div className="coverImg">
@@ -74,7 +78,21 @@ export const Book = ({ manga, fromSeries }) => {
           />
         </div>
         {!fromSeries && (
-          <button className="buyManga">
+          <button
+            className="buyManga"
+            onClick={() =>
+              dispatch(
+                addToCart({
+                  id: manga.id,
+                  title: manga.title,
+                  desc: manga.desc,
+                  price: manga.price,
+                  img: manga.imgCover,
+                  quantity: 1,
+                })
+              )
+            }
+          >
             <ShoppingCartOutlinedIcon /> <span>ADD TO CART</span>
           </button>
         )}
