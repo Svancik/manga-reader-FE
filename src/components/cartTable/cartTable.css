@@ -7,6 +7,36 @@
     margin: auto;
 }
 
+.cartTable {
+    height: max-content;
+    max-height: 80vh;
+   overflow-y: scroll;
+}
+
+
+
+.cartTable h3{
+    padding: 30px;
+    text-align: left;
+    font-weight: 600;
+    color: #2879fe;
+    
+}
+
+.cartTable .icon{
+    text-align: left;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+}
+
+.cartTable .table{
+    width: 92%;
+    margin: auto;
+    height: 35vh;
+    overflow-y: scroll;
+}
+
 .cartTable tbody tr td{
     height: 60px;
     justify-content: center;
@@ -21,6 +51,10 @@ margin: auto;
 width: max-content;
 }
 
+.cartTable tbody tr td .delete{
+    margin-top: -5px;
+}
+
 .cartTable tbody tr td .quantity button{
     width: 40px;
     height: 40px;
@@ -30,4 +64,35 @@ width: max-content;
 .cartTable .delete{
     color: red;
     cursor: pointer;
+}
+
+.quantity-disabled{
+    background-color: gray;    
+}
+
+.quantity-disabled:hover{
+    cursor:default;
+    background-color: gray;
+    color: white;
+}
+
+.price-col::after, .total-col::after{
+    content: " Kč";
+}
+
+.desc-col::after{
+    content: "...";
+}
+
+.total{   
+  
+    font-weight: 700;
+    font-size: 18px;
+    padding-bottom: 20px;
+}
+
+.returnShopping{
+    position: absolute;
+    bottom: 40px;
+    right: 80px;
 }

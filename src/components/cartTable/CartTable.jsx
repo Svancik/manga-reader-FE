@@ -3,20 +3,47 @@ import "./cartTable.css";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import { useSelector } from "react-redux";
 import { useState } from "react";
-import { removeItem, resetCart } from "../../redux/cartReducer";
+import {
+  decreaseQuantity,
+  increaseQuantity,
+  removeItem,
+  resetCart,
+} from "../../redux/cartReducer";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-
-//TODO: Vyřešit přidávání a odebírání počtu kusů uvnitř REDUX
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import { ShoppingCartIcon } from "@mui/icons-material/ShoppingCart";
 
 export const CartTable = () => {
-  const [quantity, setQuantity] = useState(0);
   const products = useSelector((state) => state.cart.products);
   const dispatch = useDispatch();
 
+  const totalPrice = () => {
+    let total = 0;
+    products.forEach((item) => {
+      total += item.quantity * item.price;
+    });
+    return total;
+  };
+
+  const totalQuantity = () => {
+    let total = 0;
+    products.forEach((item) => {
+      total += item.quantity;
+    });
+    return total;
+  };
+
   return (
     <div className="cartTable">
-      <h1>Products in your cart</h1>
+      <h3> 1) Check products in your cart</h3>
+      <Link to="/" className="linkBack">
+        <button className="returnShopping">
+          <ArrowBackIcon sx={{ width: "15%", height: "15%", margin: "2px" }} />{" "}
+          RETURN SHOPPING
+        </button>
+      </Link>{" "}
       <table class="table">
         <thead>
           <tr>
@@ -38,26 +65,47 @@ export const CartTable = () => {
                 <img src={item.img} alt="" />
               </td>
               <td>{item.title}</td>
-              <td>{item.desc.substring(0, 75)}</td>
-              <td>{item.price}</td>
+              <td className="desc-col">{item.desc.substring(0, 75)}</td>
+              <td className="price-col">{item.price}</td>
               <td>
                 <div className="quantity">
                   <button
-                    onClick={
-                      quantity === 0
-                        ? () => setQuantity(0)
-                        : () => setQuantity((prev) => prev - 1)
+                    className={item.quantity === 1 ? "quantity-disabled" : ""}
+                    onClick={() =>
+                      dispatch(
+                        decreaseQuantity({
+                          id: item.id,
+                          title: item.title,
+                          desc: item.desc,
+                          price: item.price,
+                          img: item.imgCover,
+                          quantity: 1,
+                        })
+                      )
                     }
                   >
                     -
                   </button>
                   {item.quantity}
-                  <button onClick={() => setQuantity((prev) => prev + 1)}>
+                  <button
+                    onClick={() =>
+                      dispatch(
+                        increaseQuantity({
+                          id: item.id,
+                          title: item.title,
+                          desc: item.desc,
+                          price: item.price,
+                          img: item.imgCover,
+                          quantity: 1,
+                        })
+                      )
+                    }
+                  >
                     +
                   </button>
                 </div>
               </td>
-              <td>{item.quantity * item.price}</td>
+              <td className="total-col">{item.quantity * item.price}</td>
               <td>
                 <DeleteOutlinedIcon
                   className="delete"
@@ -67,6 +115,14 @@ export const CartTable = () => {
               </td>
             </tr>
           ))}
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td className="total">{totalQuantity()} ks</td>
+            <td className="total">{totalPrice()} Kč</td>
+          </tr>
         </tbody>
       </table>
     </div>

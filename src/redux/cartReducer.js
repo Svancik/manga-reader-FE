@@ -31,7 +31,22 @@
         resetCart: (state) => {
           state.products = [];
         },
+        increaseQuantity: (state, action) =>{
+          const item = state.products.find(item=>item.id === action.payload.id);
+          if(item){
+            item.quantity+=action.payload.quantity;
+          }
+        },
+        decreaseQuantity: (state, action) =>{
+          const item = state.products.find(item=>item.id === action.payload.id);
+          if(item){            
+            item.quantity === 1 ? console.log("Delete item.") : item.quantity-=action.payload.quantity;
+                    
+          }
+        },
+
+
       },
     })
-    export const { addToCart, removeItem, resetCart } = cartSlice.actions
+    export const { addToCart, removeItem, resetCart, increaseQuantity,decreaseQuantity } = cartSlice.actions
     export default cartSlice.reducer

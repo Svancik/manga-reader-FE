@@ -1,8 +1,21 @@
 .checkoutWrapper{
     width: 90vw;
     margin: auto;
-    height: 30vw;
+    margin-top: 2vh;
+    height: max-content;
     background-color: rgba(255, 255, 255, 0.701);
     color: black;
     border: 1px solid black;
+}
+
+.returnButton{
+    width: 100%;
+    display: flex;
+    z-index: 9999;
+    height: 100%;
+}
+
+.returnButton button{
+    width: 100px;
+    height: 50px;
 }
