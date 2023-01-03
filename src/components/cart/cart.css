@@ -18,7 +18,8 @@
 }
 
 .cart  h1{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+
     color: gray;
     font-weight: 400;
     font-size: 24px;
@@ -29,19 +30,20 @@
 .cart .item{
     display: flex;
     align-items: center;
-    gap: 20px;
-    margin-bottom: 30px;
+    gap: 15px;
+    margin-bottom: 12px;
 }
 
 .cart .item img{
-    width: 170px;
-    height: 140px;
+    width: 110px;
+    height: 95px;
     object-fit: cover;
 }
 
 .cart .item .details h1{
     font-size: 20px;
     font-weight: 500;
+    margin-top: 10px;
     text-align: left;
     
 }

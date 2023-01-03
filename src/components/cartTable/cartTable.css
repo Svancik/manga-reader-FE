@@ -7,21 +7,21 @@
     margin: auto;
 }
 
-.cartTable {
+.cartTable{     
     height: max-content;
-    max-height: 80vh;
-   overflow-y: scroll;
+    max-height: 55vh;
+   overflow-y: auto;
+   width: 90vw;
+   margin: auto;
+   margin-top: 4vh;
+   height: max-content;
+   background-color: rgba(255, 255, 255, 0.701);
+   color: black;
+   border: 1px solid black;  
 }
 
+.cartTable thead th { position: sticky; top: 0; z-index: 1; background-color: rgba(255, 255, 255, 0.479); }
 
-
-.cartTable h3{
-    padding: 30px;
-    text-align: left;
-    font-weight: 600;
-    color: #2879fe;
-    
-}
 
 .cartTable .icon{
     text-align: left;
@@ -33,12 +33,15 @@
 .cartTable .table{
     width: 92%;
     margin: auto;
-    height: 35vh;
-    overflow-y: scroll;
+    overflow-y: auto;
+}
+
+.cartTable .table tr{
+    height: 20px;
 }
 
 .cartTable tbody tr td{
-    height: 60px;
+    height: 55px;
     justify-content: center;
     align-items: center;
     vertical-align: middle;
@@ -84,7 +87,7 @@ width: max-content;
     content: "...";
 }
 
-.total{   
+.cartTable .total{   
   
     font-weight: 700;
     font-size: 18px;
@@ -93,6 +96,7 @@ width: max-content;
 
 .returnShopping{
     position: absolute;
-    bottom: 40px;
-    right: 80px;
+    top: 10px;
+    right: 10px;
+    background-color: goldenrod;
 }

@@ -36,7 +36,7 @@ export const CartTable = () => {
   };
 
   return (
-    <div className="cartTable">
+    <div className="cartTable transparent-box">
       <h3> 1) Check products in your cart</h3>
       <Link to="/" className="linkBack">
         <button className="returnShopping">

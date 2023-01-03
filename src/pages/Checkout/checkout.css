@@ -1,21 +1,33 @@
+html{scroll-behavior:smooth}
+
 .checkoutWrapper{
-    width: 90vw;
-    margin: auto;
-    margin-top: 2vh;
-    height: max-content;
-    background-color: rgba(255, 255, 255, 0.701);
-    color: black;
-    border: 1px solid black;
-}
-
-.returnButton{
-    width: 100%;
+    width: 100vw;
     display: flex;
-    z-index: 9999;
-    height: 100%;
+    flex-direction:  column;
+    margin: auto;
+    margin-top: 2vh;  
+}
+.checkoutWrapper h3{
+    padding: 30px;
+    text-align: left;
+    font-weight: 600;
+    color: #2879fe;   
 }
 
-.returnButton button{
-    width: 100px;
-    height: 50px;
+.checkoutWrapper .continue{
+    width: max-content;
+    height: 8vh;
+    font-size: 34px;
+    margin: auto;
+    margin-top: 1vh;
+    padding: 0px 30px;
+      color: white;
 }
+
+.singlePage{
+    height: 100vh;
+    width: 100vw;
+       justify-content: center;
+    align-items: center;
+}
+
