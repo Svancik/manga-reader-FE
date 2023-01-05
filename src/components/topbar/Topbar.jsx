@@ -12,6 +12,8 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CancelIcon from "@mui/icons-material/Cancel";
 import { useSelector } from "react-redux";
 import Cart from "../cart/Cart";
+import { LoginButton } from "./../buttons/LoginButton";
+import { RegisterButton } from "../buttons/RegisterButton";
 
 export default function Topbar({ handleTextSearch, hideSearch }) {
   const [isLogin, setIsLogin] = useState(false);
@@ -42,23 +44,24 @@ export default function Topbar({ handleTextSearch, hideSearch }) {
           className="topbar__basket topElement"
           onClick={() => setIsCartOpen(!isCartOpen)}
         >
-          <ShoppingCartOutlinedIcon sx={{ width: "55%", height: "55%" }} />
+          <ShoppingCartOutlinedIcon sx={{ width: "60%", height: "55%" }} />
           <span>{products.length}</span>
         </div>
-        <div className="topbar__contact topElement">
-          <CallOutlinedIcon sx={{ width: "55%", height: "55%" }} />
+        <div className="topbar__buttons">
+          <LoginButton />
+          <RegisterButton />
         </div>
-        <div className="topbar__profile topElement">
-          {" "}
+        {/* 
+           <div className="topbar__profile topElement">
           <Person2OutlinedIcon sx={{ width: "55%", height: "55%" }} />
           <div className="loginBadge">
             {isLogin ? (
               <CheckCircleIcon style={{ color: "green" }} />
             ) : (
               <CancelIcon style={{ color: "red" }} />
-            )}
-          </div>
-        </div>
+            )}  
+          </div> 
+          </div>*/}
       </div>
       {isCartOpen && <Cart />}
     </div>

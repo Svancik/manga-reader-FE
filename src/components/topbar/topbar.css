@@ -4,7 +4,6 @@
     display: flex;
     width: 90vw;
     justify-content: space-between; 
-    position: fixed;
     top: 0;
     z-index: 999;
 }
@@ -29,7 +28,7 @@
 }
 
 .topbar__searchBar{
-    flex: 5;    
+    flex: 4;    
 }
 .topbar__icons{    
 
@@ -43,6 +42,7 @@
 
 .topbar__basket{
     position: relative;
+    padding-right: 40px;
 }
 
 .topbar__contact{
@@ -59,6 +59,10 @@
     justify-content: left;
     justify-self: left;
     align-items: left;
+
+    position: absolute;
+    left: 60px;
+    top: 2.5vh;
    
 }
 
@@ -71,7 +75,6 @@
     transition: all 0.5s ease-out;
     margin-top: 0px;
     margin-right: 20px;
-
 }
 
 .topElement:hover{
@@ -89,7 +92,18 @@ z-index: 9999;
     color: #1c658cb5;
 }
 
+.topbar__login{
+    flex: 6;
+    width: 200px;
+}
 
+.topbar__buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
 .topbar__basket span{ 
     font-size: 12px;
     width: 20px;
@@ -98,9 +112,10 @@ z-index: 9999;
     background-color: #2879fe;
     color: white;
     position: absolute;
-    right: 12.5px;
+    right: 52.5px;
     top: 45px;
     display: flex;
     align-items: center;
     justify-content: center;
+
 }

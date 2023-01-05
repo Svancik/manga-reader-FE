@@ -84,6 +84,7 @@ color: black;
     font-size: 12pt;
     font-weight: 600;
     margin-bottom: 10px;
+    margin: auto;
 }
 
 .filterItem .blocked-btn{

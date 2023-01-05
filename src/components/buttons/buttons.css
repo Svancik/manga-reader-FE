@@ -1,0 +1,44 @@
+.loginUser{
+    width: 160px;
+    height: 45px;
+ 
+    padding: 10px 20px;
+    font-size: 20px; 
+}
+.returnShopping{
+    background-color: goldenrod;
+    z-index: 999;
+    height: 45px;
+}
+
+
+.registerUser{
+    width: 180px;
+    height: 45px;
+    padding: 10px 20px;
+    font-size: 20px; 
+}
+
+
+
+.checkoutWrapper,.product .loginUser{
+    position: fixed;
+    right: 200px;
+    top: 10px;
+}
+
+.checkoutWrapper,.product .registerUser{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+}
+
+.checkoutWrapper,.product .returnShopping{
+    position: fixed;
+    top: 10px;
+    left: 20px;
+}
+
+.topElement .loginUser, .topElement .registerUser{
+ margin-top: 20px;
+}
