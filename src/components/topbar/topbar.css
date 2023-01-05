@@ -2,8 +2,11 @@
     background-color: rgba(255, 255, 255, 0.852);
     height: 11vh;    
     display: flex;
-    width: 100%;
+    width: 90vw;
     justify-content: space-between; 
+    position: fixed;
+    top: 0;
+    z-index: 999;
 }
 .topbarWrapper-hidden{
     background-color: transparent;

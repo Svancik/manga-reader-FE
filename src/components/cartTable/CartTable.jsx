@@ -39,10 +39,7 @@ export const CartTable = () => {
     <div className="cartTable transparent-box">
       <h3> 1) Check products in your cart</h3>
       <Link to="/" className="linkBack">
-        <button className="returnShopping">
-          <ArrowBackIcon sx={{ width: "15%", height: "15%", margin: "2px" }} />{" "}
-          RETURN SHOPPING
-        </button>
+
       </Link>{" "}
       <table class="table">
         <thead>

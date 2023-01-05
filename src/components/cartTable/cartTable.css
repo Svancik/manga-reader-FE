@@ -9,11 +9,11 @@
 
 .cartTable{     
     height: max-content;
-    max-height: 55vh;
-   overflow-y: auto;
+    max-height: 45vh;
+   overflow-y: visible;
    width: 90vw;
    margin: auto;
-   margin-top: 4vh;
+   margin-top: 5vh;
    height: max-content;
    background-color: rgba(255, 255, 255, 0.701);
    color: black;
@@ -33,7 +33,7 @@
 .cartTable .table{
     width: 92%;
     margin: auto;
-    overflow-y: auto;
+  
 }
 
 .cartTable .table tr{
@@ -94,9 +94,3 @@ width: max-content;
     padding-bottom: 20px;
 }
 
-.returnShopping{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: goldenrod;
-}

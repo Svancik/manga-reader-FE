@@ -1,11 +1,12 @@
 html{scroll-behavior:smooth}
 
 .checkoutWrapper{
+   
     width: 100vw;
     display: flex;
     flex-direction:  column;
     margin: auto;
-    margin-top: 2vh;  
+    margin-top: 1vh;  
 }
 .checkoutWrapper h3{
     padding: 30px;
@@ -31,3 +32,32 @@ html{scroll-behavior:smooth}
     align-items: center;
 }
 
+.returnShopping{
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    background-color: goldenrod;
+    z-index: 999;
+    height: 45px;
+}
+
+.loginUser{
+    width: 140px;
+    height: 45px;
+    position: fixed;
+    right: 200px;
+    top: 10px;
+    padding: 10px 20px;
+    font-size: 22px; 
+}
+
+.registerUser{
+    width: 180px;
+    height: 45px;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    padding: 10px 20px;
+    font-size: 22px; 
+
+}

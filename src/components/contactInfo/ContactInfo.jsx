@@ -6,7 +6,7 @@ import RegisterForm from "./../registerForm/RegisterForm";
 export const ContactInfo = () => {
   return (
     <div className="contactInfo">
-      <div className="left">
+      <div className="contact-left">
         <h3>2a) Login to fill personal informations</h3>{" "}
         <form action="">
           {" "}
@@ -23,7 +23,7 @@ export const ContactInfo = () => {
           <button className="registerFormNext">Login</button>
         </form>
       </div>
-      <div className="right">
+      <div className="contact-right">
         <h3> 2b) Fill in your personal informations</h3>
         <form>
           <div className="form-row">

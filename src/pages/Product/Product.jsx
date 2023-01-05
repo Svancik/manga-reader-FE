@@ -29,7 +29,6 @@ export default function Product() {
 
   return (
     <>
-      <Topbar />
       <div className="product">
         <>
           <div className="left">

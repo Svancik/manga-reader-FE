@@ -8,6 +8,7 @@ body{
 .hero{
     display: flex;
     height: max-content;
+    margin-top: 11vh;
     margin-bottom: 200px;
 }
 
