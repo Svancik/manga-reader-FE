@@ -969,3 +969,15 @@ export const MangaProducts = [
     },
 
 ]
+
+export const DeliveryServices = [
+    {id: 1, name: "Balíkovna", iconImg: "https://firebasestorage.googleapis.com/v0/b/manga-reader-36f38.appspot.com/o/9358e9360044e519bbcb90d88c5ec2d7-0.png.big-removebg-preview.png?alt=media&token=09136bbe-6782-4c06-9c92-12afe6f1ddec"},
+    {id: 2, name: "Zásilkovna", iconImg: "https://www.proarena.cz/wp-content/uploads/2021/06/Zasilkovna-logo.png"},
+    {id: 3, name: "Zásilkovna domů", iconImg: "https://www.proarena.cz/wp-content/uploads/2021/06/Zasilkovna-logo.png"},
+    {id: 4, name: "PPL", iconImg: "https://www.zaspas.cz/wp-content/uploads/2016/04/Logo-ppl-1024x333.jpg"},
+    {id: 5, name: "PPL ParcelShop", iconImg: "https://www.alvea.cz/fotky85627/Logo_PPL_ParcelShop.jpg"},
+    {id: 6, name: "Česká pošta - Balík Na poštu", iconImg: "https://www.ceskaposta.cz/documents/10180/483878/Logo-Balik-Na-postu.png/c796ffdc-57c5-48b0-a001-a638f7df16a8?t=1371809967270"},
+    {id: 7, name: "Česká pošta - Balík Do ruky", iconImg: "https://cdn.konzoleahry.cz/images/0/2f235018f0184548/2/ceska-posta-balik-do-ruky.jpg"},
+    {id: 8, name: "GLS", iconImg: "https://www.dopracenakole.cz/wp-content/uploads/gls-logo-positive-rgb-download-11622.png"},
+    {id: 9, name: "Cizina", }
+];

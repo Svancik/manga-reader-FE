@@ -1,29 +1,80 @@
-.contactInfo{
-
-   
-   width: 90vw;
-   
+.contactInfo{   
+   width: 90vw;   
    margin: auto;
-   margin-top: 2vh;
+   margin-top: 1vh;
    height: max-content; 
-   color: black;
-  
+   color: black;  
    display: flex;
-   gap: 2vh;
+   gap: 1vh;
+   
 }
+
+.contactInfo > *{
+ 
+    background-color: rgba(255, 255, 255, 0.701);
+    border: 1px solid black;  
+    padding-bottom: 0.5vh;
+}
+
 
 .contact-left{
     flex: 1;
     display: flex;
-    flex-direction: column;
-    background-color: rgba(255, 255, 255, 0.701);
+    flex-direction: column;  
     margin: 0;
-    border: 1px solid black;
+    
+}
+
+.contact-middle{
+    flex: 0.65;
+    margin: auto;
 }
 
 .contact-right{
-    flex: 1;
-    background-color: rgba(255, 255, 255, 0.701);
-    border: 1px solid black;
+    flex: 0.65;
+}
 
+.personalInfoTitle{
+    display: flex;    
+}
+
+
+.deliverySelection{
+    margin: auto;
+    width: max-content;
+}
+
+.deliveryService{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    align-self: center;
+    vertical-align: middle;
+    height: 50px;
+}
+
+.deliveryService:hover{
+    cursor: pointer;
+}
+
+.deliveryService label:hover{
+    cursor: pointer;
+    color:#2879fe; 
+}
+
+.deliveryService label{
+    margin-left: 20px;
+    justify-content: center;
+    font-weight: 500;
+  
+}
+
+.deliveryService img{
+    height: 30px;
+    width: 80px;
+    align-self: center;
+    justify-items: center;
+    margin-left: 10px;
+    margin-bottom: 20px;
 }

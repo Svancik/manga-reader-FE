@@ -2,29 +2,18 @@ import React from "react";
 import Personalnformations from "../registerForm/registerFormPages/Personalnformations";
 import "./contactInfo.css";
 import RegisterForm from "./../registerForm/RegisterForm";
+import Login from "./../../pages/Login/Login";
+import { LoginButton } from "./../buttons/LoginButton";
+import { DeliveryServices } from "./../../dummyData";
 
 export const ContactInfo = () => {
   return (
     <div className="contactInfo">
       <div className="contact-left">
-        <h3>2a) Login to fill personal informations</h3>{" "}
-        <form action="">
-          {" "}
-          <input
-            type="email"
-            placeholder="Email address"
-            className="form-control"
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            className="form-control"
-          />
-          <button className="registerFormNext">Login</button>
-        </form>
-      </div>
-      <div className="contact-right">
-        <h3> 2b) Fill in your personal informations</h3>
+        <div className="personalInfoTitle">
+          <h3> 2) Fill in your personal informations or</h3>
+          <LoginButton />
+        </div>
         <form>
           <div className="form-row">
             <div class="form-group col-md-6">
@@ -117,6 +106,28 @@ export const ContactInfo = () => {
             </div>
           </div>
         </form>
+      </div>
+      <div className="contact-middle">
+        <h3>3) Select delivery</h3>
+        <div className="deliverySelection">
+          {DeliveryServices.map((service) => (
+            <div className="deliveryService">
+              <input
+                name="delivery"
+                type="radio"
+                value={service.name}
+                id={service.id}
+              />
+              <label htmlFor={service.id}>
+                {service.name}{" "}
+                {service.iconImg && <img src={service.iconImg} alt="" />}
+              </label>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="contact-right">
+        <h3>4) Select payment method</h3>
       </div>
     </div>
   );

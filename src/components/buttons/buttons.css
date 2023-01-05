@@ -21,19 +21,19 @@
 
 
 
-.checkoutWrapper,.product .loginUser{
+.checkoutWrapper .loginUser,.product .loginUser{
     position: fixed;
     right: 200px;
     top: 10px;
 }
 
-.checkoutWrapper,.product .registerUser{
+.checkoutWrapper .registerUser,.product .registerUser{
     position: fixed;
     right: 10px;
     top: 10px;
 }
 
-.checkoutWrapper,.product .returnShopping{
+.checkoutWrapper .returnShopping,.product .returnShopping{
     position: fixed;
     top: 10px;
     left: 20px;
@@ -42,3 +42,12 @@
 .topElement .loginUser, .topElement .registerUser{
  margin-top: 20px;
 }
+
+.contact-left .loginUser{
+    position:relative;
+    top: 0px;
+    left: 0px;
+    margin-top: 15px;
+    margin-left: -10px;
+}
+
