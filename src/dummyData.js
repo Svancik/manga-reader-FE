@@ -978,7 +978,6 @@ export const DeliveryServices = [
     {id: 5, name: "PPL ParcelShop", iconImg: "https://www.alvea.cz/fotky85627/Logo_PPL_ParcelShop.jpg"},
     {id: 6, name: "Česká pošta - Balík Na poštu", iconImg: "https://www.ceskaposta.cz/documents/10180/483878/Logo-Balik-Na-postu.png/c796ffdc-57c5-48b0-a001-a638f7df16a8?t=1371809967270"},
     {id: 7, name: "Česká pošta - Balík Do ruky", iconImg: "https://cdn.konzoleahry.cz/images/0/2f235018f0184548/2/ceska-posta-balik-do-ruky.jpg"},
-    {id: 8, name: "Cizina", }
 ];
 
 export const PaymentMethod = [
