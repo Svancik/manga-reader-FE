@@ -8,6 +8,9 @@ import { useState } from "react";
 import OrderForm from "../orderForm/OrderForm";
 
 export const OrderInfo = () => {
+  const [selectedPayment, setSelectedPayment] = useState(10);
+  const [selectedDelivery, setSelectedDelivery] = useState(1);
+
   return (
     <div className="contactInfo">
       <div className="contact-left">
@@ -20,7 +23,8 @@ export const OrderInfo = () => {
                 type="radio"
                 value={service.name}
                 id={service.id}
-                checked={service.checked}
+                checked={service.id === selectedDelivery}
+                onClick={() => setSelectedDelivery(service.id)}
               />
               <label htmlFor={service.id}>
                 {service.name}{" "}
@@ -41,7 +45,8 @@ export const OrderInfo = () => {
                   type="radio"
                   value={payment.name}
                   id={payment.id}
-                  checked={payment.checked}
+                  checked={payment.id === selectedPayment}
+                  onClick={() => setSelectedPayment(payment.id)}
                 />
                 <label htmlFor={payment.id}>
                   {payment.name}{" "}
