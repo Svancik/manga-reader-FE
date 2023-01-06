@@ -6,8 +6,8 @@ export const LoginButton = () => {
   return (
     <button className="loginUser">
       <Link className="link" to="/">
-        <AccountBoxIcon sx={{ width: "25%", height: "90%", margin: "0px" }} />{" "}
-        LOGIN{" "}
+        <AccountBoxIcon sx={{ width: "17%", height: "90%", margin: "0px" }} />{" "}
+        PŘIHLÁSIT SE{" "}
       </Link>
     </button>
   );

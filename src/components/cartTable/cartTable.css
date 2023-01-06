@@ -1,6 +1,6 @@
 .cartTable img{
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     object-fit: cover;
     border-radius: 50%;
     display: flex;
@@ -10,7 +10,7 @@
 .cartTable{     
     height: max-content;
     max-height: 43vh;
-   overflow-y: visible;
+    overflow-y: visible;
    width: 90vw;
    margin: auto;
    margin-top: 5vh;
@@ -21,7 +21,7 @@
 
 }
 
-.cartTable thead th { position: sticky; top: 0; z-index: 1; background-color: rgba(255, 255, 255, 0.479); }
+.cartTable thead th { position: sticky; top: 0px; z-index: 1; background-color: rgba(255, 255, 255, 0.479); }
 
 
 .cartTable .icon{
@@ -42,7 +42,8 @@
 }
 
 .cartTable tbody tr td{
-    height: 55px;
+    max-height: 50px;
+    height: max-content;
     justify-content: center;
     align-items: center;
     vertical-align: middle;
@@ -95,3 +96,6 @@ width: max-content;
     padding-bottom: 20px;
 }
 
+.total-col{
+    font-weight: 500;
+}

@@ -1,5 +1,5 @@
 .loginUser{
-    width: 160px;
+    width:225px;
     height: 45px;
  
     padding: 10px 20px;
@@ -13,17 +13,22 @@
 
 
 .registerUser{
-    width: 180px;
+    width: 220px;
     height: 45px;
     padding: 10px 20px;
     font-size: 20px; 
 }
 
-
+.finishOrder{
+    margin: auto;
+    margin-top: 20px;
+    font-size: 21px;
+    font-weight: 600;    
+}
 
 .checkoutWrapper .loginUser,.product .loginUser{
     position: fixed;
-    right: 200px;
+    right: 240px;
     top: 10px;
 }
 

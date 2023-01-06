@@ -6,7 +6,7 @@ export const RegisterButton = () => {
   return (
     <button className="registerUser">
       <PersonAddAltIcon sx={{ width: "30%", height: "120%", margin: "2px" }} />
-      REGISTER
+      REGISTROVAT
     </button>
   );
 };

@@ -37,10 +37,8 @@ export const CartTable = () => {
 
   return (
     <div className="cartTable transparent-box">
-      <h3> 1) Check products in your cart</h3>
-      <Link to="/" className="linkBack">
-
-      </Link>{" "}
+      <h3> 1) Zkontrolujte si obsah svého košíku</h3>
+      <Link to="/" className="linkBack"></Link>{" "}
       <table class="table">
         <thead>
           <tr>
@@ -62,7 +60,7 @@ export const CartTable = () => {
                 <img src={item.img} alt="" />
               </td>
               <td>{item.title}</td>
-              <td className="desc-col">{item.desc.substring(0, 75)}</td>
+              <td className="desc-col">{item.desc.substring(0, 55)}</td>
               <td className="price-col">{item.price}</td>
               <td>
                 <div className="quantity">
@@ -107,7 +105,7 @@ export const CartTable = () => {
                 <DeleteOutlinedIcon
                   className="delete"
                   onClick={() => dispatch(removeItem(item.id))}
-                  sx={{ width: "75%", height: "75%" }}
+                  sx={{ width: "9%", height: "9%" }}
                 />
               </td>
             </tr>

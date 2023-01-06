@@ -7,7 +7,7 @@ export const ReturnButton = () => {
     <button className="returnShopping">
       <Link className="link" to="/">
         <ArrowBackIcon sx={{ width: "15%", height: "90%", margin: "5px" }} />{" "}
-        RETURN SHOPPING
+        ZPĚT DO OBCHODU
       </Link>
     </button>
   );

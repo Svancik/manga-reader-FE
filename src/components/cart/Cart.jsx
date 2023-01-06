@@ -31,7 +31,7 @@ export const Cart = () => {
               <h1>{item.title}</h1>
               <p>{item.desc.substring(0, 110)}</p>
               <div className="price">
-                {item.quantity} x {item.price} Kč
+                {item.quantity} x {item.price}
               </div>
             </div>
             <DeleteOutlinedIcon

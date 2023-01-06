@@ -46,6 +46,7 @@ export default function Topbar({ handleTextSearch, hideSearch }) {
         >
           <ShoppingCartOutlinedIcon sx={{ width: "60%", height: "55%" }} />
           <span>{products.length}</span>
+
         </div>
         <div className="topbar__buttons">
           <LoginButton />
