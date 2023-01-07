@@ -54,14 +54,14 @@ export default function Product() {
         <h1 className="title">{product.title}</h1>
         <h4 className="author">{product.authors.map((author) => author)}</h4>
         <span className="desc">{product.desc}</span>
-        <span className="priceValue">
-          {product.discount
-            ? Math.round(
-                product.price - (product.discount / 100) * product.price
-              )
-            : product.price}
-        </span>
-        {product.discount && <span className="oldPrice">{product.price}</span>}
+        <span className="priceValue">{product.price}</span>
+        {product.discount && (
+          <span className="oldPrice">
+            {Math.round(
+              product.price + (product.discount / 100) * product.price
+            )}
+          </span>
+        )}
         <div className="quantity">
           <button
             onClick={

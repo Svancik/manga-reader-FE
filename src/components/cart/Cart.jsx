@@ -21,7 +21,7 @@ export const Cart = () => {
 
   return (
     <div className="cart">
-      <h1>Products in your cart</h1>
+      <h1>Obsah Vašeho košíku</h1>
       {products.map((item) => (
         <>
           <hr />
@@ -42,12 +42,12 @@ export const Cart = () => {
         </>
       ))}
       <div className="total">
-        <span>SUBTOTAL</span>
+        <span>CELKEM</span>
         <span>{totalPrice()} Kč</span>
       </div>
       {products.length > 0 ? (
         <Link to="/checkout" className="link">
-          <button>PROCEED TO CHECKOUT</button>
+          <button>DOKONČIT OBJEDNÁVKU</button>
         </Link>
       ) : (
         <div>
@@ -55,7 +55,7 @@ export const Cart = () => {
         </div>
       )}
       <span className="reset" onClick={() => dispatch(resetCart())}>
-        Reset Cart
+        Vysypat košík
       </span>
     </div>
   );

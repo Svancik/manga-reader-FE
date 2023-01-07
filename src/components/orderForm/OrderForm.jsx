@@ -12,9 +12,10 @@ export default class OrderForm extends Component {
       phone: "",
       city: "",
       address: "",
-      psc: "",
+      zip: "",
     },
     errors: {},
+    isFinished: false,
   };
 
   schema = {
@@ -24,7 +25,7 @@ export default class OrderForm extends Component {
     phone: Joi.number().required(),
     city: Joi.string().required(),
     address: Joi.string().required(),
-    psc: Joi.string().required(),
+    zip: Joi.string().required(),
   };
 
   validate = () => {
@@ -51,6 +52,8 @@ export default class OrderForm extends Component {
     this.setState({ errors: errors || {} });
     if (errors) return; //neprovedeme submit
     alert("Form submited");
+    this.setState({ isFinished: true });
+    window.location = "/?orderFinished";
   };
 
   handleChange = (e) => {
@@ -60,11 +63,9 @@ export default class OrderForm extends Component {
   };
 
   render() {
-    console.log(this.state.errors.firstName);
-    console.log("firstName: ", this.state.data.firstName);
     return (
       <div>
-        {" "}
+        {this.state.isFinished && <span>ORDER WAS FINISHED!</span>}{" "}
         <form onSubmit={this.handleSubmit}>
           <div className="form-row" id="myform">
             <div class="form-group col-md-4">
@@ -178,13 +179,13 @@ export default class OrderForm extends Component {
               <input
                 type="text"
                 class="form-control"
-                name="psc"
-                id="inputZip"
+                name="zip"
+                id="zip"
                 placeholder="400 00"
-                value={this.state.data.psc}
+                value={this.state.data.zip}
                 onChange={this.handleChange}
               />
-              {this.state.errors.psc && (
+              {this.state.errors.zip && (
                 <div className="alert alert-danger">Vyplňte</div>
               )}
             </div>

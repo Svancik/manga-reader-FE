@@ -42,15 +42,15 @@ export const CartTable = () => {
       <table class="table">
         <thead>
           <tr>
-            <th scope="col">Image</th>
-            <th scope="col">Title</th>
-            <th scope="col">Description</th>
-            <th scope="col">Price</th>
+            <th scope="col">Obrázek</th>
+            <th scope="col">Název</th>
+            <th scope="col">Popis</th>
+            <th scope="col">Cena / ks</th>
             <th scope="col" className="col-md-2">
-              Quantity
+              Množství
             </th>
-            <th scope="col">Total</th>
-            <th scope="col">Delete</th>
+            <th scope="col">Celkem</th>
+            <th scope="col">Odebrat</th>
           </tr>
         </thead>
         <tbody>

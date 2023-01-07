@@ -5,6 +5,10 @@ body{
     background-size: cover;
 }
 
+.no-scroll{
+    height: 100vh;
+}
+
 .hero{
     display: flex;
     height: max-content;

@@ -13,8 +13,6 @@ import Topbar from './components/topbar/Topbar';
 
   - vyřešit problém s position sticky (sidebar, tabulka v checkout)
   - vyřešit problém se šírkou sidebaru (při FULL HD rozlišení dělá problém)
-  - doplnit platební metody
-  - doplnit dokončení objednávky
   - dodělat regitraci 
   - dodělat uživatele do localstorage a předvyplnění dat dle uživatele
   - dodělat sortování mangy
@@ -22,6 +20,9 @@ import Topbar from './components/topbar/Topbar';
   - dodělat footer
   - dodělat vyskakovací okno pro login
   - doplnit více dat
+  - doplnit okénko dokončení objednávky
+  - doplnit vlaječky (jazyky mangy CZ/EN) do košíku a tabulky košíku 
+  - doplnt pagination
 
 
 */

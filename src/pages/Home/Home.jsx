@@ -6,6 +6,8 @@ import "./home.css";
 import Library from "../../components/library/Library";
 import { MangaProducts } from "../../dummyData";
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import { OrderFinishedPopUp } from "../../components/orderFinishedPopUp/OrderFinishedPopUp";
 //TODO: Buttony se chovají zvláštně po kliknutí (i ve slideru)
 
 export default function Home() {
@@ -13,6 +15,9 @@ export default function Home() {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [priceRange, setPriceRange] = useState(750);
   const [isTextfieldFull, setIsTextFieldFull] = useState(false);
+
+  const orderIsFinised = "?orderFinished" === useLocation().search;
+  console.log(orderIsFinised);
 
   const handleMangaLibraryGenre = (e) => {
     isTextfieldFull
@@ -50,8 +55,6 @@ export default function Home() {
   };
 
   useEffect(() => {
-    // console.log("price: ", priceRange);
-    // console.log(mangaLibrary.filter((manga) => manga.price < priceRange));
     console.log(selectedCategory);
     selectedCategory
       ? setMangaLibrary(
@@ -66,8 +69,12 @@ export default function Home() {
         );
   }, [priceRange]);
 
+  document.body.style.overflow = "hidden";
+
   return (
-    <div className="body">
+    <div className={orderIsFinised ? "body no-scroll" : "body"}>
+      {orderIsFinised && <OrderFinishedPopUp />}
+
       <div className="homeWrapper">
         <Topbar handleTextSearch={handleTextSearch} />
         <div className="hero">
