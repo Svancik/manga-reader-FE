@@ -15,9 +15,27 @@ export default function RegisterForm() {
   ];
 
   return (
-    <>
-      <div className="progress-bar"></div>
-      <div>{componentList[page]}</div>
-    </>
+    <div className="registerForm">
+      <form action="">
+        {" "}
+        <h1 className="registerFormTitle">Vyplňte přihlašovací údaje</h1>
+        <input
+          type="email"
+          placeholder="Email address"
+          className="form-control"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          className="form-control"
+        />
+        <input
+          type="password"
+          placeholder="Repeat Password"
+          className="form-control"
+        />
+        <hr />
+      </form>
+    </div>
   );
 }

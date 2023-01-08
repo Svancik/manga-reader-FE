@@ -8,7 +8,7 @@ export default function LoginForm() {
         <input type="email" placeholder="Email" />
         <input type="password" placeholder="Password" />
         <Link to="/" className="buttonLogin">
-          <button className="buttonLogin">Sign In</button>
+          <button className="buttonLogin">Přihlásit se</button>
         </Link>
       </form>
     </div>

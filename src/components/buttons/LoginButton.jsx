@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const LoginButton = () => {
   return (
     <button className="loginUser">
-      <Link className="link" to="/">
+      <Link className="link" to="/login">
         <AccountBoxIcon sx={{ width: "17%", height: "90%", margin: "0px" }} />{" "}
         PŘIHLÁSIT SE{" "}
       </Link>

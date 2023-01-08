@@ -10,7 +10,6 @@ import RegisterFormPage3 from "../../components/registerForm/registerFormPages/S
 export default function Register() {
   return (
     <>
-      <Navbar />
       <div className="registerWrapper">
         <div className="register--left">
           <VerticalCarousel />

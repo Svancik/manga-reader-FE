@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { OrderFinishedPopUp } from "../../components/orderFinishedPopUp/OrderFinishedPopUp";
 import { resetCart } from "../../redux/cartReducer";
-//TODO: Buttony se chovají zvláštně po kliknutí (i ve slideru)
+import { useDispatch } from "react-redux";
 
 export default function Home() {
   const [mangaLibrary, setMangaLibrary] = useState(MangaProducts);
@@ -18,8 +18,10 @@ export default function Home() {
   const [isTextfieldFull, setIsTextFieldFull] = useState(false);
 
   const orderIsFinised = "?orderFinished" === useLocation().search;
-
-  console.log(orderIsFinised);
+  const dispatch = useDispatch();
+  useLocation().search === "?orderFinished"
+    ? dispatch(resetCart())
+    : console.log("swag");
 
   const handleMangaLibraryGenre = (e) => {
     isTextfieldFull
@@ -70,7 +72,6 @@ export default function Home() {
           MangaProducts.filter((manga) => manga.price < priceRange)
         );
   }, [priceRange]);
-
 
   return (
     <div className={orderIsFinised ? "body no-scroll" : "body"}>

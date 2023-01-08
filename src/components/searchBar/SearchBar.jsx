@@ -7,7 +7,7 @@ export default function SearchBar({ handleTextSearch }) {
       <input
         type="text"
         className="searchBar__input"
-        placeholder="Enter name of a Manga here..."
+        placeholder="Vyhledávejte podle názvu mangy..."
         onChange={handleTextSearch}
       />
       {/* <button className="searchBar__button button--accent">Search</button> */}

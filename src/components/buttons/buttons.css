@@ -1,9 +1,9 @@
 .loginUser{
-    width:225px;
+    width:180px;
     height: 45px;
- 
+    font-weight: 600;
     padding: 10px 20px;
-    font-size: 20px; 
+    font-size: 16px; 
 }
 .returnShopping{
     background-color: goldenrod;
@@ -13,10 +13,11 @@
 
 
 .registerUser{
-    width: 220px;
+    width: 180px;
     height: 45px;
     padding: 10px 20px;
-    font-size: 20px; 
+    font-size: 16px; 
+    font-weight: 600;
 }
 
 .finishOrder{
@@ -28,7 +29,7 @@
 
 .checkoutWrapper .loginUser,.product .loginUser{
     position: fixed;
-    right: 240px;
+    right: 200px;
     top: 10px;
 }
 
@@ -48,6 +49,18 @@
  margin-top: 20px;
 }
 
+
+.loginRight .returnShopping{
+    margin: 15px 30px;
+}
+
+.loginRight .registerUser{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+
+}
+
 .contact-left .loginUser{
     position:relative;
     top: 0px;
@@ -60,7 +73,30 @@
 .continueShopping{
     border-radius: 30px;
     margin: 20px auto;
-    font-weight: 600;
+    font-weight: 600; 
+}
+
+
+.cartButton{
+    position: fixed;
+    top: 15px;
+    right: 400px;
+    width: 150px;
+    height: 40px;
     
-    
+}
+
+.cartButton span{ 
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #2879fe;
+    color: white;
+    position: absolute;
+    right: 50px;
+    top:0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

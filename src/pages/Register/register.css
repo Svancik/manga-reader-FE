@@ -4,8 +4,7 @@
 }
 
 .register--left{
-    background: rgb(28,101,140);
-    background: linear-gradient(344deg, rgba(28,101,140,1) 7%, rgba(239,244,247,1) 100%, rgba(255,255,255,1) 100%);
+    background-color: #1C658C;
     flex: 0.5;
 }
 

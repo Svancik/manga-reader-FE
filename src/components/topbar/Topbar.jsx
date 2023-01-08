@@ -28,7 +28,7 @@ export default function Topbar({ handleTextSearch, hideSearch }) {
     >
       <div
         className={"topbar__logo topElement "}
-        style={hideSearch ? { flex: "0.5" } : { flex: "2" }}
+        style={hideSearch ? { flex: "0.5" } : { flex: "1" }}
       >
         <Link to="/">
           <img src={require("../../media/design/logo.png")} className="logo" />
@@ -46,11 +46,14 @@ export default function Topbar({ handleTextSearch, hideSearch }) {
         >
           <ShoppingCartOutlinedIcon sx={{ width: "60%", height: "55%" }} />
           <span>{products.length}</span>
-
         </div>
-        <div className="topbar__buttons">
-          <LoginButton />
-          <RegisterButton />
+        <div className="topbar__buttons topElement">
+          <div className="topbar__button">
+            <LoginButton />
+          </div>
+          <div className="topbar__button">
+            <RegisterButton />
+          </div>
         </div>
         {/* 
            <div className="topbar__profile topElement">

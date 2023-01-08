@@ -1,10 +1,17 @@
-.registerFormWrapper{    
-    width: 100%;
+.registerForm{      
     margin: auto;
     justify-content: center;
     display: flex;
     flex-direction: column;
+    background-color: white;
+    padding: 70px;
   }
+
+.registerForm hr{
+    width: 88%;
+    margin: 20px auto;
+    
+}
 
 .cardWrapper{
     background-color: red;

@@ -30,6 +30,9 @@ input{
     font-weight: 500;
     cursor: pointer;
     transition: color, background-color 1.5s;
+    justify-content: center;
+    text-align:center;
+    margin: auto;
 }
 
 button:hover{

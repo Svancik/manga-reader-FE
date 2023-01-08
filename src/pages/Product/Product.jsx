@@ -13,6 +13,7 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { ReturnButton } from "../../components/buttons/ReturnButton";
 import { LoginButton } from "../../components/buttons/LoginButton";
 import { RegisterButton } from "../../components/buttons/RegisterButton";
+import { CartButton } from "../../components/buttons/CartButton";
 
 export default function Product() {
   const productId = useLocation().pathname.split("/")[2];
@@ -33,6 +34,7 @@ export default function Product() {
   return (
     <div className="product">
       <ReturnButton />
+
       <LoginButton />
       <RegisterButton />
       <div className="left">

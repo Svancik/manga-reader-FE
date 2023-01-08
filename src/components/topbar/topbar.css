@@ -15,28 +15,26 @@
 .topElement{
     height: 100%;
     display: flex;
-    margin: auto 0; 
+
   
 }
 
 .topbar__logo{
-    flex: 2;
-    height: 100%;
-    width: max-content;
+      width: 200px;
+    height: 100%;    
     display: flex;
-
 }
 
 .topbar__searchBar{
     flex: 4;    
 }
 .topbar__icons{    
-
-    flex: 2;
+    flex: 3;
     display: flex;
     flex-direction: row;
     justify-content: right;
     margin-right: 50px;
+
 
 }
 
@@ -92,12 +90,8 @@ z-index: 9999;
     color: #1c658cb5;
 }
 
-.topbar__login{
-    flex: 6;
-    width: 200px;
-}
-
 .topbar__buttons{
+   
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -112,8 +106,8 @@ z-index: 9999;
     background-color: #2879fe;
     color: white;
     position: absolute;
-    right: 52.5px;
-    top: 45px;
+    right: 50.5px;
+    top: 37px;
     display: flex;
     align-items: center;
     justify-content: center;
