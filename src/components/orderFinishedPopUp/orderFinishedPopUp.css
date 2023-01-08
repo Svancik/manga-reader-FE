@@ -8,7 +8,7 @@
 
 .orderFinished__PopUpWrapper
 {
-    width: 33vw;
+    width: 40vw;
     height: max-content;
     position: absolute;
     z-index: 9999;
@@ -21,4 +21,21 @@
     vertical-align: middle;
     justify-content: center;
     background-color: white;
+    padding: 20px;
 }
+
+.orderFinished__PopUpWrapper h1{
+    color: black;
+    font-weight: 600;
+    margin: 15px 10px;
+}
+
+.orderFinished__PopUpWrapper span{
+    display: block;
+    margin-top: 5px;
+}
+
+.orderFinished__PopUpWrapper .icon-success{
+    margin-top: 10px;
+}
+

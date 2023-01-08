@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Joi from "joi-browser";
 import CheckIcon from "@mui/icons-material/Check";
 import Title from "./../autoSlider/subComponents/Title/Title";
+import { useDispatch } from "react-redux";
+import { resetCart } from "../../redux/cartReducer";
 
 export default class OrderForm extends Component {
   state = {
@@ -15,7 +17,6 @@ export default class OrderForm extends Component {
       zip: "",
     },
     errors: {},
-    isFinished: false,
   };
 
   schema = {
@@ -51,8 +52,6 @@ export default class OrderForm extends Component {
 
     this.setState({ errors: errors || {} });
     if (errors) return; //neprovedeme submit
-    alert("Form submited");
-    this.setState({ isFinished: true });
     window.location = "/?orderFinished";
   };
 
@@ -65,7 +64,6 @@ export default class OrderForm extends Component {
   render() {
     return (
       <div>
-        {this.state.isFinished && <span>ORDER WAS FINISHED!</span>}{" "}
         <form onSubmit={this.handleSubmit}>
           <div className="form-row" id="myform">
             <div class="form-group col-md-4">
