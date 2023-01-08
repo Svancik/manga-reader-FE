@@ -62,6 +62,8 @@ export default class OrderForm extends Component {
   };
 
   render() {
+    const { buttonText } = this.props;
+
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
@@ -75,7 +77,6 @@ export default class OrderForm extends Component {
                 class="form-control"
                 id="firstName"
                 name="firstName"
-                placeholder="Radek"
                 value={this.state.data.firstName}
                 onChange={this.handleChange}
               />
@@ -92,7 +93,6 @@ export default class OrderForm extends Component {
                 class="form-control"
                 id="lastName"
                 name="lastName"
-                placeholder="Novotný"
                 value={this.state.data.lastName}
                 onChange={this.handleChange}
               />
@@ -110,7 +110,6 @@ export default class OrderForm extends Component {
                 type="email"
                 id="emailAddress"
                 name="email"
-                placeholder="radek.svan@email.cz"
                 className="form-control"
                 value={this.state.data.email}
                 onChange={this.handleChange}
@@ -127,7 +126,7 @@ export default class OrderForm extends Component {
                 type="number"
                 id="phonenumber"
                 name="phone"
-                placeholder="+420 712 156 889"
+                placeholder="+420"
                 className="form-control"
                 value={this.state.data.phone}
                 onChange={this.handleChange}
@@ -145,7 +144,6 @@ export default class OrderForm extends Component {
                 class="form-control"
                 id="inputCity"
                 name="city"
-                placeholder="Litoměřice"
                 value={this.state.data.city}
                 onChange={this.handleChange}
               />
@@ -155,14 +153,13 @@ export default class OrderForm extends Component {
             </div>
             <div class="form-group col-md-6">
               <label for="inputAddress2" className="label">
-                Adresa bydliště
+                Adresa bydliště (včetně čísla)
               </label>
               <input
                 type="text"
                 class="form-control"
                 name="address"
                 id="inputAddress2"
-                placeholder="Obchodní 575"
                 value={this.state.data.address}
                 onChange={this.handleChange}
               />
@@ -179,8 +176,7 @@ export default class OrderForm extends Component {
                 class="form-control"
                 name="zip"
                 id="zip"
-                placeholder="400 00"
-                value={this.state.data.zip}
+s                value={this.state.data.zip}
                 onChange={this.handleChange}
               />
               {this.state.errors.zip && (
@@ -190,7 +186,7 @@ export default class OrderForm extends Component {
           </div>
           <button className="finishOrder" type="submit">
             <CheckIcon sx={{ width: "17%", height: "90%", margin: "0px" }} />{" "}
-            OBJEDNAT{" "}
+            {buttonText}{" "}
           </button>
         </form>
       </div>

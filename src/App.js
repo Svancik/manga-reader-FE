@@ -11,8 +11,6 @@ import Topbar from './components/topbar/Topbar';
 
 /*TODO:
 
-  - dodělat regitraci 
-  - dodělat uživatele do localstorage a předvyplnění dat dle uživatele
   - dodělat sortování mangy
   - dodělat selekcti bestseller/new/sale
   - dodělat footer

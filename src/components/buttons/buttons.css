@@ -50,15 +50,14 @@
 }
 
 
-.loginRight .returnShopping{
+.loginRight .returnShopping, .register--right .returnShopping{
     margin: 15px 30px;
 }
 
-.loginRight .registerUser{
+.loginRight .registerUser, .register--right .loginUser{
     position: fixed;
     top: 15px;
     right: 15px;
-
 }
 
 .contact-left .loginUser{

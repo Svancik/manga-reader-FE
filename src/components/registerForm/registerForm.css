@@ -9,8 +9,13 @@
 
 .registerForm hr{
     width: 88%;
-    margin: 20px auto;
-    
+    margin: 20px auto;    
+}
+
+.registerForm h1{
+    font-size: 32px;
+    color: black;
+    margin-bottom: 25px;
 }
 
 .cardWrapper{
@@ -47,13 +52,19 @@ label{
     color: white;
 }
 
+.registerForm__backButton{
+    position: f;
+    left: 20px;
+    top: 20px;
+}
 
 .registerFormNext{
     height: 50px;
     margin: 0 0.11vw;
-    width: 100%;
-    border-radius: 5px;
-    background-color: #1C658C;
+    width: max-content;
+    padding: 25px;
+    margin: auto;
+    background-color: #2879fe;
     color: white;
     border: none;
     font-size: 20px;

@@ -64,7 +64,7 @@ export const OrderInfo = () => {
         <div className="personalInfoTitle">
           <h3> 4) Vyplňte kontaktní údaje</h3>
         </div>
-        <OrderForm  />
+        <OrderForm buttonText="OBJEDNAT" />
       </div>
     </div>
   );

@@ -5,16 +5,26 @@ export default function registerFormPage1({ page, setPage }) {
   return (
     <form action="">
       {" "}
-      <h1 className="registerFormTitle">Create Account</h1>
+      <h1>Vyplňte přihlašovací údaje</h1>
+      <label htmlFor="username">Uživatelské jméno</label>
       <input
-        type="email"
-        placeholder="Email address"
+        id="username"
+        type="text"
+        className="form-control"
+        placeholder=""
+      />
+      <label htmlFor="password1">Heslo</label>
+      <input
+        id="password1"
+        type="password"
+        placeholder=""
         className="form-control"
       />
-      <input type="password" placeholder="Password" className="form-control" />
+      <label htmlFor="password2">Zopakujte heslo</label>
       <input
+        id="password2"
         type="password"
-        placeholder="Repeat Password"
+        placeholder=""
         className="form-control"
       />
       <button
@@ -23,7 +33,7 @@ export default function registerFormPage1({ page, setPage }) {
           setPage(page + 1);
         }}
       >
-        Next
+        DALŠÍ KROK
       </button>
     </form>
   );
