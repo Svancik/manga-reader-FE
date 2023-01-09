@@ -2,6 +2,13 @@ import React from "react";
 import { useState, useEffect } from "react";
 import "./sideMenu.css";
 import { Genres } from "../../dummyData";
+import MoneyIcon from "@mui/icons-material/Money";
+import PaidIcon from "@mui/icons-material/Paid";
+import NewReleasesIcon from "@mui/icons-material/NewReleases";
+import FiberNewIcon from "@mui/icons-material/FiberNew";
+import TrendingDownIcon from "@mui/icons-material/TrendingDown";
+import TrendingUpIcon from "@mui/icons-material/TrendingUp";
+import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 
 export default function SideMenu({
   handleMangaLibraryGenre,
@@ -22,7 +29,7 @@ export default function SideMenu({
     <div className="sideMenuWrapper">
       <div className="genresFilter">
         <div className="filterItem">
-          <h2>Filter by genres</h2>
+          <h2>Filtrovat dle žánru</h2>
           {Genres.map((genre) => (
             <div className="inputItem" key={genre.id}>
               <input
@@ -40,7 +47,7 @@ export default function SideMenu({
         </div>
       </div>
       <div className="filterItem">
-        <h2>Filter by price</h2>
+        <h2>Filtrovat dle ceny</h2>
         <div className="inputItem">
           <span>0</span>
           <input
@@ -58,21 +65,53 @@ export default function SideMenu({
           onClick={handleFilterReset}
           className={isTextfieldFull && "blocked-btn"}
         >
-          RESET FILTERS
+          Zrušit filtry
         </button>
         <hr />
       </div>
 
       <div className="filterItem">
-        <h2>Sort by</h2>
+        <h2>Seřadit dle</h2>
         <div className="sortFilter">
+          <span>
+            <PaidIcon sx={{ width: "32px", height: "32px", color: "green" }} />
+          </span>
+
           <div className="inputItem">
-            <input type="radio" id="asc" value="asc" name="price" />
-            <label htmlFor="asc">Price (Lowest first)</label>
+            <input type="radio" id="asc" value="asc" name="filter" />
+            <label htmlFor="asc">
+              Nejlevnější{" "}
+              <TrendingUpIcon sx={{ width: "22px", height: "22px" }} />
+            </label>
           </div>
           <div className="inputItem">
-            <input type="radio" id="desc" value="desc" name="price" />
-            <label htmlFor="desc">Price (Highest first)</label>
+            <input type="radio" id="desc" value="desc" name="filter" />
+            <label htmlFor="desc">
+              Nejdražší{" "}
+              <TrendingDownIcon sx={{ width: "22px", height: "22px" }} />
+            </label>
+          </div>
+          <hr />
+          <span>
+            <FiberNewIcon
+              sx={{ width: "32px", height: "32px", color: "green" }}
+            />
+          </span>
+          <div className="inputItem">
+            <input type="radio" id="date" value="desc" name="filter" />
+            <label htmlFor="date">Nejnovějsí</label>
+          </div>
+          <hr />
+
+          <span>
+            <LocalOfferIcon
+              sx={{ width: "32px", height: "32px", color: "green" }}
+            />
+          </span>
+
+          <div className="inputItem">
+            <input type="radio" id="discount" value="desc" name="filter" />
+            <label htmlFor="discount">Nejvyšší sleva</label>
           </div>
         </div>
       </div>

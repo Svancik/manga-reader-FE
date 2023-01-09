@@ -15,7 +15,7 @@ color: black;
     border-bottom: 1px solid black;
     border-left: 1px solid black;
     background-color: rgba(255, 255, 255, 0.852);
-    position: fixed;
+    position: sticky;
     top: 11vh;
     z-index: 1;
 }
@@ -23,10 +23,11 @@ color: black;
 .genresFilter{
     float: left;
     width: max-content;
+    width: 240px;
     display: flex;
-    margin: auto; 
-
+    margin: auto;
 }
+
 
 .genresFilter .inputItem{
       
@@ -41,12 +42,10 @@ color: black;
     font-weight: 500;
     font-size: 15pt;
     margin-top: 10px;
-
 }
 .genresFilter input {
     float: left;
     width: auto;  
-
 }
 
 .genresFilter h2{
@@ -62,11 +61,12 @@ color: black;
     display: flex;
     flex-direction: column;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .filterItem h2{
-    font-size: 20pt;
+    font-size: 22px;
+    text-align: center;
     color: black;
     margin-top: 15px;
 }
@@ -94,9 +94,12 @@ color: black;
 
 
 .sortFilter{
-    width: 75%;
+    width: max-content;
+    width: 240px;
     margin: auto;
+    margin-top: 20px;
     padding-bottom: 20px;
+    text-align: left;
 }
 
 .sortFilter label{
@@ -115,5 +118,39 @@ color: black;
 
 
 .sortFilter .inputItem{
+    margin-top: 0px;
+}
 
+.sortFilter label {
+    float: left;
+    text-align: left;
+    margin:20px 20px;
+    color: #1c658cb5;
+    font-weight: 500;
+    font-size: 15pt;
+    margin-top: 10px;
+}
+.sortFilter input {
+    float: left;
+    width: auto;  
+}
+
+.sortFilter hr{
+    margin-bottom: 7.5px;
+}
+
+.sortFilterCategory{
+    margin-top: 5px;
+    margin-left: 40px;
+    text-align: left;
+    font-weight: 500;
+    color: black;
+}
+
+.sortFilter span{
+    text-align: center;
+    align-self: left;
+    margin-left: auto;
+    margin-top: 5px;
+    margin-bottom: -10px;
 }
