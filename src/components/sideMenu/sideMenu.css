@@ -31,7 +31,7 @@ color: black;
 
 .genresFilter .inputItem{
       
-    margin-top: -25px;
+    margin-top: -29px;
 }
 
 .genresFilter label {
@@ -40,7 +40,7 @@ color: black;
     margin:20px 20px;
     color: #1c658cb5;
     font-weight: 500;
-    font-size: 15pt;
+    font-size: 18px;
     margin-top: 10px;
 }
 .genresFilter input {
@@ -61,7 +61,7 @@ color: black;
     display: flex;
     flex-direction: column;
     margin: auto;
-    margin-top: 15px;
+    margin-top: 4px;
 }
 
 .filterItem h2{
@@ -127,7 +127,7 @@ color: black;
     margin:20px 20px;
     color: #1c658cb5;
     font-weight: 500;
-    font-size: 15pt;
+    font-size: 18px;
     margin-top: 10px;
 }
 .sortFilter input {

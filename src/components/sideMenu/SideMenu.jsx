@@ -9,14 +9,16 @@ import FiberNewIcon from "@mui/icons-material/FiberNew";
 import TrendingDownIcon from "@mui/icons-material/TrendingDown";
 import TrendingUpIcon from "@mui/icons-material/TrendingUp";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
-
+import StarBorderIcon from "@mui/icons-material/StarBorder";
 export default function SideMenu({
   handleMangaLibraryGenre,
   selectedCategory,
+  selectedSort,
   setPriceRange,
   handleFilterReset,
   priceRange,
   isTextfieldFull,
+  handleSort,
 }) {
   const [cleanedGenreFilters, setCleanGenreFilters] = useState(false);
   const [maxPrice, setMaxPrice] = useState(750);
@@ -46,7 +48,9 @@ export default function SideMenu({
           ))}
         </div>
       </div>
+
       <div className="filterItem">
+        <hr />
         <h2>Filtrovat dle ceny</h2>
         <div className="inputItem">
           <span>0</span>
@@ -59,6 +63,123 @@ export default function SideMenu({
           />
           <span>{priceRange}</span>
         </div>
+
+        <hr />
+      </div>
+
+      <div className="filterItem">
+        <h2>Seřadit dle</h2>
+        <div className="sortFilter">
+          <div className="inputItem">
+            <input
+              type="radio"
+              id="asc"
+              value="asc"
+              name="filter"
+              onClick={handleSort}
+              checked={selectedSort === "asc"}
+            />
+            <label htmlFor="asc">
+              <TrendingUpIcon
+                sx={{
+                  width: "22px",
+                  height: "22px",
+                  color: "green",
+                  margin: "0 10px 0 0",
+                }}
+              />
+              Nejlevnější
+            </label>
+          </div>
+          <div className="inputItem">
+            <input
+              type="radio"
+              id="desc"
+              value="desc"
+              name="filter"
+              onClick={handleSort}
+              checked={selectedSort === "desc"}
+            />
+            <label htmlFor="desc">
+              <TrendingDownIcon
+                sx={{
+                  width: "22px",
+                  height: "22px",
+                  color: "green",
+                  margin: "0 10px 0 0",
+                }}
+              />
+              Nejdražší
+            </label>
+          </div>
+          <div className="inputItem">
+            <input
+              type="radio"
+              id="date"
+              value="new"
+              name="filter"
+              onClick={handleSort}
+              checked={selectedSort === "new"}
+            />
+            <label htmlFor="date">
+              <FiberNewIcon
+                sx={{
+                  width: "22px",
+                  height: "22px",
+                  color: "green",
+                  margin: "0 10px 0 0",
+                }}
+              />
+              Nejnovějsí
+            </label>
+          </div>
+
+          <div className="inputItem">
+            <input
+              type="radio"
+              id="discount"
+              value="sale"
+              name="filter"
+              onClick={handleSort}
+              checked={selectedSort === "sale"}
+            />
+            <label htmlFor="discount">
+              {" "}
+              <LocalOfferIcon
+                sx={{
+                  width: "22px",
+                  height: "22px",
+                  color: "green",
+                  margin: "0 10px 0 0",
+                }}
+              />
+              Nejvyšší sleva
+            </label>
+          </div>
+
+          <div className="inputItem">
+            <input
+              type="radio"
+              id="rating"
+              value="rating"
+              name="filter"
+              onClick={handleSort}
+              checked={selectedSort === "rating"}
+            />
+            <label htmlFor="rating">
+              {" "}
+              <StarBorderIcon
+                sx={{
+                  width: "22px",
+                  height: "22px",
+                  color: "green",
+                  margin: "0 10px 0 0",
+                }}
+              />
+              Nejoblíbenější
+            </label>
+          </div>
+        </div>
         <br />
         <button
           value=""
@@ -67,53 +188,6 @@ export default function SideMenu({
         >
           Zrušit filtry
         </button>
-        <hr />
-      </div>
-
-      <div className="filterItem">
-        <h2>Seřadit dle</h2>
-        <div className="sortFilter">
-          <span>
-            <PaidIcon sx={{ width: "32px", height: "32px", color: "green" }} />
-          </span>
-
-          <div className="inputItem">
-            <input type="radio" id="asc" value="asc" name="filter" />
-            <label htmlFor="asc">
-              Nejlevnější{" "}
-              <TrendingUpIcon sx={{ width: "22px", height: "22px" }} />
-            </label>
-          </div>
-          <div className="inputItem">
-            <input type="radio" id="desc" value="desc" name="filter" />
-            <label htmlFor="desc">
-              Nejdražší{" "}
-              <TrendingDownIcon sx={{ width: "22px", height: "22px" }} />
-            </label>
-          </div>
-          <hr />
-          <span>
-            <FiberNewIcon
-              sx={{ width: "32px", height: "32px", color: "green" }}
-            />
-          </span>
-          <div className="inputItem">
-            <input type="radio" id="date" value="desc" name="filter" />
-            <label htmlFor="date">Nejnovějsí</label>
-          </div>
-          <hr />
-
-          <span>
-            <LocalOfferIcon
-              sx={{ width: "32px", height: "32px", color: "green" }}
-            />
-          </span>
-
-          <div className="inputItem">
-            <input type="radio" id="discount" value="desc" name="filter" />
-            <label htmlFor="discount">Nejvyšší sleva</label>
-          </div>
-        </div>
       </div>
     </div>
   );

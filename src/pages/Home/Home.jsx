@@ -14,6 +14,7 @@ import { useDispatch } from "react-redux";
 export default function Home() {
   const [mangaLibrary, setMangaLibrary] = useState(MangaProducts);
   const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedSort, setSelectedSort] = useState("");
   const [priceRange, setPriceRange] = useState(750);
   const [isTextfieldFull, setIsTextFieldFull] = useState(false);
 
@@ -33,7 +34,6 @@ export default function Home() {
               manga.price < priceRange
           )
         );
-
     setSelectedCategory(e.target.value);
   };
 
@@ -41,6 +41,7 @@ export default function Home() {
     setMangaLibrary(MangaProducts);
     setPriceRange(750);
     setSelectedCategory("");
+    setSelectedSort("");
   };
 
   const handleTextSearch = (e) => {
@@ -56,6 +57,43 @@ export default function Home() {
           .includes(e.target.value.toLocaleLowerCase())
       )
     );
+  };
+
+  const handleSort = (e) => {
+    setSelectedSort(e.target.value);
+
+    switch (e.target.value) {
+      case "asc":
+        setMangaLibrary(
+          [].concat(mangaLibrary.sort((a, b) => a.price - b.price))
+        );
+        break;
+      case "desc":
+        setMangaLibrary(
+          [].concat(mangaLibrary.sort((a, b) => b.price - a.price))
+        );
+        break;
+      case "new":
+        setMangaLibrary(
+          [].concat(
+            mangaLibrary.sort((a, b) => new Date(b.date) - new Date(a.date))
+          )
+        );
+        break;
+      case "sale":
+        setMangaLibrary(
+          [].concat(mangaLibrary.sort((a, b) => b.discount - a.discount))
+        );
+        break;
+      case "rating":
+        setMangaLibrary(
+          [].concat(mangaLibrary.sort((a, b) => b.rating - a.rating))
+        );
+        break;
+
+      default:
+        break;
+    }
   };
 
   useEffect(() => {
@@ -85,9 +123,11 @@ export default function Home() {
             <SideMenu
               handleMangaLibraryGenre={handleMangaLibraryGenre}
               handleFilterReset={handleFilterReset}
+              handleSort={handleSort}
+              selectedSort={selectedSort}
               setSelectedCategory={setSelectedCategory}
-              setPriceRange={setPriceRange}
               selectedCategory={selectedCategory}
+              setPriceRange={setPriceRange}
               priceRange={priceRange}
               isTextfieldFull={isTextfieldFull}
             />
