@@ -51,7 +51,7 @@ export const Cart = () => {
         </Link>
       ) : (
         <div>
-          <span>ADD ITEMS TO CART IN ORDER TO PROCEED</span>
+          <span>Přidejte produkty do košíku.</span>
         </div>
       )}
       <span className="reset" onClick={() => dispatch(resetCart())}>

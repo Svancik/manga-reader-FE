@@ -12,11 +12,9 @@ color: black;
     display: flex; 
     height: max-content;
     flex-direction: column;  
-    border-bottom: 1px solid black;
-    border-left: 1px solid black;
     background-color: rgba(255, 255, 255, 0.852);
     position: sticky;
-    top: 11vh;
+    top: 11vh;   
     z-index: 1;
 }
 

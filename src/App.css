@@ -44,6 +44,10 @@ body{
   font-size: inherit;
 }
 
+.link:hover{
+  color: black;
+}
+
 a:hover{
   text-decoration: none;
 }

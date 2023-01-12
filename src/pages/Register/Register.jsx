@@ -1,4 +1,3 @@
-import Navbar from "../../components/navbar/Navbar";
 import RegisterForm from "../../components/registerForm/RegisterForm";
 import VerticalCarousel from "./../../components/verticalCarousel/VerticalCarousel";
 import "./register.css";

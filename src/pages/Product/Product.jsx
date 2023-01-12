@@ -91,13 +91,14 @@ export default function Product() {
                 desc: product.desc,
                 price: product.price,
                 img: product.imgCover,
+                language: product.language,
                 quantity,
               })
             )
           }
         >
-          <ShoppingCartOutlinedIcon />
-          ADD TO CARD
+          <ShoppingCartOutlinedIcon sx={{ height: "24px", width: "24px" }} />
+          Přidat do košíku
         </button>
         <div className="info">
           {product.isNew && (
@@ -107,7 +108,7 @@ export default function Product() {
               }
             >
               <div className="pointer">
-                <span>new</span>
+                <span>nové</span>
               </div>
             </div>
           )}
@@ -120,7 +121,7 @@ export default function Product() {
           )}
           <div className="ratingDiv">
             <span className="rating">
-              Rating: {"  "}
+              Hodnocení: {"  "}
               <ReactStars
                 count={5}
                 isHalf={true}
@@ -134,24 +135,27 @@ export default function Product() {
             </span>
           </div>
           <span>
-            Language:{" "}
-            {product.language === "EN" ? (
+            Jazyk:{" "}
+            {product.language === "EN" && (
               <img className="flag" src="/img/en.png" alt="" />
-            ) : (
-              product.language
-            )}{" "}
+            )}
+            {product.language === "CZ" && (
+              <img className="flag" src="/img/cz.png" alt="" />
+            )}
           </span>
 
           <span>
-            Genres:
+            Žánry:
             {product.categories.map((genre) => (
               <span className="genre"> {genre}</span>
             ))}
           </span>
-          <span>Pages: {product.pages}</span>
-          <span>Date of publishment: {product.date}</span>
+          <span>Počet stránek: {product.pages}</span>
+          <span>Datum vydání: {product.date}</span>
 
-          <h3>More from the series:</h3>
+          <h3>
+            Více Mangy ze série <b>{product.series}</b>:
+          </h3>
           <div className="showSeries">
             {series.map((manga) => (
               <Book

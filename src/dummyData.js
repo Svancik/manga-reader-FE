@@ -592,11 +592,7 @@ export const MangaProducts = [
         isNew: true,
         numberOfRatings: 6,
         price: 169,
-        desc: `The complete classic horror series, now available in a single deluxe volume.
-
-        Murdered again and again, one girl always comes back for more... Tomie Kawakami is a femme fatale with long black hair and a beauty mark just under her left eye. She can seduce nearly any man, and drive them to murder as well, even though the victim is often Tomie herself.
-        
-        While one lover seeks to keep her for himself, another grows terrified of the immortal succubus. But soon they realize no matter how many times they kill her, the world will never be free of Tomie.`,
+        desc: `Je překrásná a svůdná. Jmenuje se Tomie a coby dokonalá femme fatale ničí životy mužů i žen ve svém okolí. Před jejím kouzlem není úniku a nelze se jí zbavit – a že se o to mnozí neustále pokoušejí...`,
         pages: 548,
         date: "16.10.2013",
         categories: ["Horror", "Záhadné", "Nadpřirozené"],
@@ -1605,11 +1601,7 @@ export const MangaProductsEN = [
         isNew: true,
         numberOfRatings: 6,
         price: 169,
-        desc: `The complete classic horror series, now available in a single deluxe volume.
-
-        Murdered again and again, one girl always comes back for more... Tomie Kawakami is a femme fatale with long black hair and a beauty mark just under her left eye. She can seduce nearly any man, and drive them to murder as well, even though the victim is often Tomie herself.
-        
-        While one lover seeks to keep her for himself, another grows terrified of the immortal succubus. But soon they realize no matter how many times they kill her, the world will never be free of Tomie.`,
+        desc: `Je překrásná a svůdná. Jmenuje se Tomie a coby dokonalá femme fatale ničí životy mužů i žen ve svém okolí. Před jejím kouzlem není úniku a nelze se jí zbavit – a že se o to mnozí neustále pokoušejí...`,
         pages: 548,
         date: "16.10.2013",
         categories: ["Horror", "Mystery", "Supernatural"],

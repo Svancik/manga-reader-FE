@@ -12,21 +12,24 @@
     justify-content: space-between;    
 }
 
-.topElement{
-    height: 100%;
-    display: flex;
-
-  
+.topbarWrapper .logo{
+    width: 200px;
 }
 
-.topbar__logo{
-      width: 200px;
-    height: 100%;    
-    display: flex;
+
+.topElement{
+    height: 100%;
+    display: flex;  
+}
+
+
+
+.topbar__logo{    
+    flex: 1.5;
 }
 
 .topbar__searchBar{
-    flex: 4;    
+    flex: 3;    
 }
 .topbar__icons{    
     flex: 3;
@@ -49,18 +52,6 @@
 
 .topbar__profile{
    position: relative;
-   
-}
-
-.logo{
-    width: max-content;
-    justify-content: left;
-    justify-self: left;
-    align-items: left;
-
-    position: absolute;
-    left: 60px;
-    top: 2.5vh;
    
 }
 

@@ -31,7 +31,7 @@ export const Book = ({ manga, fromSeries }) => {
             className={manga.isBestseller ? "newBadge badge-up" : "newBadge"}
           >
             <div className="pointer">
-              <span>new</span>
+              <span>nové</span>
             </div>
           </div>
         )}
@@ -88,12 +88,13 @@ export const Book = ({ manga, fromSeries }) => {
                   desc: manga.desc,
                   price: manga.price,
                   img: manga.imgCover,
+                  language: manga.language,
                   quantity: 1,
                 })
               )
             }
           >
-            <ShoppingCartOutlinedIcon /> <span>ADD TO CART</span>
+            <ShoppingCartOutlinedIcon /> <span> PŘIDAT DO KOŠÍKU</span>
           </button>
         )}
       </div>

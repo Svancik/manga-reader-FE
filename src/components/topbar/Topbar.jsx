@@ -26,10 +26,7 @@ export default function Topbar({ handleTextSearch, hideSearch }) {
         hideSearch ? "topbarWrapper topbarWrapper-hidden" : "topbarWrapper"
       }
     >
-      <div
-        className={"topbar__logo topElement "}
-        style={hideSearch ? { flex: "0.5" } : { flex: "1" }}
-      >
+      <div className={"topbar__logo topElement "}>
         <Link to="/">
           <img src={require("../../media/design/logo.png")} className="logo" />
         </Link>

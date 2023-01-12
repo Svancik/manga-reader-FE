@@ -73,7 +73,7 @@
 
 .coverImg .newBadge{
     position: absolute; 
-    width: 100px;
+    width: 105px;
     color: white;
     bottom: 45px;
     right: -20px;
@@ -241,6 +241,7 @@ background-color: #900C3F;
 
 .buyManga span{
     font-size: 13px;
+    margin-left: 5px;
 }
 
 .coverImg:hover{

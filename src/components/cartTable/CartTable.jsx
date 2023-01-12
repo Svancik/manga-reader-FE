@@ -37,13 +37,17 @@ export const CartTable = () => {
 
   return (
     <div className="cartTable transparent-box">
-      <h3> 1) Zkontrolujte si obsah svého košíku</h3>
+      <h3>
+        {" "}
+        1) Zkontrolujte si obsah svého košíku v hodnotě {totalPrice()} Kč
+      </h3>
       <Link to="/" className="linkBack"></Link>{" "}
       <table class="table">
         <thead>
           <tr>
             <th scope="col">Obrázek</th>
             <th scope="col">Název</th>
+            <th scope="col">Jazyk</th>
             <th scope="col">Popis</th>
             <th scope="col">Cena / ks</th>
             <th scope="col" className="col-md-2">
@@ -60,6 +64,14 @@ export const CartTable = () => {
                 <img src={item.img} alt="" />
               </td>
               <td>{item.title}</td>
+              <td>
+                {item.language === "EN" && (
+                  <img className="flag" src="/img/en.png" alt="" />
+                )}
+                {item.language === "CZ" && (
+                  <img className="flag" src="/img/cz.png" alt="" />
+                )}
+              </td>
               <td className="desc-col">{item.desc.substring(0, 55)}</td>
               <td className="price-col">{item.price}</td>
               <td>

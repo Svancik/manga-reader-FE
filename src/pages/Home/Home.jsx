@@ -10,6 +10,7 @@ import { useLocation } from "react-router-dom";
 import { OrderFinishedPopUp } from "../../components/orderFinishedPopUp/OrderFinishedPopUp";
 import { resetCart } from "../../redux/cartReducer";
 import { useDispatch } from "react-redux";
+import { Footer } from "../../components/footer/Footer";
 
 export default function Home() {
   const [mangaLibrary, setMangaLibrary] = useState(MangaProducts);
@@ -153,6 +154,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

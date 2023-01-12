@@ -12,7 +12,6 @@ import Topbar from './components/topbar/Topbar';
 /*TODO:
 
   - dodělat footer
-  - doplnit vlaječky (jazyky mangy CZ/EN) do košíku a tabulky košíku 
   - doplnt pagination
 
   PROBLÉMY:
