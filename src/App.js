@@ -11,16 +11,14 @@ import Topbar from './components/topbar/Topbar';
 
 /*TODO:
 
-  - dodělat sortování mangy
-  - dodělat selekcti bestseller/new/sale
   - dodělat footer
   - doplnit vlaječky (jazyky mangy CZ/EN) do košíku a tabulky košíku 
   - doplnt pagination
 
   PROBLÉMY:
   - vyřešit problém s position sticky (sidebar, tabulka v checkout)
-  - vyřešit problém se šírkou sidebaru (při FULL HD rozlišení dělá problém)
-  - velikosti písem
+  - vyřešit problém se zobrazením ve FULL HD
+  -
 
 
 */

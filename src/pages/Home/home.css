@@ -48,8 +48,6 @@ body{
 
 .horizontalCarousel{
    
-    flex:10;
-    background-color: rgb(151, 111, 36);  
     object-fit: fill;
 }
 

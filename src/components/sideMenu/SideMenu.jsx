@@ -19,9 +19,10 @@ export default function SideMenu({
   priceRange,
   isTextfieldFull,
   handleSort,
+  mostExpensiveBook,
 }) {
   const [cleanedGenreFilters, setCleanGenreFilters] = useState(false);
-  const [maxPrice, setMaxPrice] = useState(750);
+  const [maxPrice, setMaxPrice] = useState(mostExpensiveBook);
 
   useEffect(() => {
     setPriceRange(maxPrice);
@@ -57,7 +58,7 @@ export default function SideMenu({
           <input
             type="range"
             min={0}
-            max={750}
+            max={mostExpensiveBook}
             onChange={(e) => setMaxPrice(e.target.value)}
             disabled={isTextfieldFull}
           />
@@ -88,7 +89,7 @@ export default function SideMenu({
                   margin: "0 10px 0 0",
                 }}
               />
-              Nejlevnější
+              Ceny vzestupně
             </label>
           </div>
           <div className="inputItem">
@@ -109,7 +110,7 @@ export default function SideMenu({
                   margin: "0 10px 0 0",
                 }}
               />
-              Nejdražší
+              Ceny sestupně
             </label>
           </div>
           <div className="inputItem">
@@ -130,7 +131,7 @@ export default function SideMenu({
                   margin: "0 10px 0 0",
                 }}
               />
-              Nejnovějsí
+              Datum vydání
             </label>
           </div>
 
@@ -153,7 +154,7 @@ export default function SideMenu({
                   margin: "0 10px 0 0",
                 }}
               />
-              Nejvyšší sleva
+              Zlevnění
             </label>
           </div>
 

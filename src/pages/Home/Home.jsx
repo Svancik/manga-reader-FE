@@ -25,13 +25,14 @@ export default function Home() {
     : console.log("swag");
 
   const handleMangaLibraryGenre = (e) => {
+    console.log("priceRange: ", priceRange);
     isTextfieldFull
       ? setMangaLibrary(mangaLibrary)
       : setMangaLibrary(
           MangaProducts.filter(
             (manga) =>
               manga.categories.some((m) => m === e.target.value) &&
-              manga.price < priceRange
+              manga.price <= priceRange
           )
         );
     setSelectedCategory(e.target.value);
@@ -39,7 +40,7 @@ export default function Home() {
 
   const handleFilterReset = () => {
     setMangaLibrary(MangaProducts);
-    setPriceRange(750);
+    setPriceRange(getMostExpensivePrice(MangaProducts));
     setSelectedCategory("");
     setSelectedSort("");
   };
@@ -96,8 +97,17 @@ export default function Home() {
     }
   };
 
+  const getMostExpensivePrice = (array) => {
+    let mostExpensive = 0;
+    for (let index = 0; index < array.length; index++) {
+      array[index].price > mostExpensive
+        ? (mostExpensive = array[index].price)
+        : (mostExpensive = mostExpensive);
+    }
+    return mostExpensive;
+  };
+
   useEffect(() => {
-    console.log(selectedCategory);
     selectedCategory
       ? setMangaLibrary(
           MangaProducts.filter(
@@ -107,7 +117,7 @@ export default function Home() {
           )
         )
       : setMangaLibrary(
-          MangaProducts.filter((manga) => manga.price < priceRange)
+          MangaProducts.filter((manga) => manga.price <= priceRange)
         );
   }, [priceRange]);
 
@@ -130,6 +140,7 @@ export default function Home() {
               setPriceRange={setPriceRange}
               priceRange={priceRange}
               isTextfieldFull={isTextfieldFull}
+              mostExpensiveBook={getMostExpensivePrice(MangaProducts)}
             />
           </div>
           <div className="contentWrapper">

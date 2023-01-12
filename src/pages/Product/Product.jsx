@@ -31,6 +31,10 @@ export default function Product() {
     setMainImg(product.imgCover);
   }, [product]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="product">
       <ReturnButton />
