@@ -11,16 +11,16 @@ import Topbar from './components/topbar/Topbar';
 
 /*TODO:
 
-  - dodělat footer
-  - doplnt pagination
+  - doplnt pagination - https://www.youtube.com/watch?v=IYCa1F-OWmk&ab_channel=TraversyMedia
 
   PROBLÉMY:
   - vyřešit problém s position sticky (sidebar, tabulka v checkout)
   - vyřešit problém se zobrazením ve FULL HD
-  -
-
+  - košík na product page?!
 
 */
+
+
 
 
 

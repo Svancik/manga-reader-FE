@@ -11,19 +11,30 @@ import { OrderFinishedPopUp } from "../../components/orderFinishedPopUp/OrderFin
 import { resetCart } from "../../redux/cartReducer";
 import { useDispatch } from "react-redux";
 import { Footer } from "../../components/footer/Footer";
+import { Pagination } from "../../components/pagination/Pagination";
 
 export default function Home() {
   const [mangaLibrary, setMangaLibrary] = useState(MangaProducts);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage, setPostsPerPage] = useState(24);
+
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedSort, setSelectedSort] = useState("");
   const [priceRange, setPriceRange] = useState(750);
   const [isTextfieldFull, setIsTextFieldFull] = useState(false);
+
+  // Získat nejnovější
+  const indexOfLastBook = currentPage * postsPerPage;
+  const indexOfFirstBook = indexOfLastBook - postsPerPage;
+  const currentBooks = mangaLibrary.slice(indexOfFirstBook, indexOfLastBook);
 
   const orderIsFinised = "?orderFinished" === useLocation().search;
   const dispatch = useDispatch();
   useLocation().search === "?orderFinished"
     ? dispatch(resetCart())
     : console.log("swag");
+
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   const handleMangaLibraryGenre = (e) => {
     console.log("priceRange: ", priceRange);
@@ -149,8 +160,13 @@ export default function Home() {
               <AutoSlider />
             </div>
             <div className="library">
-              <Library mangaLibrary={mangaLibrary} />
+              <Library mangaLibrary={currentBooks} />
             </div>
+            <Pagination
+              postsPerPage={postsPerPage}
+              totalPosts={MangaProducts.length}
+              paginate={paginate}
+            />
           </div>
         </div>
       </div>

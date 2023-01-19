@@ -39,7 +39,7 @@ export const CartTable = () => {
     <div className="cartTable transparent-box">
       <h3>
         {" "}
-        1) Zkontrolujte si obsah svého košíku v hodnotě {totalPrice()} Kč
+        1) Zkontrolujte si obsah svého košíku v hodnotě <b>{totalPrice()} Kč</b>
       </h3>
       <Link to="/" className="linkBack"></Link>{" "}
       <table class="table">
@@ -72,7 +72,7 @@ export const CartTable = () => {
                   <img className="flag" src="/img/cz.png" alt="" />
                 )}
               </td>
-              <td className="desc-col">{item.desc.substring(0, 55)}</td>
+              <td className="desc-col">{item.desc.substring(0, 30)}</td>
               <td className="price-col">{item.price}</td>
               <td>
                 <div className="quantity">
