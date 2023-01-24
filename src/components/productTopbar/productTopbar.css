@@ -1,0 +1,59 @@
+.productTopbarWrapper{
+    margin: auto;   
+    background-color: rgba(255, 255, 255, 0.821);
+    display: flex;
+    width: 100vw;
+    height: 7vh;
+    justify-content: space-between; 
+    top: 0;
+    z-index: 999;
+}
+
+.ptopbar__icons{    
+    flex: 3;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin-right: 50px;
+
+}
+
+.ptopbar__basket{
+    position: relative;
+    padding-right: 40px;
+    margin-top: 20px;
+    color: goldenrod;
+}
+
+.ptopElement{
+    height: 100%;
+    display: flex;  
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    color:rgb(187, 142, 28);
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+    margin-top: 0px;
+    margin-right: 20px;
+}
+
+.ptopElement:hover{
+    color: #1c658cb5;
+}
+
+.ptopbar__basket span{ 
+    font-size: 12px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #2879fe;
+    color: white;
+    position: absolute;
+    right: 37px;
+    top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}

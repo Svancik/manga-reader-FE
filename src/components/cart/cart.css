@@ -3,7 +3,8 @@
     right: 370px;
     width: 600px;
     top: 80px;
-    z-index: 99;
+    z-index: 9999;
+ 
     background-color: white;
     padding: 20px;
     -webkit-box-shadow: 3px 3px 43px -11px rgba(0,0,0,0.75);

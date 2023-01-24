@@ -9,6 +9,7 @@
     background-color: goldenrod;
     z-index: 999;
     height: 45px;
+   
 }
 
 
@@ -45,9 +46,15 @@
     left: 20px;
 }
 
-.topElement .loginUser, .topElement .registerUser{
+.topElement .loginUser, .topElement .registerUser, .topElement .returnShopping{
  margin-top: 20px;
+ margin-left: 10px;
 }
+
+.ptopElement .loginUser, .ptopElement .registerUser, .ptopElement .returnShopping{
+    margin-top: 20px;
+    margin-left: 10px;
+   }
 
 
 .loginRight .returnShopping, .register--right .returnShopping{
@@ -82,10 +89,15 @@
     right: 400px;
     width: 150px;
     height: 40px;
-    
+    z-index: 999;
+}
+
+.cartButton:hover{
+    cursor: pointer;
 }
 
 .cartButton span{ 
+    display: flex;
     font-size: 12px;
     width: 20px;
     height: 20px;
