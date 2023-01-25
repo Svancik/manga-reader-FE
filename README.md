@@ -2,11 +2,17 @@
 
 This is my first self-made major FRONTEND project which uses following technologies: React, REDUX, CSS, JOI, Hero-slider, Material-UI.
 
+This project includes e-shop which sells Mangas. Manga is a style of Japanese comic books and graphic novels, typically aimed at adults as well as children.
+
+This project is purely for desktop, yet without mobile version / view.
+
 ## Description of the page
 
 This project works as a e-shop which focuses on selling manga books.
 
-![HomePage](./media/documentation/HomePage.png)
+<a href="/src/media/documentation/HomePage.png">
+<img src="/src/media/documentation/HomePage.png" alt="HomePage" title="HomePage view">
+</a>
 
 Project is made up of following Pages:
 
@@ -25,15 +31,14 @@ Project is made up of following Pages:
     5) Register.jsx
      This is non-functional frontend with Register Form. You can return to Home.jsx or switch to Register.jsx.
 
-## Page utilities 
+## Page utilities
 
-The e-shop includes following utilities. 
+The e-shop includes following utilities.
 
-- filters 
-- sort 
-- pagination 
-- textsearch- 
+- filters
+- sort
+- pagination
+- textsearch-
 - cart & CRUD operations with products - preview book - find similiar books in the series - order information form
 
 ### Thank you for reading and look forward to more project for my portfolio.
-
