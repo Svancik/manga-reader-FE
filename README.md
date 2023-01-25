@@ -57,8 +57,11 @@ The e-shop includes following utilities.
 - sort
 - pagination
 - textsearch-
-- cart & CRUD operations with products - preview book - find similiar books in the series - order information form
+- cart & CRUD operations with products 
+- preview book 
+- find similiar books in the series 
+- order information form
 
 This project works as a e-shop which focuses on selling manga books.
 
-### Thank you for reading and look forward to more projects for my portfolio.
+### Thank you for reading and look forward to more projects for my portfolio #waitingforjoboffers
