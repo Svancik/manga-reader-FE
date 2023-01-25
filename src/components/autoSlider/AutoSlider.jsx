@@ -1,7 +1,6 @@
 import React from "react";
-import "./autoSlider.css";
-
 import HeroSlider, { Slide, Nav } from "hero-slider";
+import "./autoSlider.css";
 
 const slides = [
   {

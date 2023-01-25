@@ -1,11 +1,10 @@
 import React from "react";
-import "./cart.css";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import { useSelector } from "react-redux";
 import { removeItem, resetCart } from "../../redux/cartReducer";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-//TODO: Po refreshi položky z košíku zmizí!
+import "./cart.css";
 
 export const Cart = () => {
   const products = useSelector((state) => state.cart.products);

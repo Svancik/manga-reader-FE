@@ -1,22 +1,29 @@
-import React, { useEffect } from "react";
-import "./product.css";
-
+import React from "react";
 import { useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 import { MangaProducts } from "../../dummyData";
 import ReactStars from "react-rating-stars-component";
 import { Book } from "./../../components/book/Book";
-import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cartReducer";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import { ProductTopbar } from "../../components/productTopbar/ProductTopbar";
 import { Footer } from "../../components/footer/Footer";
+import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
+import "./product.css";
+
+/* V této komponentě je zobrazen detail knihy. Skrze tuto komponentu se můžeme prokliknout na <Login/>, <Register/>, <Cart/>, či <Home/> pomocí navigační komponenty <ProductTopBar/>. 
+   Dále se můžeme prokliknout na knihy které jsou ze stejné série jako kniha právě zobrazená. 
+   ID knihy v URL se porovná s ID knihy v seznamu knih z dummyData.js. */
+
+
 
 export default function Product() {
+  //načtení id z url
   const productId = useLocation().pathname.split("/")[2];
   const product = MangaProducts.filter(
     (manga) => manga.id.toString() === productId.toString()
   )[0];
+  //nalezení stejné série knih
   const series = MangaProducts.filter(
     (manga) =>
       manga.series === product.series &&
@@ -28,6 +35,8 @@ export default function Product() {
 
   const dispatch = useDispatch();
 
+
+  //pomocí useEffect měníme náhledovou fotografii
   useEffect(() => {
     setMainImg(product.imgCover);
   }, [product]);
@@ -85,6 +94,7 @@ export default function Product() {
             <span>{quantity}</span>
             <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
           </div>
+          {/* Přidání položky do košíku pomocí redux */}
           <button
             className="add"
             onClick={() =>

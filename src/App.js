@@ -8,17 +8,6 @@ import Product from "./pages/Product/Product";
 import { Checkout } from './pages/Checkout/Checkout';
 
 
-/*TODO:
-
-  PROBLÉMY:
-  - doladit errory v console
-
-*/
-
-
-
-
-
 
 function App() {
   return (
