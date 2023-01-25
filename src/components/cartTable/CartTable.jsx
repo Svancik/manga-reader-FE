@@ -88,7 +88,8 @@ export const CartTable = () => {
                   >
                     -
                   </button>
-                  {item.quantity}
+                  <span> {item.quantity}</span>
+
                   <button
                     onClick={() =>
                       dispatch(
@@ -112,7 +113,7 @@ export const CartTable = () => {
                 <DeleteOutlinedIcon
                   className="delete"
                   onClick={() => dispatch(removeItem(item.id))}
-                  sx={{ width: "9%", height: "9%" }}
+                  sx={{ width: "24px", height: "24Spx" }}
                 />
               </td>
             </tr>

@@ -13,6 +13,7 @@ html{scroll-behavior:smooth}
     text-align: left;
     font-weight: 500;
     color: #2879fe;   
+    font-size: 20px;
 }
 
 .checkoutWrapper .continue{

@@ -1,6 +1,6 @@
 .cartTable img{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     object-fit: cover;
     border-radius: 50%;
     display: flex;
@@ -20,6 +20,8 @@
    border: 1px solid black;  
 
 }
+
+
 
 .cartTable b{
     color: black;
@@ -43,12 +45,12 @@
 }
 
 .cartTable .table tr{
-    height: 20px;
+    height: 15px;
 }
 
 .cartTable tbody tr td{
-    max-height: 50px;
-    height: max-content;
+    height: 30px;
+    margin-bottom: -20px;
     justify-content: center;
     align-items: center;
     vertical-align: middle;
@@ -59,6 +61,13 @@ display: flex;
 height: max-content;
 margin: auto;
 width: max-content;
+
+}
+
+.quantity span{
+    font-size: 18px;
+    margin-bottom: 0px;
+    margin-top: -10px;
 }
 
 .cartTable tbody tr td .delete{
@@ -66,8 +75,8 @@ width: max-content;
 }
 
 .cartTable tbody tr td .quantity button{
-    width: 40px;
-    height: 40px;
+    width: 25px;
+    height: 25px;
     margin-top: 10px;
 }
 
