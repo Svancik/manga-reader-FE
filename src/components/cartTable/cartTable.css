@@ -10,7 +10,7 @@
 .cartTable{     
     height: max-content;
     max-height: 43vh;
-    overflow-y:scroll;
+   overflow-y: auto;
    width: 90vw;
    margin: auto;
    margin-top: 5vh;

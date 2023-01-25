@@ -6,6 +6,10 @@
     justify-content: space-between; 
     top: 0;
     z-index: 999;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+
 }
 .topbarWrapper-hidden{
     background-color: transparent;

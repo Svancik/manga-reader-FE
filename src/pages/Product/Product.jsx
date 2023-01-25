@@ -121,16 +121,17 @@ export default function Product() {
             <div className="ratingDiv">
               <span className="rating">
                 Hodnocení: {"  "}
-                <ReactStars
-                  count={5}
-                  isHalf={true}
-                  value={product.rating}
-                  size={24}
-                  edit={false}
-                  activeColor="#ffd700"
-                  classNames="ratingStars"
-                />
-                {product.numberOfRatings}x
+                <div className="ratingStars">
+                  <ReactStars
+                    count={5}
+                    isHalf={true}
+                    value={product.rating}
+                    size={24}
+                    edit={false}
+                    activeColor="#ffd700"
+                  />
+                </div>
+                <p>{product.numberOfRatings}x</p>
               </span>
             </div>
             <span>

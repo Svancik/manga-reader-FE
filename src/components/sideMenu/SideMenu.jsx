@@ -49,7 +49,7 @@ export default function SideMenu({
           ))}
         </div>
       </div>
-
+      <div className="priceFilter">
       <div className="filterItem">
         <hr />
         <h2>Filtrovat dle ceny</h2>
@@ -66,6 +66,7 @@ export default function SideMenu({
         </div>
 
         <hr />
+      </div>
       </div>
 
       <div className="filterItem">

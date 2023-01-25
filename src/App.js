@@ -12,9 +12,8 @@ import Topbar from './components/topbar/Topbar';
 /*TODO:
 
   PROBLÉMY:
-  - vyřešit problém s position sticky (sidebar, tabulka v checkout)
-  - vyřešit problém se zobrazením ve FULL HD
-  - košík na product page?!
+  - použití filtrů / seřazení na druhé stránce produktrů
+  - doladit errory v console
 
 */
 

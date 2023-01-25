@@ -32,7 +32,7 @@ export default function Home() {
   const dispatch = useDispatch();
   useLocation().search === "?orderFinished"
     ? dispatch(resetCart())
-    : console.log("swag");
+    : console.log();
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
@@ -162,11 +162,16 @@ export default function Home() {
             <div className="library">
               <Library mangaLibrary={currentBooks} />
             </div>
-            <Pagination
-              postsPerPage={postsPerPage}
-              totalPosts={MangaProducts.length}
-              paginate={paginate}
-            />
+            <div className="pagination">
+              {selectedCategory === "" && !isTextfieldFull && (
+                <Pagination
+                  postsPerPage={postsPerPage}
+                  totalPosts={MangaProducts.length}
+                  currentPage={currentPage}
+                  paginate={paginate}
+                />
+              )}
+            </div>
           </div>
         </div>
       </div>

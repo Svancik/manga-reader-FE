@@ -42,7 +42,7 @@ export const Footer = () => {
         </div>
       </div>
       <div className="bottom">
-        <div className="left">
+        <div className="lefty">
           <span className="logo">MANGAREADER</span>
           <span className="copyright">
             © Copyright 2023. All Rights Reserved

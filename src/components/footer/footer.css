@@ -1,8 +1,9 @@
 .footer{
     width: 100vw;
     margin: auto;
+    margin-top: 150px;
+    padding-top: 50px;
     background-color: white;
-
 
 }
 
@@ -43,18 +44,18 @@
         width: 70vw;
         margin: auto;
     }
-        .bottom .left{
+        .bottom .lefty{
             display: flex;
             align-items: center;
         }
 
-        .bottom .left .logo{
+        .bottom .lefty .logo{
                 color:#2879fe;
                 font-weight: bold;
                 font-size: 24px;
             }
 
-        .bottom .left  .copyright{
+        .bottom .lefty  .copyright{
                 margin-left: 20px;
                 font-size: 12px;
                 color: gray;

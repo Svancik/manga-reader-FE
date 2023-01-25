@@ -2,9 +2,13 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid black;   
+
    
 }
 .mangaListBook{
     display: inline-block;
+}
+
+.mangaList{
+    text-align: left;
 }

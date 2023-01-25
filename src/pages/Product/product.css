@@ -192,11 +192,16 @@ p{
     float: left;
     width: max-content;
     margin-left: auto;
+    
+}
+
+.rating p{
+    font-size: 14px;
+    margin-top: 0px;
 }
 
 .ratingStars{
-    margin-top: -5px;
-    margin-right: 10px;
+    margin: -7.5px 10px;
 }
 
 .right h1.title{
