@@ -7,8 +7,7 @@ html {
 
 body{
   min-height: 100%
-
- }
+}
 
 
 .App {
@@ -44,14 +43,19 @@ body{
 .link{
   text-decoration: none;
   font-size: inherit;
+  color: inherit;
 }
 
 .link:hover{
-  color: black;
+color: inherit;
 }
 
 a:hover{
   text-decoration: none;
+}
+
+button{
+  transition: background-color 0.5s;
 }
 
 

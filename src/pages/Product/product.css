@@ -109,6 +109,11 @@ p{
     border: none;    
 }
 
+.quantity span{
+    font-size: 24px;
+    margin-top: -20px;
+}
+
 .add{
     width: 250px;
     padding: 10px;

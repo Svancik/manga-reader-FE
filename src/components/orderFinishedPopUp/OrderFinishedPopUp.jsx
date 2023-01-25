@@ -1,7 +1,6 @@
 import React from "react";
 import "./orderFinishedPopUp.css";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import CloseIcon from "@mui/icons-material/Close";
 import { ContinueShopping } from "../buttons/ContinueShopping";
 
 export const OrderFinishedPopUp = () => {
@@ -20,9 +19,8 @@ export const OrderFinishedPopUp = () => {
           následně předána přepravní službě.{" "}
         </span>
         <span>Do emailu jsme Vám zaslali podrobnosti vaší objednávky. </span>
-       
-        <ContinueShopping />
 
+        <ContinueShopping />
       </div>
     </div>
   );

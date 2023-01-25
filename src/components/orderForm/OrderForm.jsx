@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import Joi from "joi-browser";
 import CheckIcon from "@mui/icons-material/Check";
-import Title from "./../autoSlider/subComponents/Title/Title";
-import { useDispatch } from "react-redux";
-import { resetCart } from "../../redux/cartReducer";
 
 export default class OrderForm extends Component {
   state = {
@@ -176,7 +173,8 @@ export default class OrderForm extends Component {
                 class="form-control"
                 name="zip"
                 id="zip"
-s                value={this.state.data.zip}
+                s
+                value={this.state.data.zip}
                 onChange={this.handleChange}
               />
               {this.state.errors.zip && (

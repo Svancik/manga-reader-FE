@@ -1,5 +1,5 @@
 import "../../registerForm/registerForm.css";
-import React, { Component } from "react";
+import React from "react";
 
 export default function Personalnformations({ page, setPage }) {
   return (

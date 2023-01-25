@@ -1,22 +1,15 @@
 import "./topbar.css";
 import React from "react";
 import SearchBar from "../searchBar/SearchBar";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import ContactMailOutlinedIcon from "@mui/icons-material/ContactMailOutlined";
-import CallOutlinedIcon from "@mui/icons-material/CallOutlined";
-import Person2OutlinedIcon from "@mui/icons-material/Person2Outlined";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import CancelIcon from "@mui/icons-material/Cancel";
+import { useState } from "react";
 import { useSelector } from "react-redux";
 import Cart from "../cart/Cart";
 import { LoginButton } from "./../buttons/LoginButton";
 import { RegisterButton } from "../buttons/RegisterButton";
 
 export default function Topbar({ handleTextSearch, hideSearch }) {
-  const [isLogin, setIsLogin] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
   const products = useSelector((state) => state.cart.products);
 
@@ -28,7 +21,11 @@ export default function Topbar({ handleTextSearch, hideSearch }) {
     >
       <div className={"topbar__logo topElement "}>
         <Link to="/">
-          <img src={require("../../media/design/logo.png")} className="logo" />
+          <img
+            src={require("../../media/design/logo.png")}
+            alt="logo"
+            className="logo"
+          />
         </Link>
       </div>
       {!hideSearch && (

@@ -1,18 +1,16 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import React, { Component }  from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from 'react';
 import Login from './pages/Login/Login';
 import Register from './pages/Register/Register';
 import Home from './pages/Home/Home';
 import './App.css';
 import Product from "./pages/Product/Product";
 import { Checkout } from './pages/Checkout/Checkout';
-import Topbar from './components/topbar/Topbar';
 
 
 /*TODO:
 
   PROBLÉMY:
-  - použití filtrů / seřazení na druhé stránce produktrů
   - doladit errory v console
 
 */

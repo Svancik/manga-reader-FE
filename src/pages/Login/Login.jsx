@@ -1,7 +1,7 @@
 import LoginForm from "../../components/loginForm/LoginForm";
 import "./login.css";
 
-import React, { Component } from "react";
+import React from "react";
 import VerticalCarousel from "./../../components/verticalCarousel/VerticalCarousel";
 import { ReturnButton } from "../../components/buttons/ReturnButton";
 import { RegisterButton } from "../../components/buttons/RegisterButton";

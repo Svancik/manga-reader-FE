@@ -1,26 +1,26 @@
 import React, { useEffect } from "react";
 import "./product.css";
-import Topbar from "./../../components/topbar/Topbar";
-import { Link, useLocation } from "react-router-dom";
+
+import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { MangaProducts } from "../../dummyData";
 import ReactStars from "react-rating-stars-component";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Book } from "./../../components/book/Book";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cartReducer";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import { ReturnButton } from "../../components/buttons/ReturnButton";
-import { LoginButton } from "../../components/buttons/LoginButton";
-import { RegisterButton } from "../../components/buttons/RegisterButton";
-import { CartButton } from "../../components/buttons/CartButton";
 import { ProductTopbar } from "../../components/productTopbar/ProductTopbar";
+import { Footer } from "../../components/footer/Footer";
 
 export default function Product() {
   const productId = useLocation().pathname.split("/")[2];
-  const product = MangaProducts.filter((manga) => manga.id == productId)[0];
+  const product = MangaProducts.filter(
+    (manga) => manga.id.toString() === productId.toString()
+  )[0];
   const series = MangaProducts.filter(
-    (manga) => manga.series === product.series && manga.id != product.id
+    (manga) =>
+      manga.series === product.series &&
+      manga.id.toString() !== product.id.toString()
   );
 
   const [quantity, setQuantity] = useState(1);
@@ -43,7 +43,12 @@ export default function Product() {
         <div className="left">
           <div className="images">
             {product.imgPanels.map((panel) => (
-              <img src={panel} onClick={() => setMainImg(panel)} alt="" />
+              <img
+                src={panel}
+                onClick={() => setMainImg(panel)}
+                alt=""
+                key={panel}
+              />
             ))}
             <img
               src={product.imgCover}
@@ -77,7 +82,7 @@ export default function Product() {
             >
               -
             </button>
-            {quantity}
+            <span>{quantity}</span>
             <button onClick={() => setQuantity((prev) => prev + 1)}>+</button>
           </div>
           <button
@@ -147,7 +152,10 @@ export default function Product() {
             <span>
               Žánry:
               {product.categories.map((genre) => (
-                <span className="genre"> {genre}</span>
+                <span className="genre" key={genre}>
+                  {" "}
+                  {genre}
+                </span>
               ))}
             </span>
             <span>Počet stránek: {product.pages}</span>
@@ -160,6 +168,7 @@ export default function Product() {
               {series.map((manga) => (
                 <Book
                   manga={manga}
+                  key={manga.id}
                   fromSeries={true}
                   onClick={() => setMainImg(manga.imgCover)}
                 />
@@ -168,6 +177,7 @@ export default function Product() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

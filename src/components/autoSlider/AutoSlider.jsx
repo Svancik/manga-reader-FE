@@ -1,7 +1,7 @@
 import React from "react";
 import "./autoSlider.css";
 
-import HeroSlider, { Overlay, Slide, MenuNav, Nav } from "hero-slider";
+import HeroSlider, { Slide, Nav } from "hero-slider";
 
 const slides = [
   {
@@ -62,7 +62,7 @@ export default function AutoSlider() {
       }}
     >
       {slides.map((slide) => (
-        <div className="heroSlider__slide">
+        <div className="heroSlider__slide" key={slide.label}>
           <Slide
             shouldRenderMask
             label={slide.label}

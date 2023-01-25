@@ -57,12 +57,14 @@ export const Book = ({ manga, fromSeries }) => {
         </Link>
         <div className="authors">
           {manga.authors.map((author) => (
-            <span className="author">{author}</span>
+            <span className="author" key={author}>
+              {author}
+            </span>
           ))}
         </div>
         <div className="categories">
           {manga.categories.map((category) => (
-            <span>
+            <span key={category}>
               <span className="category">{category}</span>
             </span>
           ))}

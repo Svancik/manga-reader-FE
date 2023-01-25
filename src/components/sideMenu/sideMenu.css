@@ -64,6 +64,7 @@ margin-left: 10px;
 
 .filterItem{
     margin-bottom: -10px;
+    
 }
 
 .filterItem hr{    
@@ -166,4 +167,41 @@ margin-left: 10px;
     margin-left: auto;
     margin-top: 5px;
     margin-bottom: -10px;
+}
+
+.cancelFilter{
+    border: 2px solid black;
+}
+
+.cancelFilter:hover{
+    background-color: white;
+    color: black;
+}
+
+.filterBlocked label{
+    color: gray;
+    font-weight:500;
+}
+
+
+.filterBlocked label:hover{
+    color: gray;
+    cursor:default;
+}
+
+.blockedFilterMsg{
+    width: 100%;
+    height: 65px;  
+    background-color: rgba(128, 128, 128, 0.406);
+    font-size: 16px;
+    display: table;
+    border: 2px solid red;
+}
+
+.blockedFilterMsg span{
+    display:table-cell;
+ vertical-align:middle;
+    margin-top: 50%;
+    color: black;
+    font-weight: 500;
 }

@@ -1,5 +1,5 @@
 import "./verticalCarousel.css";
-import React, { Component } from "react";
+import React from "react";
 
 //TODO: Zakomponovat Parallax na automaticky scroll carouselu
 

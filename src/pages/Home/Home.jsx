@@ -16,9 +16,9 @@ import { Pagination } from "../../components/pagination/Pagination";
 export default function Home() {
   const [mangaLibrary, setMangaLibrary] = useState(MangaProducts);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postsPerPage, setPostsPerPage] = useState(24);
+  const postsPerPage = 24;
 
-  const [selectedCategory, setSelectedCategory] = useState("");
+  const [selectedGenre, setSelectedGenre] = useState("");
   const [selectedSort, setSelectedSort] = useState("");
   const [priceRange, setPriceRange] = useState(750);
   const [isTextfieldFull, setIsTextFieldFull] = useState(false);
@@ -34,10 +34,12 @@ export default function Home() {
     ? dispatch(resetCart())
     : console.log();
 
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    window.scrollTo(0, 0);
+  };
 
   const handleMangaLibraryGenre = (e) => {
-    console.log("priceRange: ", priceRange);
     isTextfieldFull
       ? setMangaLibrary(mangaLibrary)
       : setMangaLibrary(
@@ -47,13 +49,14 @@ export default function Home() {
               manga.price <= priceRange
           )
         );
-    setSelectedCategory(e.target.value);
+    setCurrentPage(1);
+    setSelectedGenre(e.target.value);
   };
 
   const handleFilterReset = () => {
     setMangaLibrary(MangaProducts);
     setPriceRange(getMostExpensivePrice(MangaProducts));
-    setSelectedCategory("");
+    setSelectedGenre("");
     setSelectedSort("");
   };
 
@@ -112,20 +115,20 @@ export default function Home() {
   const getMostExpensivePrice = (array) => {
     let mostExpensive = 0;
     for (let index = 0; index < array.length; index++) {
-      array[index].price > mostExpensive
-        ? (mostExpensive = array[index].price)
-        : (mostExpensive = mostExpensive);
+      if (array[index].price > mostExpensive) {
+        mostExpensive = array[index].price;
+      }
     }
     return mostExpensive;
   };
 
   useEffect(() => {
-    selectedCategory
+    selectedGenre
       ? setMangaLibrary(
           MangaProducts.filter(
             (manga) =>
               manga.price < priceRange &&
-              manga.categories.some((m) => m === selectedCategory)
+              manga.categories.some((m) => m === selectedGenre)
           )
         )
       : setMangaLibrary(
@@ -134,7 +137,7 @@ export default function Home() {
   }, [priceRange]);
 
   return (
-    <div className={orderIsFinised ? "body no-scroll" : "body"}>
+    <div className={orderIsFinised ? "no-scroll" : "scroll"}>
       {orderIsFinised && resetCart}
       {orderIsFinised && <OrderFinishedPopUp />}
 
@@ -146,10 +149,10 @@ export default function Home() {
               handleMangaLibraryGenre={handleMangaLibraryGenre}
               handleFilterReset={handleFilterReset}
               handleSort={handleSort}
+              selectedGenre={selectedGenre}
               selectedSort={selectedSort}
-              setSelectedCategory={setSelectedCategory}
-              selectedCategory={selectedCategory}
               setPriceRange={setPriceRange}
+              setCurrentPage={setCurrentPage}
               priceRange={priceRange}
               isTextfieldFull={isTextfieldFull}
               mostExpensiveBook={getMostExpensivePrice(MangaProducts)}
@@ -163,14 +166,18 @@ export default function Home() {
               <Library mangaLibrary={currentBooks} />
             </div>
             <div className="pagination">
-              {selectedCategory === "" && !isTextfieldFull && (
-                <Pagination
-                  postsPerPage={postsPerPage}
-                  totalPosts={MangaProducts.length}
-                  currentPage={currentPage}
-                  paginate={paginate}
-                />
-              )}
+              {/* {selectedCategory === "" && !isTextfieldFull && ( */}
+
+              <Pagination
+                postsPerPage={postsPerPage}
+                totalPosts={
+                  mangaLibrary.length !== 0
+                    ? mangaLibrary.length
+                    : MangaProducts.length
+                }
+                currentPage={currentPage}
+                paginate={paginate}
+              />
             </div>
           </div>
         </div>

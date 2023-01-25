@@ -28,6 +28,8 @@
     font-weight: 600;    
 }
 
+
+
 .checkoutWrapper .loginUser,.product .loginUser{
     position: fixed;
     right: 200px;
@@ -110,4 +112,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.registerUser:hover, .loginUser:hover {
+    color: black;
 }

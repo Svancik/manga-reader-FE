@@ -2,18 +2,13 @@ import React from "react";
 import "./cartTable.css";
 import DeleteOutlinedIcon from "@mui/icons-material/DeleteOutlined";
 import { useSelector } from "react-redux";
-import { useState } from "react";
 import {
   decreaseQuantity,
   increaseQuantity,
   removeItem,
-  resetCart,
 } from "../../redux/cartReducer";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import { ShoppingCartIcon } from "@mui/icons-material/ShoppingCart";
 
 export const CartTable = () => {
   const products = useSelector((state) => state.cart.products);

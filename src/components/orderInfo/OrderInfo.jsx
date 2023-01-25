@@ -1,9 +1,7 @@
 import React from "react";
-import Joi from "joi-browser";
 import "./orderInfo.css";
 
 import { DeliveryServices, PaymentMethod } from "../../dummyData";
-import { FinishOrder } from "../buttons/FinishOrderButton";
 import { useState } from "react";
 import OrderForm from "../orderForm/OrderForm";
 

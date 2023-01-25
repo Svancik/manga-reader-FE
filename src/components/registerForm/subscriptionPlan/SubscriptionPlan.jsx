@@ -1,5 +1,5 @@
 import "./subscriptionPlan.css";
-import React, { Component } from "react";
+import React from "react";
 import { useState } from "react";
 
 export default function SubscriptionPlan({ setSelect }) {
